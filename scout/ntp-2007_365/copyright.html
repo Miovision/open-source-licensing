@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="generator" content="HTML::TextToHTML v2.51"/>
+</head>
+<body>
+<p>This package is maintained for Debian by:
+Bruce Walker &lt;<a href="mailto:w1bw@debian.org">w1bw@debian.org</a>&gt;<br/>
+Bdale Garbee &lt;<a href="mailto:bdale@gag.com">bdale@gag.com</a>&gt;<br/>
+Matthias Urlichs &lt;<a href="mailto:smurf@debian.org">smurf@debian.org</a>&gt;<br/>
+Peter Eisentraut &lt;<a href="mailto:petere@debian.org">petere@debian.org</a>&gt;<br/>
+Kurt Roeckx &lt;<a href="mailto:kurt@roeckx.be">kurt@roeckx.be</a>&gt;
+</p>
+<p>The upstream source is available from <a href="http://www.ntp.org">http://www.ntp.org</a>
+</p>
+<p>General copyright and license:
+</p>
+<p>   The following copyright notice applies to all files collectively
+   called the Network Time Protocol Version 4 Distribution. Unless
+   specifically declared otherwise in an individual file, this notice
+   applies as if the text was explicitly included in the file.
+</p><hr/>
+<pre>
+*                                                                     *
+* Copyright (c) David L. Mills 1992-2009                              *
+*                                                                     *
+* Permission to use, copy, modify, and distribute this software and   *
+* its documentation for any purpose with or without fee is hereby     *
+* granted, provided that the above copyright notice appears in all    *
+* copies and that both the copyright notice and this permission       *
+* notice appear in supporting documentation, and that the name        *
+* University of Delaware not be used in advertising or publicity      *
+* pertaining to distribution of the software without specific,        *
+* written prior permission. The University of Delaware makes no       *
+* representations about the suitability this software for any         *
+* purpose. It is provided "as is" without express or implied          *
+* warranty.                                                           *
+*                                                                     *
+</pre>
+<hr/>
+
+<p>   The following individuals contributed in part to the Network Time
+   Protocol Distribution Version 4 and are acknowledged as authors of
+   this work.
+</p><ol>
+  <li>Mark Andrews &lt;<a href="mailto:mark_andrews@isc.org">mark_andrews@isc.org</a>&gt; Leitch atomic clock controller
+  </li><li>Bernd Altmeier &lt;<a href="mailto:altmeier@atlsoft.de">altmeier@atlsoft.de</a>&gt; hopf Elektronik serial line
+       and PCI-bus devices
+  </li><li>Viraj Bais &lt;<a href="mailto:vbais@mailman1.intel.com">vbais@mailman1.intel.com</a>&gt; and Clayton Kirkwood
+       &lt;<a href="mailto:kirkwood@striderfm.intel.com">kirkwood@striderfm.intel.com</a>&gt; port to WindowsNT 3.5
+  </li><li>Michael Barone &lt;michael,<a href="mailto:barone@lmco.com">barone@lmco.com</a>&gt; GPSVME fixes
+  </li><li>Jean-Francois Boudreault
+       &lt;<a href="mailto:Jean-Francois.Boudreault@viagenie.qc.ca">Jean-Francois.Boudreault@viagenie.qc.ca</a>&gt;IPv6 support
+  </li><li>Karl Berry &lt;<a href="mailto:karl@owl.HQ.ileaf.com">karl@owl.HQ.ileaf.com</a>&gt; syslog to file option
+  </li><li>Greg Brackley &lt;<a href="mailto:greg.brackley@bigfoot.com">greg.brackley@bigfoot.com</a>&gt; Major rework of WINNT
+       port. Clean up recvbuf and iosignal code into separate modules.
+  </li><li>Marc Brett &lt;<a href="mailto:Marc.Brett@westgeo.com">Marc.Brett@westgeo.com</a>&gt; Magnavox GPS clock driver
+  </li><li>Piete Brooks &lt;<a href="mailto:Piete.Brooks@cl.cam.ac.uk">Piete.Brooks@cl.cam.ac.uk</a>&gt; MSF clock driver, Trimble
+       PARSE support
+  </li><li>Reg Clemens &lt;<a href="mailto:reg@dwf.com">reg@dwf.com</a>&gt; Oncore driver (Current maintainer)
+  </li><li>Steve Clift &lt;<a href="mailto:clift@ml.csiro.au">clift@ml.csiro.au</a>&gt; OMEGA clock driver
+  </li><li>Casey Crellin &lt;<a href="mailto:casey@csc.co.za">casey@csc.co.za</a>&gt; vxWorks (Tornado) port and help
+       with target configuration
+  </li><li>Sven Dietrich &lt;<a href="mailto:sven_dietrich@trimble.com">sven_dietrich@trimble.com</a>&gt; Palisade reference clock
+       driver, NT adj. residuals, integrated Greg's Winnt port.
+  </li><li>John A. Dundas III &lt;<a href="mailto:dundas@salt.jpl.nasa.gov">dundas@salt.jpl.nasa.gov</a>&gt; Apple A/UX port
+  </li><li>Torsten Duwe &lt;<a href="mailto:duwe@immd4.informatik.uni-erlangen.de">duwe@immd4.informatik.uni-erlangen.de</a>&gt; Linux port
+  </li><li>Dennis Ferguson &lt;<a href="mailto:dennis@mrbill.canet.ca">dennis@mrbill.canet.ca</a>&gt; foundation code for NTP
+       Version 2 as specified in RFC-1119
+  </li><li>John Hay &lt;jhay@@icomtek.csir.co.za&gt; IPv6 support and testing
+  </li><li>Glenn Hollinger &lt;<a href="mailto:glenn@herald.usask.ca">glenn@herald.usask.ca</a>&gt; GOES clock driver
+  </li><li>Mike Iglesias &lt;<a href="mailto:iglesias@uci.edu">iglesias@uci.edu</a>&gt; DEC Alpha port
+  </li><li>Jim Jagielski &lt;<a href="mailto:jim@jagubox.gsfc.nasa.gov">jim@jagubox.gsfc.nasa.gov</a>&gt; A/UX port
+  </li><li>Jeff Johnson &lt;<a href="mailto:jbj@chatham.usdesign.com">jbj@chatham.usdesign.com</a>&gt; massive prototyping
+       overhaul
+  </li><li>Hans Lambermont &lt;<a href="mailto:Hans.Lambermont@nl.origin-it.com">Hans.Lambermont@nl.origin-it.com</a>&gt; or
+       &lt;<a href="mailto:H.Lambermont@chello.nl">H.Lambermont@chello.nl</a>&gt; ntpsweep
+  </li><li>Poul-Henning Kamp &lt;<a href="mailto:phk@FreeBSD.ORG">phk@FreeBSD.ORG</a>&gt; Oncore driver (Original
+       author)
+  </li><li>Frank Kardel &lt;kardel (at) ntp (dot) org&gt; PARSE &lt;GENERIC&gt;
+       driver (&gt;14 reference clocks), STREAMS modules for PARSE, support
+       scripts, syslog cleanup, dynamic interface handling
+  </li><li>William L. Jones &lt;<a href="mailto:jones@hermes.chpc.utexas.edu">jones@hermes.chpc.utexas.edu</a>&gt; RS/6000 AIX
+       modifications, HPUX modifications
+  </li><li>Dave Katz &lt;<a href="mailto:dkatz@cisco.com">dkatz@cisco.com</a>&gt; RS/6000 AIX port
+  </li><li>Craig Leres &lt;<a href="mailto:leres@ee.lbl.gov">leres@ee.lbl.gov</a>&gt; 4.4BSD port, ppsclock, Magnavox GPS
+       clock driver
+  </li><li>George Lindholm &lt;<a href="mailto:lindholm@ucs.ubc.ca">lindholm@ucs.ubc.ca</a>&gt; SunOS 5.1 port
+  </li><li>Louis A. Mamakos &lt;<a href="mailto:louie@ni.umd.edu">louie@ni.umd.edu</a>&gt; MD5-based authentication
+  </li><li>Lars H. Mathiesen &lt;<a href="mailto:thorinn@diku.dk">thorinn@diku.dk</a>&gt; adaptation of foundation code
+       for Version 3 as specified in RFC-1305
+  </li><li>Danny Mayer &lt;<a href="mailto:mayer@ntp.org">mayer@ntp.org</a>&gt;Network I/O, Windows Port, Code
+       Maintenance
+  </li><li>David L. Mills &lt;<a href="mailto:mills@udel.edu">mills@udel.edu</a>&gt; Version 4 foundation: clock
+       discipline, authentication, precision kernel; clock drivers:
+       Spectracom, Austron, Arbiter, Heath, ATOM, ACTS, KSI/Odetics;
+       audio clock drivers: CHU, WWV/H, IRIG
+  </li><li>Wolfgang Moeller &lt;<a href="mailto:moeller@gwdgv1.dnet.gwdg.de">moeller@gwdgv1.dnet.gwdg.de</a>&gt; VMS port
+  </li><li>Jeffrey Mogul &lt;<a href="mailto:mogul@pa.dec.com">mogul@pa.dec.com</a>&gt; ntptrace utility
+  </li><li>Tom Moore &lt;<a href="mailto:tmoore@fievel.daytonoh.ncr.com">tmoore@fievel.daytonoh.ncr.com</a>&gt; i386 svr4 port
+  </li><li>Kamal A Mostafa &lt;<a href="mailto:kamal@whence.com">kamal@whence.com</a>&gt; SCO OpenServer port
+  </li><li>Derek Mulcahy &lt;<a href="mailto:derek@toybox.demon.co.uk">derek@toybox.demon.co.uk</a>&gt; and Damon Hart-Davis
+       &lt;<a href="mailto:d@hd.org">d@hd.org</a>&gt; ARCRON MSF clock driver
+  </li><li>Rainer Pruy &lt;<a href="mailto:Rainer.Pruy@informatik.uni-erlangen.de">Rainer.Pruy@informatik.uni-erlangen.de</a>&gt;
+       monitoring/trap scripts, statistics file handling
+  </li><li>Dirce Richards &lt;<a href="mailto:dirce@zk3.dec.com">dirce@zk3.dec.com</a>&gt; Digital UNIX V4.0 port
+  </li><li>Wilfredo S&Atilde;&iexcl;nchez &lt;<a href="mailto:wsanchez@apple.com">wsanchez@apple.com</a>&gt; added support for NetInfo
+  </li><li>Nick Sayer &lt;<a href="mailto:mrapple@quack.kfu.com">mrapple@quack.kfu.com</a>&gt; SunOS streams modules
+  </li><li>Jack Sasportas &lt;<a href="mailto:jack@innovativeinternet.com">jack@innovativeinternet.com</a>&gt; Saved a Lot of space
+       on the stuff in the html/pic/ subdirectory
+  </li><li>Ray Schnitzler &lt;<a href="mailto:schnitz@unipress.com">schnitz@unipress.com</a>&gt; Unixware1 port
+  </li><li>Michael Shields &lt;<a href="mailto:shields@tembel.org">shields@tembel.org</a>&gt; USNO clock driver
+  </li><li>Jeff Steinman &lt;<a href="mailto:jss@pebbles.jpl.nasa.gov">jss@pebbles.jpl.nasa.gov</a>&gt; Datum PTS clock driver
+  </li><li>Harlan Stenn &lt;<a href="mailto:harlan@pfcs.com">harlan@pfcs.com</a>&gt; GNU automake/autoconfigure
+       makeover, various other bits (see the ChangeLog)
+  </li><li>Kenneth Stone &lt;<a href="mailto:ken@sdd.hp.com">ken@sdd.hp.com</a>&gt; HP-UX port
+  </li><li>Ajit Thyagarajan &lt;<a href="mailto:ajit@ee.udel.edu">ajit@ee.udel.edu</a>&gt;IP multicast/anycast support
+  </li><li>Tomoaki TSURUOKA &lt;<a href="mailto:tsuruoka@nc.fukuoka-u.ac.jp">tsuruoka@nc.fukuoka-u.ac.jp</a>&gt;TRAK clock driver
+  </li><li>Paul A Vixie &lt;<a href="mailto:vixie@vix.com">vixie@vix.com</a>&gt; TrueTime GPS driver, generic TrueTime
+       clock driver
+  </li><li>Ulrich Windl &lt;<a href="mailto:Ulrich.Windl@rz.uni-regensburg.de">Ulrich.Windl@rz.uni-regensburg.de</a>&gt; corrected and
+       validated HTML documents according to the HTML DTD
+</li></ol>
+<p>Copyright and licenses for other files:
+</p>
+<p>A lot of the other files are:
+</p><ul>
+  <li>Copyright (c) 1995-2006 by Frank Kardel &lt;kardel &lt;AT&gt; ntp.org&gt;
+  </li><li>Copyright (c) 1989-1994 by Frank Kardel, Friedrich-Alexander Universit&Atilde;&curren;t Erlangen-N&Atilde;&frac14;rnberg, Germany
+  </li><li>Copyright (c) 1997 by Meinberg Funkuhren (<a href="http://www.meinberg.de/">www.meinberg.de</a>)
+</li></ul>
+<p>With the following license:
+</p><ul>
+  <li>Redistribution and use in source and binary forms, with or without
+  </li><li>modification, are permitted provided that the following conditions
+  </li><li>are met:
+  </li><li>1. Redistributions of source code must retain the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer.
+  </li><li>2. Redistributions in binary form must reproduce the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer in the
+  </li><li>documentation and/or other materials provided with the distribution.
+  </li><li>3. Neither the name of the author nor the names of its contributors
+  </li><li>may be used to endorse or promote products derived from this software
+  </li><li>without specific prior written permission.
+ *
+  </li><li>THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+  </li><li>ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  </li><li>IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  </li><li>ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+  </li><li>FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  </li><li>DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  </li><li>OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  </li><li>HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  </li><li>LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  </li><li>OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  </li><li>SUCH DAMAGE.
+</li></ul>
+<p>Some files are:
+</p><ul>
+  <li>Copyright (C) 1996-2003  Internet Software Consortium.
+</li></ul>
+<p>With the following copyright notice:
+</p><ul>
+  <li>Permission to use, copy, modify, and distribute this software for any
+  </li><li>purpose with or without fee is hereby granted, provided that the above
+  </li><li>copyright notice and this permission notice appear in all copies.
+ *
+  </li><li>THE SOFTWARE IS PROVIDED "AS IS" AND INTERNET SOFTWARE CONSORTIUM
+  </li><li>DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL
+  </li><li>IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
+  </li><li>INTERNET SOFTWARE CONSORTIUM BE LIABLE FOR ANY SPECIAL, DIRECT,
+  </li><li>INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+  </li><li>FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+  </li><li>NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+  </li><li>WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+</li></ul>
+<p>Some files are:
+</p><ul>
+  <li>Copyright (C) 2004-2006  Internet Systems Consortium, Inc. ("ISC")
+</li></ul>
+<p>With the license:
+</p><ul>
+  <li>Permission to use, copy, modify, and distribute this software for any
+  </li><li>purpose with or without fee is hereby granted, provided that the above
+  </li><li>copyright notice and this permission notice appear in all copies.
+ *
+  </li><li>THE SOFTWARE IS PROVIDED "AS IS" AND ISC DISCLAIMS ALL WARRANTIES WITH
+  </li><li>REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+  </li><li>AND FITNESS.  IN NO EVENT SHALL ISC BE LIABLE FOR ANY SPECIAL, DIRECT,
+  </li><li>INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+  </li><li>LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+  </li><li>OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  </li><li>PERFORMANCE OF THIS SOFTWARE.
+</li></ul>
+<p>Some files are:
+</p><ul>
+  <li>Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.
+</li></ul>
+<p>With as license:
+</p><ul>
+  <li>Redistribution and use in source and binary forms, with or without
+  </li><li>modification, are permitted provided that the following conditions
+  </li><li>are met:
+  </li><li>1. Redistributions of source code must retain the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer.
+  </li><li>2. Redistributions in binary form must reproduce the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer in the
+  </li><li>documentation and/or other materials provided with the distribution.
+  </li><li>3. Neither the name of the project nor the names of its contributors
+  </li><li>may be used to endorse or promote products derived from this software
+  </li><li>without specific prior written permission.
+ *
+  </li><li>THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+  </li><li>ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  </li><li>IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  </li><li>ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+  </li><li>FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  </li><li>DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  </li><li>OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  </li><li>HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  </li><li>LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  </li><li>OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  </li><li>SUCH DAMAGE.
+</li></ul>
+<p>Some files are:
+</p><ul>
+  <li>Copyright (c) 1982-2003
+  </li><li>The Regents of the University of California.  All rights reserved.
+</li></ul>
+<p>With as license:
+</p><ul>
+  <li>Redistribution and use in source and binary forms, with or without
+  </li><li>modification, are permitted provided that the following conditions
+  </li><li>are met:
+  </li><li>1. Redistributions of source code must retain the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer.
+  </li><li>2. Redistributions in binary form must reproduce the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer in the
+  </li><li>documentation and/or other materials provided with the distribution.
+  </li><li>3. All advertising materials mentioning features or use of this software
+  </li><li>must display the following acknowledgement:
+  </li><li>This product includes software developed by the University of
+  </li><li>California, Berkeley and its contributors.
+  </li><li>4. Neither the name of the University nor the names of its contributors
+  </li><li>may be used to endorse or promote products derived from this software
+  </li><li>without specific prior written permission.
+ *
+  </li><li>THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+  </li><li>ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  </li><li>IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  </li><li>ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+  </li><li>FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  </li><li>DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  </li><li>OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  </li><li>HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  </li><li>LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  </li><li>OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  </li><li>SUCH DAMAGE.
+</li></ul>
+<p>Some files are:<br/>
+/* Copyright (c) 1995 Vixie Enterprises
+</p>
+<p>With as license:
+</p><ul>
+  <li>Permission to use, copy, modify, and distribute this software for any
+  </li><li>purpose with or without fee is hereby granted, provided that the above
+  </li><li>copyright notice and this permission notice appear in all copies, and that
+  </li><li>the name of Vixie Enterprises not be used in advertising or publicity
+  </li><li>pertaining to distribution of the document or software without specific,
+  </li><li>written prior permission.
+ *
+  </li><li>THE SOFTWARE IS PROVIDED "AS IS" AND VIXIE ENTERPRISES DISCLAIMS ALL
+  </li><li>WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES
+  </li><li>OF MERCHANTABILITY AND FITNESS.   IN NO EVENT SHALL VIXIE ENTERPRISES
+  </li><li>BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES
+  </li><li>OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+  </li><li>WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+  </li><li>ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+  </li><li>SOFTWARE.
+</li></ul>
+<p>adjtime.c:
+</p><pre>
+/* (c) Copyright Tai Jin, 1988.  All Rights Reserved.                    <em>/
+/</em>     Hewlett-Packard Laboratories.                                     <em>/
+/</em>                                                                       <em>/
+/</em> Permission is hereby granted for unlimited modification, use, and     <em>/
+/</em> distribution.  This software is made available with no warranty of    <em>/
+/</em> any kind, express or implied.  This copyright notice must remain      <em>/
+/</em> intact in all versions of this software.                              <em>/
+/</em>                                                                       <em>/
+</pre>
+<p>/</em> The author would appreciate it if any bug fixes and enhancements were <em>/
+/</em> to be sent back to him for incorporation into future versions of this <em>/
+/</em> software.  Please send changes to <a href="mailto:tai@iag.hp.com">tai@iag.hp.com</a> or <a href="mailto:ken@sdd.hp.com">ken@sdd.hp.com</a>.   */
+</p>
+<p>ntp_filegen.c/h:
+</p><ul>
+  <li>Copyright (C) 1992, 1996 by Rainer Pruy
+  </li><li>Friedrich-Alexander Universit&Atilde;&curren;t Erlangen-N&Atilde;&frac14;rnberg, Germany
+ *
+  </li><li>This code may be modified and used freely
+  </li><li>provided the credits remain intact.
+</li></ul>
+<p>inet_aton.c:
+</p><ul>
+  <li>Portions Copyright (c) 1993 by Digital Equipment Corporation.
+ *
+  </li><li>Permission to use, copy, modify, and distribute this software for any
+  </li><li>purpose with or without fee is hereby granted, provided that the above
+  </li><li>copyright notice and this permission notice appear in all copies, and that
+  </li><li>the name of Digital Equipment Corporation not be used in advertising or
+  </li><li>publicity pertaining to distribution of the document or software without
+  </li><li>specific, written prior permission.
+ *
+  </li><li>THE SOFTWARE IS PROVIDED "AS IS" AND DIGITAL EQUIPMENT CORP. DISCLAIMS ALL
+  </li><li>WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES
+  </li><li>OF MERCHANTABILITY AND FITNESS.   IN NO EVENT SHALL DIGITAL EQUIPMENT
+  </li><li>CORPORATION BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+  </li><li>DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+  </li><li>PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS
+  </li><li>ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+  </li><li>SOFTWARE.
+</li></ul>
+<p>strstr.c:
+</p><ul>
+  <li>Copyright (c) 1991-1998 University of Maryland at College Park
+  </li><li>All Rights Reserved.
+ *
+  </li><li>Permission to use, copy, modify, distribute, and sell this software and its
+  </li><li>documentation for any purpose is hereby granted without fee, provided that
+  </li><li>the above copyright notice appear in all copies and that both that
+  </li><li>copyright notice and this permission notice appear in supporting
+  </li><li>documentation, and that the name of U.M. not be used in advertising or
+  </li><li>publicity pertaining to distribution of the software without specific,
+  </li><li>written prior permission.  U.M. makes no representations about the
+  </li><li>suitability of this software for any purpose.  It is provided "as is"
+  </li><li>without express or implied warranty.
+ *
+  </li><li>U.M. DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL
+  </li><li>IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL U.M.
+  </li><li>BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  </li><li>WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+  </li><li>OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OU
+  <dl>
+    <dt>refclock jjy</dt>
+<dd>/*  Copyright (C) 2001-2004, Takao Abe.  All rights reserved.         <em>/
+/</em>                                                                    <em>/
+/</em>  Permission to use, copy, modify, and distribute this software     <em>/
+/</em>  and its documentation for any purpose is hereby granted           <em>/
+/</em>  without fee, provided that the following conditions are met:      <em>/
+/</em>                                                                    <em>/
+/</em>  One retains the entire copyright notice properly, and both the    <em>/
+/</em>  copyright notice and this license. in the documentation and/or    <em>/
+/</em>  other materials provided with the distribution.                   <em>/
+/</em>                                                                    <em>/
+/</em>  This software and the name of the author must not be used to      <em>/
+/</em>  endorse or promote products derived from this software without    <em>/
+/</em>  prior written permission.                                         <em>/
+/</em>                                                                    <em>/
+<strong>/</em>  THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESSED OR IMPLIED    <em>/</strong>
+<strong>/</em>  WARRANTIES OF ANY KIND, INCLUDING, BUT NOT LIMITED TO, THE        <em>/</strong>
+<strong>/</em>  IMPLIED WARRANTIES OF MERCHANTABLILITY AND FITNESS FOR A          <em>/</strong>
+<strong>/</em>  PARTICULAR PURPOSE.                                               <em>/</strong>
+<strong>/</em>  IN NO EVENT SHALL THE AUTHOR TAKAO ABE BE LIABLE FOR ANY DIRECT,  <em>/</strong>
+<strong>/</em>  INDIRECT, GENERAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES   <em>/</strong>
+<strong>/</em>  ( INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE        <em>/</strong>
+<strong>/</em>  GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS      <em>/</strong>
+<strong>/</em>  INTERRUPTION ) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,     <em>/</strong>
+<strong>/</em>  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT ( INCLUDING        <em>/</strong>
+<strong>/</em>  NEGLIGENCE OR OTHERWISE ) ARISING IN ANY WAY OUT OF THE USE OF    <em>/</strong>
+<strong>/</em>  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */</strong>
+  </dd></dl>
+</li></ul>
+<p>refclock_palisade.c:
+</p><ul>
+  <li>Copyright (c) 1997, 1998, 1999, 2000  Trimble Navigation Ltd.
+  </li><li>All rights reserved.
+ *
+  </li><li>Redistribution and use in source and binary forms, with or without
+  </li><li>modification, are permitted provided that the following conditions
+  </li><li>are met:
+  </li><li>1. Redistributions of source code must retain the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer.
+  </li><li>2. Redistributions in binary form must reproduce the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer in the
+  </li><li>documentation and/or other materials provided with the distribution.
+  </li><li>3. All advertising materials mentioning features or use of this software
+  </li><li>must display the following acknowledgement:
+  </li><li>This product includes software developed by Trimble Navigation, Ltd.
+  </li><li>4. The name of Trimble Navigation Ltd. may not be used to endorse or
+  </li><li>promote products derived from this software without specific prior
+  </li><li>written permission.
+ *
+  </li><li>THIS SOFTWARE IS PROVIDED BY TRIMBLE NAVIGATION LTD. ``AS IS'' AND
+  </li><li>ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  </li><li>IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  </li><li>ARE DISCLAIMED.  IN NO EVENT SHALL TRIMBLE NAVIGATION LTD. BE LIABLE
+  </li><li>FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  </li><li>DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+  </li><li>OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  </li><li>HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  </li><li>LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+  </li><li>OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+  </li><li>SUCH DAMAGE.
+  <dl>
+    <dt>ntpsweep</dt>
+<dd># Copyright (C) 1999,2000 Hans Lambermont and Origin B.V.
+#
+# Permission to use, copy, modify and distribute this software and its
+# documentation for any purpose and without fee is hereby granted,
+# provided that the above copyright notice appears in all copies and
+# that both the copyright notice and this permission notice appear in
+# supporting documentation. This software is supported as is and without
+# any express or implied warranties, including, without limitation, the
+# implied warranties of merchantability and fitness for a particular
+# purpose. The name Origin B.V. must not be used to endorse or promote
+# products derived from this software without prior written permission.
+  </dd></dl>
+</li></ul>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="generator" content="HTML::TextToHTML v2.51"/>
+</head>
+<body>
+<p>This package was debianized by David Schleef &lt;<a href="mailto:ds@debian.org">ds@debian.org</a>&gt; on
+Sat, 13 Jan 2001 10:48:08 -0800.
+</p>
+<p>It was downloaded from: git://git.infradead.org/mtd-utils.git
+Main web page for the project: <a href="http://www.linux-mtd.infradead.org/">http://www.linux-mtd.infradead.org/</a>
+</p>
+<p>Upstream Author: David Woodhouse &lt;<a href="mailto:dmwm2@infradead.org">dmwm2@infradead.org</a>&gt; and others
+</p>
+<dl>
+  <dt>Copyright</dt>
+<dd>
+</dd></dl>
+<p>mtd-tools is copyrighted by following entities:
+</p>
+<pre>
+        Copyright (C) 2007-2008 Nokia Corporation. All rights reserved.
+                      2006 KaiGai Kohei &lt;<a href="mailto:kaigai@ak.jp.nec.com">kaigai@ak.jp.nec.com</a>&gt;
+                      2005 Daniel Measurement and Control, Inc
+        Copyright (C) 2005 Sean Young &lt;<a href="mailto:sean@mess.org">sean@mess.org</a>&gt;
+        Copyright (C) 2004 Ferenc Havasi &lt;<a href="mailto:havasi@inf.u-szeged.hu">havasi@inf.u-szeged.hu</a>&gt;,
+                      2004 Patrik Kluba &lt;<a href="mailto:pajko@halom.u-szeged.hu">pajko@halom.u-szeged.hu</a>&gt;,
+                      2004 Zoltan Sogor &lt;<a href="mailto:weth@inf.u-szeged.hu">weth@inf.u-szeged.hu</a>&gt;,
+                      2004 University of Szeged, Hungary
+        Copyright (C) 2003 Thomas Gleixner (<a href="mailto:tglx@linutronix.de">tglx@linutronix.de</a>)
+        Copyright (C) 2002 Axis Communications AB
+        Copyright (C) 2001-2003 Red Hat, Inc.
+        Copyright (C) 2001, 2002 Erik Andersen &lt;<a href="mailto:andersen@codepoet.org">andersen@codepoet.org</a>&gt;
+        Copyright (C) 2001 Jari Kirma &lt;<a href="mailto:Jari.Kirma@hut.fi">Jari.Kirma@hut.fi</a>&gt;
+                      2001 David A. Schleef &lt;<a href="mailto:ds@lineo.com">ds@lineo.com</a>&gt;
+        Copyright (C) 2000 Arcom Control System Ltd
+                      2000 David Woodhouse (<a href="mailto:dwmw2@infradead.org">dwmw2@infradead.org</a>)
+                      2000 Steven J. Hill (<a href="mailto:sjhill@realitydiluted.com">sjhill@realitydiluted.com</a>)
+        Copyright (C) 1999 David A. Hinds.  All Rights Reserved.
+                  (C) 1999 Andrea Arcangeli &lt;<a href="mailto:andrea@suse.de">andrea@suse.de</a>&gt;
+</pre>
+<p>most of mtd-tools is licensed under the terms of GNU GPL v2 ; 
+the licence header is:
+</p>
+<p>    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+</p>
+<p>    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+</p>
+<p>    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+</p>
+<p>On Debian systems, the complete text of the GNU General Public
+License, version 2, can be found in /usr/share/common-licenses/GPL-2.
+</p>
+<p>        flashcp.c, mtd_debug.c:
+</p>
+<ul>
+  <li>Copyright (c) 2d3D, Inc.
+  </li><li>Written by Abraham vd Merwe &lt;<a href="mailto:abraham@2d3d.co.za">abraham@2d3d.co.za</a>&gt;
+ *
+  </li><li>Redistribution and use in source and binary forms, with or without
+  </li><li>modification, are permitted provided that the following conditions
+  </li><li>are met:
+  </li><li>1. Redistributions of source code must retain the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer.
+  </li><li>2. Redistributions in binary form must reproduce the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer in the
+  </li><li>documentation and/or other materials provided with the distribution.
+  </li><li>3. Neither the name of the author nor the names of other contributors
+  </li><li>may be used to endorse or promote products derived from this software
+  </li><li>without specific prior written permission.
+ *
+  </li><li>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  </li><li>AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+  </li><li>THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  </li><li>ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+  </li><li>FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  </li><li>DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  </li><li>SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  </li><li>CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  </li><li>OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  </li><li>OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</li></ul>
+<p>        fec.c is:
+</p>
+<p>        (C) 1997-98 Luigi Rizzo (<a href="mailto:luigi@iet.unipi.it">luigi@iet.unipi.it</a>)
+</p>
+<ul>
+  <li>Portions derived from code by Phil Karn (<a href="mailto:karn@ka9q.ampr.org">karn@ka9q.ampr.org</a>),
+  </li><li>Robert Morelos-Zaragoza (<a href="mailto:robert@spectra.eng.hawaii.edu">robert@spectra.eng.hawaii.edu</a>) and Hari
+  </li><li>Thirumoorthy (<a href="mailto:harit@spectra.eng.hawaii.edu">harit@spectra.eng.hawaii.edu</a>), Aug 1995
+ *
+  </li><li>Redistribution and use in source and binary forms, with or without
+  </li><li>modification, are permitted provided that the following conditions
+  </li><li>are met:
+ *
+  </li><li>1. Redistributions of source code must retain the above copyright
+  </li><li>notice, this list of conditions and the following disclaimer.
+  </li><li>2. Redistributions in binary form must reproduce the above
+  </li><li>copyright notice, this list of conditions and the following
+  </li><li>disclaimer in the documentation and/or other materials
+  </li><li>provided with the distribution.
+ *
+  </li><li>THIS SOFTWARE IS PROVIDED BY THE AUTHORS ``AS IS'' AND
+  </li><li>ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+  </li><li>THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  </li><li>PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS
+  </li><li>BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+  </li><li>OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  </li><li>PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+  </li><li>OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  </li><li>THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+  </li><li>TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+  </li><li>OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  </li><li>OF SUCH DAMAGE.
+</li></ul>
+<p>        crc32.c is: 
+</p>
+<pre>
+        COPYRIGHT (C) 1986 Gary S. Brown.  You may use this program, or
+        code or tables extracted from it, as desired without restriction.
+
+        ubi-tools is GPL-2:
+        
+        Copyright (c) International Business Machines Corp., 2006-2008
+                  2007 Frank Haverkamp &lt;<a href="mailto:haver@vnet.ibm.com">haver@vnet.ibm.com</a>&gt;
+        Copyright (C) 2007, 2008 Nokia Corporation
+        Copyright (c) Artem Bityutskiy, 2007
+        Copyright (C) 2000-2004 Steven J. Hill (<a href="mailto:sjhill@realitydiluted.com">sjhill@realitydiluted.com</a>)
+                      Toshiba America Electronics Components, Inc
+
+        libiniparser is:
+</pre>
+<p>Copyright (c) 2000-2007 by Nicolas Devillard.
+MIT License
+</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+</p>
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+</p>
+<p><strong>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</strong>
+<strong>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</strong>
+<strong>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</strong>
+<strong>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</strong>
+<strong>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</strong>
+<strong>FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</strong>
+<strong>DEALINGS IN THE SOFTWARE.</strong>
+</p>
+
+</body>
+</html>
