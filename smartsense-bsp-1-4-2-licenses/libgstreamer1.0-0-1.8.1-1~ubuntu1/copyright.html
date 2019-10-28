@@ -1,0 +1,749 @@
+<html>
+   <body>
+This package was debianized by David I. Lehn <dlehn@debian.org> on<br>
+Mon, 15 Jan 2001 18:21:37 -0500.<br>
+<br>
+It was downloaded from <http://gstreamer.freedesktop.org/>.<br>
+<br>
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/<br>
+Upstream-Name: GStreamer core 1.0<br>
+Upstream-Contact: gstreamer-devel@lists.freedesktop.org<br>
+Source: http://gstreamer.freedesktop.org<br>
+<br>
+Files: gst/gst.c<br>
+gst/gst.h<br>
+gst/gst_private.h<br>
+gst/gstbin.c<br>
+gst/gstbin.h<br>
+gst/gstbuffer.c<br>
+gst/gstbuffer.h<br>
+gst/gstclock.c<br>
+gst/gstclock.h<br>
+gst/gstcompat.h<br>
+gst/gstelement.c<br>
+gst/gstelement.h<br>
+gst/gstelementfactory.c<br>
+gst/gstelementfactory.h<br>
+gst/gstelementmetadata.h<br>
+gst/gstevent.c<br>
+gst/gstevent.h<br>
+gst/gstformat.c<br>
+gst/gstformat.h<br>
+gst/gstghostpad.c<br>
+gst/gstghostpad.h<br>
+gst/gstinfo.h<br>
+gst/gstobject.c<br>
+gst/gstobject.h<br>
+gst/gstpad.c<br>
+gst/gstpad.h<br>
+gst/gstpadtemplate.c<br>
+gst/gstpadtemplate.h<br>
+gst/gstparse.c<br>
+gst/gstparse.h<br>
+gst/gstpipeline.c<br>
+gst/gstpipeline.h<br>
+gst/gstplugin.c<br>
+gst/gstplugin.h<br>
+gst/gstpluginfeature.c<br>
+gst/gstpluginfeature.h<br>
+gst/gstquery.c<br>
+gst/gstquery.h<br>
+gst/gstregistry.c<br>
+gst/gstregistry.h<br>
+gst/gstsample.h<br>
+gst/gstsystemclock.c<br>
+gst/gstsystemclock.h<br>
+gst/gsttask.c<br>
+gst/gsttrace.c<br>
+gst/gsttrace.h<br>
+gst/gsturi.h<br>
+gst/gstutils.c<br>
+gst/gstutils.h<br>
+libs/gst/base/gstbasesink.h<br>
+libs/gst/base/gstbasesrc.c<br>
+libs/gst/base/gstbasesrc.h<br>
+libs/gst/base/gstbasetransform.c<br>
+libs/gst/base/gstbasetransform.h<br>
+libs/gst/base/gstindex.h<br>
+libs/gst/base/gstpushsrc.c<br>
+libs/gst/base/gstpushsrc.h<br>
+plugins/elements/gstcapsfilter.c<br>
+plugins/elements/gstcapsfilter.h<br>
+plugins/elements/gstelements.c<br>
+plugins/elements/gstfakesink.c<br>
+plugins/elements/gstfakesink.h<br>
+plugins/elements/gstfakesrc.c<br>
+plugins/elements/gstfakesrc.h<br>
+plugins/elements/gstfdsink.c<br>
+plugins/elements/gstfdsink.h<br>
+plugins/elements/gstfdsrc.c<br>
+plugins/elements/gstfdsrc.h<br>
+plugins/elements/gstfilesink.c<br>
+plugins/elements/gstfilesink.h<br>
+plugins/elements/gstfilesrc.c<br>
+plugins/elements/gstfilesrc.h<br>
+plugins/elements/gstidentity.c<br>
+plugins/elements/gstidentity.h<br>
+plugins/elements/gstqueue.c<br>
+plugins/elements/gstqueue.h<br>
+plugins/elements/gstqueue2.c<br>
+plugins/elements/gstqueue2.h<br>
+plugins/elements/gsttee.c<br>
+plugins/elements/gsttee.h<br>
+tools/gst-inspect.c<br>
+tools/gst-launch.c<br>
+win32/common/gstconfig.h<br>
+win32/common/gstversion.h<br>
+Copyright: 1999-2000, Erik Walthinsen <omega@cse.ogi.edu><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/check/libcheck/check.c<br>
+libs/gst/check/libcheck/check.h<br>
+libs/gst/check/libcheck/check_error.c<br>
+libs/gst/check/libcheck/check_error.h<br>
+libs/gst/check/libcheck/check_impl.h<br>
+libs/gst/check/libcheck/check_list.c<br>
+libs/gst/check/libcheck/check_list.h<br>
+libs/gst/check/libcheck/check_log.c<br>
+libs/gst/check/libcheck/check_log.h<br>
+libs/gst/check/libcheck/check_msg.c<br>
+libs/gst/check/libcheck/check_msg.h<br>
+libs/gst/check/libcheck/check_pack.c<br>
+libs/gst/check/libcheck/check_pack.h<br>
+libs/gst/check/libcheck/check_print.c<br>
+libs/gst/check/libcheck/check_print.h<br>
+libs/gst/check/libcheck/check_run.c<br>
+libs/gst/check/libcheck/check_str.c<br>
+libs/gst/check/libcheck/check_str.h<br>
+Copyright: 2001, 2002, Arien Malec<br>
+2001-2002, Arien Malec<br>
+License: LGPL-2.1+<br>
+<br>
+Files: gst/gstparamspecs.c<br>
+gst/gstparamspecs.h<br>
+gst/math-compat.h<br>
+libs/gst/base/gstbytereader-docs.h<br>
+tests/check/elements/multiqueue.c<br>
+tests/check/elements/queue2.c<br>
+tests/check/gst/gstinfo.c<br>
+tests/check/gst/gstparamspecs.c<br>
+tests/check/gst/gstregistry.c<br>
+tests/check/gst/gsttagsetter.c<br>
+tests/check/gst/gsturi.c<br>
+tests/check/libs/basesrc.c<br>
+tests/check/libs/gstlibscpp.cc<br>
+tests/check/libs/typefindhelper.c<br>
+tests/check/pipelines/parse-disabled.c<br>
+Copyright: 2006, Tim-Philipp Müller <tim centricular net><br>
+2007, Tim-Philipp Müller <tim centricular net><br>
+2009, Tim-Philipp Müller <tim centricular net><br>
+2010, Tim-Philipp Müller <tim centricular net><br>
+2011, Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gsttaglist.c<br>
+gst/gsttaglist.h<br>
+gst/gsttagsetter.c<br>
+gst/gsttagsetter.h<br>
+gst/gsttypefind.c<br>
+gst/gsttypefind.h<br>
+gst/gsttypefindfactory.c<br>
+gst/gsttypefindfactory.h<br>
+plugins/elements/gsttypefindelement.c<br>
+plugins/elements/gsttypefindelement.h<br>
+tests/check/gst/gsttag.c<br>
+Copyright: 2003, Benjamin Otte <in7y118@public.uni-hamburg.de><br>
+License: LGPL-2+<br>
+<br>
+Files: debian/gst-codec-info.c<br>
+libs/gst/base/gstbitreader-docs.h<br>
+libs/gst/base/gstbitreader.c<br>
+libs/gst/base/gstbitreader.h<br>
+libs/gst/base/gstbytewriter-docs.h<br>
+libs/gst/base/gstbytewriter.c<br>
+libs/gst/base/gstbytewriter.h<br>
+libs/gst/controller/gstinterpolationcontrolsource.c<br>
+libs/gst/controller/gstlfocontrolsource.c<br>
+libs/gst/controller/gsttimedvaluecontrolsource.c<br>
+libs/gst/controller/gsttriggercontrolsource.c<br>
+Copyright: 2007,2009, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+2007,2010, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+2008, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+2009, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+2010, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstchildproxy.c<br>
+gst/gstchildproxy.h<br>
+gst/gstdebugutils.c<br>
+gst/gstdebugutils.h<br>
+gst/gstpreset.c<br>
+gst/gstpreset.h<br>
+tests/benchmarks/capsnego.c<br>
+tests/benchmarks/controller.c<br>
+tests/check/gst/gstchildproxy.c<br>
+tests/check/gst/gstelementfactory.c<br>
+Copyright: 2005, Stefan Kost <ensonic@users.sf.net><br>
+2006, Stefan Kost <ensonic@users.sf.net><br>
+2007, Stefan Kost <ensonic@users.sf.net><br>
+2009, Stefan Kost <ensonic@users.sf.net><br>
+2010, Stefan Kost <ensonic@users.sf.net><br>
+2011, Stefan Kost <ensonic@users.sf.net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/fakesink.c<br>
+tests/check/elements/fakesrc.c<br>
+tests/check/elements/identity.c<br>
+tests/check/generic/states.c<br>
+tests/check/gst/gst.c<br>
+tests/check/gst/gstbuffer.c<br>
+tests/check/gst/gstpad.c<br>
+tests/check/gst/gststructure.c<br>
+tests/check/pipelines/cleanup.c<br>
+Copyright: <2005> Thomas Vander Stichele <thomas at apestaart dot org><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/net/gstnet.h<br>
+libs/gst/net/gstnettimepacket.h<br>
+libs/gst/net/gstnettimeprovider.c<br>
+tests/benchmarks/caps.c<br>
+tests/check/gst/gstiterator.c<br>
+tests/check/libs/gstnetclientclock.c<br>
+tests/check/libs/gstnettimeprovider.c<br>
+tests/check/pipelines/simple-launch-lines.c<br>
+tests/check/pipelines/stress.c<br>
+Copyright: 2005, Andy Wingo <wingo@pobox.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstbufferpool.c<br>
+gst/gstbufferpool.h<br>
+gst/gstmeta.c<br>
+gst/gstsample.c<br>
+gst/gsttaskpool.c<br>
+libs/gst/base/gstbasesink.c<br>
+tests/check/libs/transform1.c<br>
+tests/examples/streams/testrtpool.c<br>
+Copyright: 2005-2007, Wim Taymans <wim.taymans@gmail.com><br>
+2008, Wim Taymans <wim.taymans@gmail.com><br>
+2009, Wim Taymans <wim.taymans@gmail.com><br>
+2010, Wim Taymans <wim.taymans@gmail.com><br>
+2011, Wim Taymans <wim.taymans@gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstbus.c<br>
+gst/gstbus.h<br>
+gst/gstmessage.c<br>
+gst/gstmessage.h<br>
+gst/gstsegment.c<br>
+gst/gstsegment.h<br>
+tests/check/gst/gstghostpad.c<br>
+tests/check/gst/gstsystemclock.c<br>
+Copyright: 2004, Wim Taymans <wim@fluendo.com><br>
+2005, Wim Taymans <wim@fluendo.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gsttoc.c<br>
+gst/gsttoc.h<br>
+gst/gsttocsetter.c<br>
+gst/gsttocsetter.h<br>
+tests/check/gst/gsttoc.c<br>
+tests/check/gst/gsttocsetter.c<br>
+Copyright: 2010, 2012 Alexander Saprykin <xelfium@gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstcontrolsource.c<br>
+gst/gstcontrolsource.h<br>
+libs/gst/controller/gstinterpolationcontrolsource.h<br>
+libs/gst/controller/gstlfocontrolsource.h<br>
+libs/gst/controller/gsttimedvaluecontrolsource.h<br>
+libs/gst/controller/gsttriggercontrolsource.h<br>
+Copyright: 2007, Sebastian Dröge <slomo@circular-chaos.org><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstcontrolbinding.c<br>
+gst/gstcontrolbinding.h<br>
+libs/gst/controller/gstargbcontrolbinding.c<br>
+libs/gst/controller/gstargbcontrolbinding.h<br>
+libs/gst/controller/gstdirectcontrolbinding.c<br>
+libs/gst/controller/gstdirectcontrolbinding.h<br>
+Copyright: 2011, Stefan Sauer <ensonic@users.sf.net><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gsterror.h<br>
+tests/check/elements/filesrc.c<br>
+tests/check/gst/gstelement.c<br>
+tests/check/gst/gstpipeline.c<br>
+tests/check/gst/gsttask.c<br>
+Copyright: 2004, Thomas Vander Stichele <thomas at apestaart dot org><br>
+2005, Thomas Vander Stichele <thomas at apestaart dot org><br>
+2006, Thomas Vander Stichele <thomas at apestaart dot org><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstcaps.c<br>
+gst/gsterror.c<br>
+gst/gstvalue.c<br>
+gst/gstvalue.h<br>
+Copyright: <2003> David A. Schleef <ds@schleef.org><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gstadapter.c<br>
+libs/gst/base/gstadapter.h<br>
+tests/benchmarks/mass-elements.c<br>
+tools/tools.h<br>
+Copyright: 2004, Benjamin Otte <otte@gnome.org><br>
+2005, Benjamin Otte <otte@gnome.org><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gst-i18n-app.h<br>
+gst/gst-i18n-lib.h<br>
+tests/examples/metadata/read-metadata.c<br>
+tools/gst-typefind.c<br>
+Copyright: 2003, Thomas Vander Stichele <thomas@apestaart.org><br>
+2004, Thomas Vander Stichele <thomas@apestaart.org><br>
+License: LGPL-2+<br>
+<br>
+Files: common/coverage/coverage-report-entry.pl<br>
+common/coverage/coverage-report.pl<br>
+common/coverage/coverage-report.xsl<br>
+Copyright: 2006, Daniel Berrange<br>
+License: GPL-2+<br>
+<br>
+Files: gst/gstmacros.h<br>
+gst/gsttask.h<br>
+libs/gst/base/gstmemindex.c<br>
+Copyright: <1999> Erik Walthinsen <omega@cse.ogi.edu><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/generic/sinks.c<br>
+tests/check/gst/gstmessage.c<br>
+tests/check/libs/adapter.c<br>
+Copyright: <2005> Wim Taymans <wim at fluendo dot com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gsttaskpool.h<br>
+tests/check/gst/gstmeta.c<br>
+tests/examples/streams/testrtpool.h<br>
+Copyright: <2009> Wim Taymans <wim.taymans@gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstbufferlist.c<br>
+gst/gstbufferlist.h<br>
+tests/check/gst/gstbufferlist.c<br>
+Copyright: 2009, Axis Communications <dev-gstreamer at axis dot com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstcaps.h<br>
+gst/gststructure.c<br>
+gst/gststructure.h<br>
+Copyright: 2003, David A. Schleef <ds@schleef.org><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/glib-compat-private.h<br>
+gst/gstminiobject.c<br>
+gst/gstminiobject.h<br>
+Copyright: 2005, David Schleef <ds@schleef.org><br>
+License: LGPL-2+<br>
+<br>
+Files: plugins/elements/gstdataqueue.c<br>
+plugins/elements/gstdataqueue.h<br>
+plugins/elements/gstmultiqueue.h<br>
+Copyright: 2006, Edward Hervey <edward@fluendo.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstpluginloader.c<br>
+gst/gstpluginloader.h<br>
+libs/gst/helpers/gst-plugin-scanner.c<br>
+Copyright: 2008, Jan Schmidt <jan.schmidt@sun.com><br>
+License: LGPL-2+<br>
+<br>
+Files: plugins/elements/gstoutputselector.c<br>
+plugins/elements/gstoutputselector.h<br>
+tests/check/elements/selector.c<br>
+Copyright: 2008, Nokia Corporation. (contact <stefan.kost@nokia.com>)<br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstmemory.c<br>
+gst/gstmemory.h<br>
+gst/gstmeta.h<br>
+Copyright: 2009, Wim Taymans <wim.taymans@gmail.be><br>
+2011, Wim Taymans <wim.taymans@gmail.be><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstcontroller.c<br>
+tests/check/libs/controller.c<br>
+Copyright: <2005> Stefan Kost <ensonic at users dot sf dot net><br>
+<2006-2007> Sebastian Dröge <slomo@circular-chaos.org><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/libs/bitreader.c<br>
+tests/check/libs/bytereader.c<br>
+Copyright: <2008> Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/net/gstnetaddressmeta.c<br>
+libs/gst/net/gstnetaddressmeta.h<br>
+Copyright: <2011> Wim Taymans <wim.taymans@gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstclock.c<br>
+tests/check/libs/basesink.c<br>
+Copyright: 2010, Alessandro Decina <alessandro.decina@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/check/gstbufferstraw.c<br>
+libs/gst/check/gstbufferstraw.h<br>
+Copyright: 2006, Andy Wingo <wingo at pobox.com><br>
+License: LGPL-2+<br>
+<br>
+Files: plugins/elements/gstvalve.c<br>
+plugins/elements/gstvalve.h<br>
+Copyright: 2007, Collabora Ltd<br>
+2007, Nokia Corporation<br>
+2007-2009, Collabora Ltd<br>
+2007-2009, Nokia Corporation<br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/net/gstnetclientclock.c<br>
+libs/gst/net/gstnetclientclock.h<br>
+Copyright: 1999-2000, Erik Walthinsen <omega@cse.ogi.edu><br>
+2012, Collabora Ltd. <tim.muller@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstatomicqueue.c<br>
+libs/gst/check/gstconsistencychecker.h<br>
+Copyright: 2009, Edward Hervey <bilboed@bilboed.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstinfo.c<br>
+gst/gsturi.c<br>
+Copyright: 1999-2000, Erik Walthinsen <omega@cse.ogi.edu><br>
+2008-2009, Tim-Philipp Müller <tim centricular net><br>
+2011, Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gsttypefindhelper.c<br>
+libs/gst/base/gsttypefindhelper.h<br>
+Copyright: 1999-2000, Erik Walthinsen <omega@cse.ogi.edu><br>
+2000,2005, Wim Taymans <wim@fluendo.com><br>
+2006, Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstevent.c<br>
+tests/check/gst/gstsegment.c<br>
+Copyright: 2005, Jan Schmidt <thaytan@mad.scientist.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstquark.c<br>
+gst/gstquark.h<br>
+Copyright: 2006, Jan Schmidt <thaytan@noraisin.net><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstregistrybinary.c<br>
+gst/gstregistrychunks.c<br>
+Copyright: 2006, Josep Torra <josep@fluendo.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstregistrybinary.h<br>
+gst/gstregistrychunks.h<br>
+Copyright: 2006, Josep Torra <josep@fluendo.com><br>
+2006, Mathieu Garcia <matthieu@fluendo.com><br>
+2006, Stefan Kost <ensonic@sonicpulse.de><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gstbytereader.c<br>
+libs/gst/base/gstbytereader.h<br>
+Copyright: 2008, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+2009, Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstiterator.c<br>
+gst/gstiterator.h<br>
+Copyright: 2004, Wim Taymans <wim@fluendo.com><br>
+2011, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstdatetime.c<br>
+gst/gstdatetime.h<br>
+Copyright: 2010, Thiago Santos <thiago.sousa.santos@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: plugins/elements/gstfunnel.c<br>
+plugins/elements/gstfunnel.h<br>
+Copyright: 2007, Collabora Ltd<br>
+2007, Nokia Corp<br>
+License: LGPL-2.1+<br>
+<br>
+Files: ltmain.sh<br>
+Copyright: 1996-2001, 2003-2006<br>
+License: GPL-2+<br>
+<br>
+Files: gst/parse/grammar.tab.h<br>
+Copyright: 1984, 1989-1990, 2000-2011, Free Software Foundation, Inc<br>
+License: GPL-3+<br>
+<br>
+Files: tests/check/gst/gstquery.c<br>
+Copyright: *No copyright*<br>
+License: LGPL-2+<br>
+<br>
+Files: tests/benchmarks/gstpollstress.c<br>
+Copyright: <1999> Erik Walthinsen <omega@cse.ogi.edu><br>
+<2004> Thomas Vander Stichele <thomas at apestaart dot org><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstvalue.c<br>
+Copyright: <2004> David Schleef <david at schleef dot org><br>
+<2005> Thomas Vander Stichele <thomas at apestaart dot org><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstobject.c<br>
+Copyright: <2004> Thomas Vander Stichele <thomas at apestaart dot org><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/check/gstcheck.h<br>
+Copyright: <2004> Thomas Vander Stichele <thomas at apestaart dot org><br>
+<2008> Thijs Vermeir <thijsvermeir@gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/fdsrc.c<br>
+Copyright: <2005> Jan Schmidt <thaytan at mad dot scientist dot com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/examples/typefind/typefind.c<br>
+Copyright: <2005> Stefan Kost<br>
+<2006> Tim-Philipp Müller<br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstminiobject.c<br>
+Copyright: <2005> Thomas Vander Stichele <thomas at apestaart dot org><br>
+<2005> Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstutils.c<br>
+Copyright: <2005> Thomas Vander Stichele <thomas at apestaart dot org><br>
+<2006> Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/pipelines/parse-launch.c<br>
+Copyright: <2005> Thomas Vander Stichele <thomas at apestaart dot org><br>
+<2008> Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstcaps.c<br>
+Copyright: 2005, Andy Wingo <wingo@pobox.com><br>
+<2005> Thomas Vander Stichele <thomas at apestaart dot org><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/queue.c<br>
+Copyright: <2006> Stefan Kost <ensonic@users.sf.net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstpoll.c<br>
+Copyright: <2007> Peter Kjellerstedt <pkj@axis.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/tee.c<br>
+Copyright: <2007> Wim Taymans <wim dot taymans at gmail dot com><br>
+<2008> Christian Berentsen <christian.berentsen@tandberg.com><br>
+<2008> Ole Andr? Vadla Ravnås <ole.andre.ravnas@tandberg.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/capsfilter.c<br>
+Copyright: <2008> Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/benchmarks/gstbufferstress.c<br>
+Copyright: <2009> Edward Hervey <bilboed@bilboed.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/libs/bytewriter.c<br>
+Copyright: <2009> Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/benchmarks/gstclockstress.c<br>
+Copyright: <2009> Wim Taymans <wim taymans at gmail dot com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstatomicqueue.c<br>
+Copyright: <2011> Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstmemory.c<br>
+Copyright: <2012> Wim Taymans <wim.taymans at gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/libs/collectpads2.c<br>
+Copyright: 2006, Alessandro Decina <alessandro@nnva.org><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/benchmarks/complexity.c<br>
+Copyright: 2004, Benjamin Otte <otte@gnome.org><br>
+2005, Andy Wingo <wingo@pobox.com><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/net/gstnettimeprovider.h<br>
+Copyright: 2005, Andy Wingo <wingo@pobox.com><br>
+2012, Collabora Ltd. <tim.muller@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/net/gstnettimepacket.c<br>
+Copyright: 2005, Andy Wingo <wingo@pobox.com><br>
+2010, Tim-Philipp Müller <tim centricular net><br>
+2012, Collabora Ltd. <tim.muller@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: plugins/elements/gstinputselector.c<br>
+Copyright: 2003, Julien Moutte <julien@moutte.net><br>
+2005, Jan Schmidt <thaytan@mad.scientist.com><br>
+2005, Ronald S. Bultje <rbultje@ronald.bitfreak.net><br>
+2007, Andy Wingo <wingo@pobox.com><br>
+2007, Wim Taymans <wim.taymans@gmail.com><br>
+2008, Nokia Corporation. (contact <stefan.kost@nokia.com>)<br>
+2011, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstbus.c<br>
+Copyright: 2005, Andy Wingo <wingo@pobox.com><br>
+2007, Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstdatetime.c<br>
+Copyright: 2010, Christian Hergert <chris@dronelabs.com><br>
+2010, Thiago Santos <thiago.sousa.santos@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/pipelines/seek.c<br>
+Copyright: 2012, Collabora Ltd<br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/valve.c<br>
+Copyright: 2009, Collabora Ltd<br>
+2009, Nokia Corp<br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstplugin.c<br>
+Copyright: 2004, Thomas Vander Stichele <thomas at apestaart dot org><br>
+2005, David Schleef <ds@schleef.org><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/check/gstconsistencychecker.c<br>
+Copyright: 2009, Edward Hervey <bilboed@bilboed.com><br>
+2012, Stefan Sauer <ensonic@users.sf.net><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstatomicqueue.h<br>
+Copyright: 2009-2010, Edward Hervey <bilboed@bilboed.com><br>
+2011, Wim Taymans <wim.taymans@gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: plugins/elements/gstmultiqueue.c<br>
+Copyright: 2006, Edward Hervey <edward@fluendo.com><br>
+2007, Jan Schmidt <jan@fluendo.com><br>
+2007, Wim Taymans <wim@fluendo.com><br>
+2011, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstpoll.c<br>
+Copyright: 1999, Erik Walthinsen <omega@cse.ogi.edu><br>
+2004, Wim Taymans <wim.taymans@gmail.com><br>
+2007, Peter Kjellerstedt <pkj@axis.com><br>
+2008, Ole Andr? Vadla Ravn?s <ole.andre.ravnas@tandberg.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gstpoll.h<br>
+Copyright: 1999, Erik Walthinsen <omega@cse.ogi.edu><br>
+2004, Wim Taymans <wim.taymans@gmail.com><br>
+2007, Peter Kjellerstedt <pkj@axis.com><br>
+License: LGPL-2+<br>
+<br>
+Files: gst/gettext.h<br>
+Copyright: 1995-1998, 2000-2002, Free Software Foundation, Inc<br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gstbaseparse.c<br>
+Copyright: 2008, Nokia Corporation.<br>
+2008, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+2011, Hewlett-Packard Development Company, L.P<br>
+License: LGPL-2+<br>
+<br>
+Files: plugins/elements/gstinputselector.h<br>
+Copyright: 2003, Julien Moutte <julien@moutte.net><br>
+2005, Ronald S. Bultje <rbultje@ronald.bitfreak.net><br>
+2008, Nokia Corporation. (contact <stefan.kost@nokia.com>)<br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/pipelines/queue-error.c<br>
+Copyright: 2007, Tim-Philipp Müller <tim centricular net><br>
+2009, Mark Nauwelaerts <mnauw users sourceforge net><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gstcollectpads2.c<br>
+Copyright: 2005, Wim Taymans <wim@fluendo.com><br>
+2008, Mark Nauwelaerts <mnauw@users.sourceforge.net><br>
+2010, Sebastian Dröge <sebastian.droege@collabora.co.uk><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gstcollectpads2.h<br>
+Copyright: 2005, Wim Taymans <wim@fluendo.com><br>
+2008, Mark Nauwelaerts <mnauw@users.sourceforge.net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstpreset.c<br>
+Copyright: 2008, Nokia Corporation and its subsidary(-ies)<br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gstbaseparse.h<br>
+Copyright: 2008, Nokia Corporation.<br>
+License: LGPL-2+<br>
+<br>
+Files: gst/glib-compat.h<br>
+Copyright: 1995-1997, Peter Mattis, Spencer Kimball and Josh MacDonald<br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/base/gstindex.c<br>
+Copyright: 2001, RidgeRun (http://www.ridgerun.com/)<br>
+License: LGPL-2+<br>
+<br>
+Files: tests/benchmarks/init.c<br>
+Copyright: 2006, Stefan Kost <stefan.kost@nokia.com><br>
+License: LGPL-2+<br>
+<br>
+Files: libs/gst/check/gstcheck.c<br>
+Copyright: 2004,2006, Thomas Vander Stichele <thomas at apestaart dot org><br>
+2008, Thijs Vermeir <thijsvermeir@gmail.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/filesink.c<br>
+Copyright: 2006, Thomas Vander Stichele <thomas at apestaart dot org><br>
+2007, Tim-Philipp Müller <tim centricular net><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/gst/gstbin.c<br>
+Copyright: 2005, Thomas Vander Stichele <thomas at apestaart dot org><br>
+2005, Wim Taymans <wim@fluendo.com><br>
+License: LGPL-2+<br>
+<br>
+Files: tests/check/elements/funnel.c<br>
+Copyright: 2008, Collabora, Nokia<br>
+License: LGPL-2.1+<br>
+<br>
+Copyright:<br>
+<br>
+This package is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2 of the License, or (at your option) any later version.<br>
+<br>
+This package is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU Lesser General Public<br>
+License along with this package; if not, write to the Free Software<br>
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA<br>
+<br>
+On Debian GNU/Linux systems, the complete text of the GNU Lesser General<br>
+Public License can be found in `/usr/share/common-licenses/LGPL'.<br>
+<br>
+   </body>
+</html>

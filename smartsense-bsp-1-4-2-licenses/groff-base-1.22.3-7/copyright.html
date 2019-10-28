@@ -1,0 +1,357 @@
+<html>
+   <body>
+This is the Debian GNU/Linux prepackaged version of the GNU groff<br>
+document formatting system.<br>
+GNU groff was written by James Clark <jjc@jclark.com>.<br>
+It is now maintained by Ted Harding <ted.harding@nessie.mcc.ac.uk> and<br>
+Werner Lemberg <wl@gnu.org>.<br>
+<br>
+This Debian package was previously maintained by Fabrizio Polacco<br>
+<fpolacco@debian.org>.<br>
+It is now maintained by Colin Watson <cjwatson@debian.org>.<br>
+<br>
+The original tarball came from <URL:ftp://groff.ffii.org/pub/groff/>:<br>
+48fa768dd6fdeb7968041dd5ae8e2b02  groff-1.20.1.tar.gz<br>
+and was simply renamed to groff_1.20.1.orig.tar.gz.<br>
+<br>
+Some patches have been applied to groff outside the debian directory.<br>
+<br>
+The Debian diff also appends /usr/share/groff/tmac to the default macro path<br>
+for compatibility with versions of groff earlier than 1.17 (patch by Colin<br>
+Watson).<br>
+<br>
+=========================================================================<br>
+<br>
+Copyright (C) 1989-2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,<br>
+2008, 2009<br>
+Free Software Foundation, Inc.<br>
+Written by James Clark (jjc@jclark.com)<br>
+<br>
+This file is part of groff.<br>
+<br>
+groff is free software; you can redistribute it and/or modify it under<br>
+the terms of the GNU General Public License as published by the Free<br>
+Software Foundation, either version 3 of the License, or<br>
+(at your option) any later version.<br>
+<br>
+groff is distributed in the hope that it will be useful, but WITHOUT ANY<br>
+WARRANTY; without even the implied warranty of MERCHANTABILITY or<br>
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License<br>
+for more details.<br>
+<br>
+You should have received a copy of the GNU General Public License<br>
+along with this program. If not, see <http://www.gnu.org/licenses/>.<br>
+<br>
+On Debian systems, a copy of the GNU General Public License is available<br>
+in /usr/share/common-licenses/GPL-3 as part of the base-files package.<br>
+<br>
+=========================================================================<br>
+<br>
+Included in this release are implementations of troff, pic, eqn, tbl,<br>
+grn, refer, -man, -mdoc, and -ms macros, and drivers for PostScript, TeX<br>
+dvi format, HP LaserJet 4 printers, Canon CAPSL printers, HTML format<br>
+(still alpha), and typewriter-like devices.  Also included is a modified<br>
+version of the Berkeley -me macros, an enhanced version of the X11<br>
+xditview previewer, and an implementation of the -mm macros contributed<br>
+by Joergen Haegg (jh@axis.se).<br>
+<br>
+xditview is copyrighted by MIT under the usual X terms.<br>
+<br>
+/*<br>
+* Copyright 1991 Massachusetts Institute of Technology<br>
+*<br>
+* Permission to use, copy, modify, distribute, and sell this software and its<br>
+* documentation for any purpose is hereby granted without fee, provided that<br>
+* the above copyright notice appear in all copies and that both that<br>
+* copyright notice and this permission notice appear in supporting<br>
+* documentation, and that the name of M.I.T. not be used in advertising or<br>
+* publicity pertaining to distribution of the software without specific,<br>
+* written prior permission.  M.I.T. makes no representations about the<br>
+* suitability of this software for any purpose.  It is provided "as is"<br>
+* without express or implied warranty.<br>
+*<br>
+* M.I.T. DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL<br>
+* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL M.I.T.<br>
+* BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES<br>
+* WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION<br>
+* OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN<br>
+* CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.<br>
+*<br>
+*/<br>
+<br>
+=========================================================================<br>
+<br>
+The groff manual is also distributed under the terms of the GNU Free<br>
+Documentation License version 1.3.  On Debian systems, this is available in<br>
+/usr/share/common-licenses/GFDL-1.3 as part of the base-files package.<br>
+However, Debian does not consider this free when the Front-Cover Texts or<br>
+Back-Cover Texts options are used.  groff is distributed with a LICENSES<br>
+file containing the following text (excerpted):<br>
+<br>
+The groff program is a free software project.  It is licensed under the GNU<br>
+General Public License (GNU GPL), version 3 or later.<br>
+<br>
+The file COPYING in the top directory of the groff source package contains a<br>
+copy of the GPL that was downloaded from the GNU web site<br>
+http://www.gnu.org/copyleft/gpl.txt at 3 jan 2009.<br>
+<br>
+All files part of groff are licensed under this version of the GPL (or<br>
+licenses which are compatible with the GPL). You are free to choose<br>
+version 3 or any subsequent version of the GPL.<br>
+<br>
+I e-mailed the upstream maintainer to clarify the intent of this. Here is<br>
+the relevant part of the reply:<br>
+<br>
+From: Werner LEMBERG <wl@gnu.org><br>
+To: cjwatson@debian.org<br>
+Subject: Re: Clarifying the scope of groff/LICENSE<br>
+Date: Thu, 18 Nov 2004 00:19:52 +0100 (CET)<br>
+<br>
+> Since "compatible with the GPL" means to all intents and purposes<br>
+> "may be distributed under the terms of the GPL", can I correctly<br>
+> assume that groff/LICENSE grants me permission to distribute<br>
+> groff/doc/groff.texinfo and groff/doc/pic.ms under the terms of the<br>
+> GPL?<br>
+<br>
+This is the intention, of course.<br>
+<br>
+> If not, is the FDL thing from yesteryear going to be resolved some<br>
+> other way?  I just want to make sure that I don't get forced to<br>
+> remove the groff manual, since that would really diminish the<br>
+> quality of the Debian package IMHO.<br>
+<br>
+Sigh.  I haven't found time to revert the FDL stuff back to GPL.  It<br>
+basically affects only Bernd Warken and me, and we have both agreed to<br>
+return to GPL in case FDL makes problems.<br>
+<br>
+(Note that this e-mail predates the current wording in LICENSES.)<br>
+<br>
+It is therefore my understanding that the copyright holders of the groff<br>
+documentation intend it to be distributable under the terms of the GPL<br>
+version 3 or later.  The reference above to the FDL text in<br>
+/usr/share/common-licenses/ is for information only.<br>
+<br>
+=========================================================================<br>
+<br>
+The following material is based on that in the groff LICENSES file, which<br>
+itself is licensed as follows:<br>
+<br>
+Copyright 2003, 2006, 2007, 2009<br>
+Free Software Foundation, Inc.<br>
+<br>
+Copying and distribution of this file, with or without modification,<br>
+are permitted in any medium without royalty provided the copyright<br>
+notice and this notice are preserved.<br>
+<br>
+=========================================================================<br>
+<br>
+src/libs/snprintf/snprintf.c is distributed under the following terms:<br>
+<br>
+Copyright 1999-2002 Mark Martinec. All rights reserved.<br>
+<br>
+This program is free software; it is dual licensed, the terms of the<br>
+"Frontier Artistic License" or the "GNU General Public License"<br>
+can be chosen at your discretion. The chosen license then applies<br>
+solely and in its entirety. Both licenses come with this Kit.<br>
+<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty<br>
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br>
+See the license for more details.<br>
+<br>
+You should have received a copy of the "Frontier Artistic License"<br>
+with this Kit in the file named LICENSE.txt, and the copy of<br>
+the "GNU General Public License" in the file named LICENSE-GPL.txt.<br>
+If not, I'll be glad to provide one.<br>
+<br>
+=========================================================================<br>
+<br>
+The grn preprocessor was written by Barry Roitblat <barry@rentonww.com> and<br>
+David Slattengren <slatteng@Xinet.COM>. These files have been part of the<br>
+original Berkeley ditroff distribution, without AT&T code, and are in the<br>
+public domain.<br>
+<br>
+=========================================================================<br>
+<br>
+The gxditview output device was based on X11's xditview program and thus has<br>
+the X licence.<br>
+<br>
+Copyright 1991 Massachusetts Institute of Technology<br>
+<br>
+Permission to use, copy, modify, distribute, and sell this software and its<br>
+documentation for any purpose is hereby granted without fee, provided that<br>
+the above copyright notice appear in all copies and that both that<br>
+copyright notice and this permission notice appear in supporting<br>
+documentation, and that the name of M.I.T. not be used in advertising or<br>
+publicity pertaining to distribution of the software without specific,<br>
+written prior permission.  M.I.T. makes no representations about the<br>
+suitability of this software for any purpose.  It is provided "as is"<br>
+without express or implied warranty.<br>
+<br>
+M.I.T. DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL M.I.T.<br>
+BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES<br>
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION<br>
+OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN<br>
+CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.<br>
+<br>
+=========================================================================<br>
+<br>
+The -mdoc and -me macro sets are distributed under the terms of the BSD<br>
+licence.<br>
+<br>
+Copyright (c) 1991, 1993<br>
+The Regents of the University of California.  All rights reserved.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. [Deleted.  See<br>
+ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change]<br>
+4. Neither the name of the University nor the names of its contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+=========================================================================<br>
+<br>
+The file tmac/hyphen.us is identical to the file hyphen.tex, part of the TeX<br>
+system written by Donald E. Knuth; the master file can be found at:<br>
+<br>
+ftp://labrea.stanford.edu/pub/tex/dist/lib/hyphen.tex<br>
+<br>
+It has been renamed for consistency, i.e., to make patterns available under<br>
+the filenames hyphen.<language>, e.g. hyphen.de or hyphen.uk.<br>
+<br>
+Unlimited copying and redistribution of this file are permitted as long<br>
+as this file is not modified. Modifications are permitted, but only if<br>
+the resulting file is not named hyphen.tex.<br>
+<br>
+=========================================================================<br>
+<br>
+The file tmac/hyphen.fr contains the same patterns as the file frhyph.tex<br>
+(for TeX), which can be found at:<br>
+<br>
+http://dante.ctan.org/CTAN/language/hyphenation/frhyph.tex<br>
+<br>
+The patterns have been converted to a format groff can understand.<br>
+<br>
+frhyph.tex % French hyphenation patterns<br>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<br>
+This file is available for free and can used and redistributed<br>
+asis for free. Modified versions should have another name.<br>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<br>
+% message{frhyph.tex - French hyphenation patterns (V2.11) <2002/01/16>}<br>
+<br>
+=========================================================================<br>
+<br>
+The file tmac/hyphen.sv is identical to the file svhyph.tex, which can be<br>
+found at:<br>
+<br>
+http://dante.ctan.org/CTAN/language/hyphenation/svhyph.tex<br>
+<br>
+Copyright 1994 by Jan Michael Rynning. All rights reserved.<br>
+This program may be distributed and/or modified under the conditions of<br>
+the LaTeX Project Public License, either version 1.2 of this license or<br>
+(at your option) any later version.  The latest version of this license<br>
+is in http://www.latex-project.org/lppl.txt and version 1.2 or later is<br>
+part of all distributions of LaTeX version 1999/12/01 or later.<br>
+<br>
+=========================================================================<br>
+<br>
+The files tmac/hyphen.det and tmac/hyphen.den contain the same patterns as<br>
+the files dehyphn.tex and dehypht.tex (for TeX), which can be found at:<br>
+<br>
+http://dante.ctan.org/CTAN/language/hyphenation/dehyphn.tex<br>
+http://dante.ctan.org/CTAN/language/hyphenation/dehypht.tex<br>
+<br>
+The patterns have been converted to a format groff can understand.<br>
+<br>
+Copyright (C) 1988,1991 Rechenzentrum der Ruhr-Universitaet Bochum<br>
+[german hyphen patterns]<br>
+Copyright (C) 1993,1994,1999 Bernd Raichle/DANTE e.V.<br>
+[macros, adaption for TeX 2]<br>
+Copyright (C) 1998--2001 Walter Schmidt<br>
+[adaption to new German orthography]<br>
+<br>
+-----------------------------------------------------------------<br>
+IMPORTANT NOTICE:<br>
+<br>
+This program can be redistributed and/or modified under the terms<br>
+of the LaTeX Project Public License Distributed from CTAN<br>
+archives in directory macros/latex/base/lppl.txt; either<br>
+version 1 of the License, or any later version.<br>
+-----------------------------------------------------------------<br>
+<br>
+=========================================================================<br>
+<br>
+The file tmac/hyphenex.det is identical to the file dehyphtex.tex, which can<br>
+be found at:<br>
+<br>
+http://dante.ctan.org/CTAN/language/hyphenation/dehyphtex.tex<br>
+<br>
+Copyright (C) 2005, 2006 Werner Lemberg <wl@gnu.org><br>
+<br>
+This program can be redistributed and/or modified under the terms<br>
+of the LaTeX Project Public License Distributed from CTAN<br>
+archives in directory macros/latex/base/lppl.txt; either<br>
+version 1 of the License, or any later version.<br>
+<br>
+=========================================================================<br>
+<br>
+The file tmac/hyphen.cs contains the same patterns as the file czhyphen.tex<br>
+(for TeX), which can be found in the archive:<br>
+<br>
+http://dante.ctan.org/CTAN/macros/cstex/base/csplain.tar.gz<br>
+<br>
+The patterns have been converted to a format groff can understand.<br>
+<br>
+This is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation; either version 2 of the License, or<br>
+(at your option) any later version.<br>
+<br>
+This file is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU General Public License<br>
+along with this program. If not, see <http://www.gnu.org/licenses/>.<br>
+<br>
+=========================================================================<br>
+<br>
+doc/meintro.me and doc/meref.me are distributed under the following terms:<br>
+<br>
+Copyright (c) 1986 The Regents of the University of California.<br>
+All rights reserved.<br>
+<br>
+Redistribution and use in source and binary forms are permitted<br>
+provided that the above copyright notice and this paragraph are<br>
+duplicated in all such forms and that any documentation,<br>
+advertising materials, and other materials related to such<br>
+distribution and use acknowledge that the software was developed<br>
+by the University of California, Berkeley.  The name of the<br>
+University may not be used to endorse or promote products derived<br>
+from this software without specific prior written permission.<br>
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR<br>
+IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED<br>
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.<br>
+   </body>
+</html>

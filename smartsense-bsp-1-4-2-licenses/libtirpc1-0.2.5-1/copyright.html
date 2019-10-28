@@ -1,0 +1,506 @@
+<html>
+   <body>
+This package was debianized by Steinar H. Gunderson <sesse@debian.org> on<br>
+Thu, 25 Jun 2009 20:21:55 +0200.<br>
+<br>
+It was downloaded from<br>
+<br>
+http://sourceforge.net/projects/libtirpc<br>
+<br>
+Upstream authors:<br>
+<br>
+Gilles Quillard <gilles.quillard@bull.net><br>
+Antoine Fraticelli <antoine.fraticelli@bull.net><br>
+<br>
+Copyright:<br>
+<br>
+Copyright 1984-1996,1998,2009 Sun Microsystems, Inc.<br>
+Copyright 1989 AT&T<br>
+Copyright 2003 Niels Provos <provos@citi.umich.edu><br>
+Copyright (c) 1982, 1985, 1986, 1988, 1993, 1994 The Regents of the University of California.<br>
+Copyright (c) 1996 Bill Paul <wpaul@ctr.columbia.edu>.<br>
+Copyright (c) 1997,98 The NetBSD Foundation, Inc.<br>
+Copyright (c) 1998 John Birrell <jb@cimlogic.com.au>.<br>
+Copyright (c) 1999,2000,2001 Jonathan Lemon <jlemon@FreeBSD.org><br>
+Copyright (c) 2000 Dug Song <dugsong@UMICH.EDU>.<br>
+Copyright (c) 2000 The Regents of the University of Michigan.<br>
+Copyright (c) 2001 Daniel Eischen <deischen@FreeBSD.org>.<br>
+Copyright (c) 2001 Dima Dorfman.<br>
+Copyright (c) 2002 David Schultz <dschultz@uclink.Berkeley.EDU><br>
+Copyright (c) 2003 Mike Barcroft <mike@FreeBSD.org><br>
+Copyright (c) 2003 Networks Associates Technology, Inc.<br>
+Portions Copyright(C) 1996, Jason Downs.<br>
+<br>
+Licenses:<br>
+<br>
+Sun Industry Standards Source License 1.0<br>
+<br>
+DEFINITIONS<br>
+<br>
+1.1.  "Commercial Use" means distribution or otherwise<br>
+making the Original Code available to a third party.<br>
+<br>
+1.2.  "Contributor Version" means the combination of the<br>
+Original Code, and the Modifications made by that particular<br>
+Contributor.<br>
+<br>
+1.3.  "Electronic Distribution Mechanism" means a mechanism<br>
+generally accepted in the software development community for<br>
+the electronic transfer of data.<br>
+<br>
+1.4.  "Executable" means Original Code in any form other<br>
+than Source Code.<br>
+<br>
+1.5.  "Initial Developer" means the individual or entity<br>
+identified as the Initial Developer in the Source Code<br>
+notice required by 2 (Exhibit A)<br>
+<br>
+1.6.  "Larger Work" means a work which combines Original<br>
+Code or portions thereof with code not governed by the terms<br>
+of this License.<br>
+<br>
+1.7.  "License" means this document.<br>
+<br>
+1.8.  "Licensable" means having the right to grant, to the<br>
+maximum extent possible, whether at the time of the initial<br>
+grant or subsequently acquired, any and all of the rights<br>
+conveyed herein.<br>
+<br>
+1.9.  "Modifications" means any addition to or deletion from<br>
+the substance or structure of either the Original Code or<br>
+any previous Modifications.  A Modification is:<br>
+<br>
+A.  Any addition to or deletion from the contents of a file<br>
+containing Original Code or previous Modifications.<br>
+<br>
+B.  Any new file that contains any part of the Original Code<br>
+or previous Modifications.  .<br>
+<br>
+1.10.  "Original Code" means Source Code of computer<br>
+software code which is described in the Source Code notice<br>
+required by Exhibit A as Original Code.<br>
+<br>
+1.11.  "Patent Claims" means any patent claims, now owned or<br>
+hereafter acquired, including without limitation, method,<br>
+process, and apparatus claims, in any patent Licensable by<br>
+grantor.<br>
+<br>
+1.12.  "Source Code" means the preferred form of the<br>
+Original Code for making modifications to it, including all<br>
+modules it contains, plus any associated interface<br>
+definition files, or scripts used to control compilation and<br>
+installation of an Executable.<br>
+<br>
+1.13.  "Standards" means the standard identified in Exhibit<br>
+B or a subsequent version of such standard.<br>
+<br>
+1.14.  "You" or "Your" means an individual or a legal entity<br>
+exercising rights under, and complying with all of the terms<br>
+of, this License or a future version of this License issued<br>
+under Section 6.1.  For legal entities, "You" includes any<br>
+entity which controls, is controlled by, or is under common<br>
+control with You.  For purposes of this definition,<br>
+"control" means (a) the power, direct or indirect, to cause<br>
+the direction or management of such entity, whether by<br>
+contract or otherwise, or (b) ownership of more than fifty<br>
+percent (50%) of the outstanding shares or beneficial<br>
+ownership of such entity.<br>
+<br>
+2.0 SOURCE CODE LICENSE<br>
+<br>
+2.1 The Initial Developer Grant:  The Initial Developer<br>
+hereby grants You a world-wide, royalty-free, non-exclusive<br>
+license, subject to third party intellectual property<br>
+claims:<br>
+<br>
+a) under intellectual property rights (other than patent or<br>
+trademark) Licensable by Initial Developer to use,<br>
+reproduce, modify, display, perform, sub license and<br>
+distribute the Original Code (or portions thereof )with or<br>
+without Modifications, and/or as part of a Larger Work; and<br>
+<br>
+b) under Patents Claims infringed by the making, using or<br>
+selling of Original Code, to make, have made, use, practice,<br>
+sell, and offer for sale, and/or otherwise dispose of the<br>
+Original Code (or portions thereof).<br>
+<br>
+c) the licenses granted in this Section 2.1(a ) and (b) are<br>
+effective on the date Initial Developer first distributes<br>
+Original Code under the terms of this License.<br>
+<br>
+d) Notwithstanding Section 2.1(b )above, no patent license<br>
+is granted:  1) for code that You delete from the Original<br>
+Code; 2) separate from the Original Code; or 3) for<br>
+infringements caused by:  i) the modification of the<br>
+Original Code or<br>
+<br>
+ii) the combination of the Original Code with other software<br>
+or devices, including but not limited to Modifications.<br>
+<br>
+3.0 DISTRIBUTION OBLIGATIONS<br>
+<br>
+3.1 Application of License.  The Source Code version of<br>
+Original Code may be distributed only under the terms of<br>
+this License or a future version of this License released<br>
+under Section 6.1, and You must include a copy of this<br>
+License with every copy of the Source Code You distribute.<br>
+You may not offer or impose any terms on any Source Code<br>
+version that alters or restricts the applicable version of<br>
+this License or the recipient's rights hereunder.  Your<br>
+license for shipment of the Contributor Version is<br>
+conditioned upon your full compliance with this Section.<br>
+The Modifications which you create must comply with all<br>
+requirements set out by the Standards body in effect 120<br>
+days before You ship the Contributor Version.  In the event<br>
+that the Modifications do not meet such requirements, You<br>
+agree to publish (i) any deviation from the Standards<br>
+protocol resulting from implementation of your Modifications<br>
+and (ii) a reference implementation of Your Modifications,<br>
+and to make any such deviation and reference implementation<br>
+available to all third parties under the same terms as the<br>
+license on a royalty free basis within thirty (30) days of<br>
+Your first customer shipment of Your Modifications.<br>
+<br>
+3.2 Required Notices.  You must duplicate the notice in<br>
+Exhibit A in each file of the Source Code.  If it is not<br>
+possible to put such notice in a particular Source Code file<br>
+due to its structure, then You must include such notice in a<br>
+location (such as a relevant directory ) where a user would<br>
+be likely to look for such a notice.  If You created one or<br>
+more Modifications ) You may add your name as a Contributor<br>
+to the notice described in Exhibit A.  You must also<br>
+duplicate this License in any documentation for the Source<br>
+Code where You describe recipients' rights or ownership<br>
+rights relating to Initial Code.  You may choose to offer,<br>
+and to charge a fee for, warranty, support, indemnity or<br>
+liability obligations to one or more recipients of Your<br>
+version of the Code.  However, You may do so only<br>
+<br>
+on Your own behalf, and not on behalf of the Initial<br>
+Developer.  You must make it absolutely clear than any such<br>
+warranty, support, indemnity or liability obligation is<br>
+offered by You alone, and You hereby agree to indemnify the<br>
+Initial Developer for any liability incurred by the Initial<br>
+Developer as a result of warranty, support, indemnity or<br>
+liability terms You offer.<br>
+<br>
+3.3 Distribution of Executable Versions.  You may distribute<br>
+Original Code in Executable and Source form only if the<br>
+requirements of Section 3.1 and 3.2 have been met for that<br>
+Original Code, and if You include a notice stating that the<br>
+Source Code version of the Original Code is available under<br>
+the terms of this License.  The notice must be conspicuously<br>
+included in any notice in an Executable or Source versions,<br>
+related documentation or collateral in which You describe<br>
+recipients' rights relating to the Original Code.  You may<br>
+distribute the Executable and Source versions of Your<br>
+version of the Code or ownership rights under a license of<br>
+Your choice, which may contain terms different from this<br>
+License, provided that You are in compliance with the terms<br>
+of this License.  If You distribute the Executable and<br>
+Source versions under a different license You must make it<br>
+absolutely clear that any terms which differ from this<br>
+License are offered by You alone, not by the Initial<br>
+Developer .  You hereby agree to indemnify the Initial<br>
+Developer for any liability incurred by the Initial<br>
+Developer as a result of any such terms You offer .<br>
+<br>
+3.4 Larger Works.  You may create a Larger Work by combining<br>
+Original Code with other code not governed by the terms of<br>
+this License and distribute the Larger Work as a single<br>
+product.  In such a case, You must make sure the<br>
+requirements of this License are fulfilled for the Original<br>
+Code.<br>
+<br>
+4.0 INABILITY TO COMPLY DUE TO STATUTE OR REGULATION<br>
+<br>
+If it is impossible for You to comply with any of the terms<br>
+of this License with respect to some or all of the Original<br>
+Code due to statute, judicial order, or regulation then You<br>
+must:<br>
+<br>
+a) comply with the terms of this License to the maximum<br>
+extent possible; and<br>
+<br>
+b) describe the limitations and the code they affect.  Such<br>
+description must be included in the LEGAL file described in<br>
+Section 3.2 and must be included with all distributions of<br>
+the Source Code.  Except to the extent prohibited by statute<br>
+or regulation, such description must be sufficiently<br>
+detailed for a recipient of ordinary skill to be able to<br>
+understand it.<br>
+<br>
+5.0 APPLICATION OF THIS LICENSE This License applies to code<br>
+to which the Initial Developer has attached the notice in<br>
+Exhibit A and to related Modifications as set out in Section<br>
+3.1.<br>
+<br>
+6.0 VERSIONS OF THE LICENSE<br>
+<br>
+6.1 New Versions.  Sun Microsystems, Inc.  Sun may publish<br>
+revised and/or new versions of the License from time to<br>
+time.  Each version will be given a distinguishing version<br>
+number .<br>
+<br>
+6.2 Effect of New Versions.  Once Original Code has been<br>
+published under a particular version of the License, You may<br>
+always continue to use it under the terms of that version.<br>
+You may also choose to use such Original Code under the<br>
+terms of any subsequent version of the License published by<br>
+Sun.  No one other than Sun has the right to modify the<br>
+terms applicable to Original Code.<br>
+<br>
+7.  DISCLAIMER OF W ARRANTY.  ORIGINAL CODE IS PROVIDED<br>
+UNDER THIS LICENSE ON AN "AS IS" BASIS, WITHOUT WARRANTY OF<br>
+ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT<br>
+LIMITATION, WARRANTIES THAT THE ORIGINAL CODE IS FREE OF<br>
+DEFECTS, MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR<br>
+NON-INFRINGING.  THE ENTIRE RISK AS TO THE QUALITY AND<br>
+PERFORMANCE OF THE ORIGINAL CODE IS WITH YOU.  SHOULD ANY<br>
+ORIGINAL CODE PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE<br>
+INITIAL DEVELOPER )ASSUME THE COST OF ANY NECESSARY<br>
+SERVICING, REPAIR OR CORRECTION.  THIS DISCLAIMER OF<br>
+WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENSE.  NO<br>
+USE OF ANY ORIGINAL CODE IS AUTHORIZED HEREUNDER EXCEPT<br>
+UNDER THIS DISCLAIMER.<br>
+<br>
+8.0 TERMINATION<br>
+<br>
+8.1 This License and the rights granted hereunder will<br>
+terminate automatically if You fail to comply with terms<br>
+herein and fail to cure such breach within 30 days of<br>
+becoming aware of the breach.  All sublicenses to the<br>
+Original Code which are properly granted shall survive any<br>
+termination of this License.  Provisions which, by their<br>
+nature, must remain in effect beyond the termination of this<br>
+License shall survive.<br>
+<br>
+8.2 .In the event of termination under Section 8.1 above,<br>
+all end user license agreements (excluding distributors and<br>
+resellers) which have been validly granted by You or any<br>
+distributor hereunder prior to termination shall survive<br>
+termination.<br>
+<br>
+9.0 LIMIT OF LIABILITY UNDER NO CIRCUMSTANCES AND UNDER NO<br>
+LEGAL THEORY, WHETHER TORT (INCLUDING NEGLIGENCE) ,CONTRACT,<br>
+OR OTHER WISE, SHALL YOU, THE INITIAL DEVELOPER, ANY OTHER<br>
+CONTRIBUTOR, OR ANY DISTRIBUTOR OF ORIGINAL CODE, OR ANY<br>
+SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR<br>
+ANY INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES<br>
+OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR<br>
+LOSS OF GOOD WILL, WORK STOPPAGE, COMPUTER FAILURE OR<br>
+MALFUNCTION, OR ANY AND ALL OTHER COMMERCIAL DAMAGES OR<br>
+LOSSES, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE<br>
+POSSIBILITY OF SUCH DAMAGES.  THIS LIMITATION OF LIABILITY<br>
+SHALL NOT APPLY TO LIABILITY FOR DEATH OR PERSONAL INJURY<br>
+RESULTING FROM SUCH PARTYS NEGLIGENCE TO THE EXTENT<br>
+APPLICABLE LAW PROHIBITS SUCH LIMITATION.  SOME<br>
+JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF<br>
+INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS EXCLUSION AND<br>
+LIMITATION MAY NOT APPLY TO YOU.<br>
+<br>
+10.0 U .S.  GOVERNMENT END USERS U.S.  Government:  If this<br>
+Software is being acquired by or on behalf of the U.S.<br>
+Government or by a U.S.  Government prime contractor or<br>
+subcontractor (at any tier), then the Government's rights in<br>
+the Software and accompanying documentation shall be only as<br>
+set forth in this license; this is in accordance with 48 C.F<br>
+.R.  227.7201 through 227.7202-4 (for Department of Defense<br>
+(DoD) acquisitions )and with 48 C.F.R.2.101 and 12.212( for<br>
+non-DoD acquisitions).<br>
+<br>
+11.0 MISCELLANEOUS This License represents the complete<br>
+agreement concerning subject matter hereof.  If any<br>
+provision of this License is held to be unenforceable, such<br>
+provision shall be reformed only to the extent necessary to<br>
+make it enforceable.  This License shall be governed by<br>
+California law provisions (except to the extent applicable<br>
+law, if any, provides otherwise), excluding its<br>
+conflict-of-law provisions.  With respect to disputes in<br>
+which at least one party is a citizen of, or an entity<br>
+chartered or registered to do business in the United States<br>
+of America, any litigation relating to this License shall be<br>
+subject to the jurisdiction of the Federal Courts of the<br>
+Northern District of California, with venue lying in Santa<br>
+Clara County, California, with the losing party responsible<br>
+for costs, including without limitation, court costs and<br>
+reasonable attorneys fees and expenses.  The application of<br>
+the United Nations Convention on Contracts for the<br>
+International Sale of Goods is expressly excluded.  Any law<br>
+or regulation which provides that the language of a contract<br>
+shall be construed against the drafter shall not apply to<br>
+this License.<br>
+<br>
+EXHIBIT A - Sun Standards<br>
+<br>
+"The contents of this file are subject to the Sun Standards<br>
+License Version 1.0 the (the "License";) You may not use<br>
+this file except in compliance with the License.  You may<br>
+obtain a copy of the License at<br>
+_______________________________.<br>
+<br>
+Software distributed under the License is distributed on<br>
+an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either<br>
+express or implied.  See the License for the specific<br>
+language governing rights and limitations under the License.<br>
+<br>
+The Original Code is Copyright 1998 by Sun Microsystems, Inc<br>
+<br>
+The Initial Developer of the Original Code is:  Sun<br>
+Microsystems, Inc.<br>
+<br>
+Portions created by _____________________________ are<br>
+Copyright ______________________________.<br>
+<br>
+All Rights Reserved.<br>
+<br>
+Contributors:  ______________________________________.<br>
+<br>
+EXHIBIT B - Sun Standards<br>
+<br>
+The Standard is defined as the following IETF RFCs:<br>
+<br>
+RFC1831:  RPC:  Remote Procedure Call Protocol Specification<br>
+Version 2 RFC1832:  XDR:  External Data REpresentation<br>
+Standard RFC1833:  Binding Protocols for ONC RPC Version 2<br>
+RFC2078:  Generic Security Service Application Program<br>
+Interface, Version 2 RFC2203:  RPCSEC_GSS Protocol<br>
+Specification RFC2695:  Authentication Mechanisms for ONC RPC<br>
+<br>
+<br>
+<br>
+Copyright (c) Copyright (c) Bull S.A.  2005  All Rights Reserved.<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. The name of the author may not be used to endorse or promote products<br>
+derived from this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR<br>
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES<br>
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<br>
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,<br>
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT<br>
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF<br>
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+<br>
+<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+<br>
+<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. Neither the name of the University nor the names of its<br>
+contributors may be used to endorse or promote products derived<br>
+from this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED<br>
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF<br>
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br>
+DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF<br>
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR<br>
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF<br>
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+<br>
+<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. All advertising materials mentioning features or use of this software<br>
+must display the following acknowledgement:<br>
+This product includes software developed by Bill Paul.<br>
+4. Neither the name of the author nor the names of any co-contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY Bill Paul AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL Bill Paul OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are met:<br>
+- Redistributions of source code must retain the above copyright notice,<br>
+this list of conditions and the following disclaimer.<br>
+- Redistributions in binary form must reproduce the above copyright notice,<br>
+this list of conditions and the following disclaimer in the documentation<br>
+and/or other materials provided with the distribution.<br>
+- Neither the name of Sun Microsystems, Inc. nor the names of its<br>
+contributors may be used to endorse or promote products derived<br>
+from this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"<br>
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE<br>
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF<br>
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN<br>
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)<br>
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+<br>
+The Debian packaging is copyright 2009, Steinar H. Gunderson <sesse@debian.org><br>
+and is licensed under the GPLv2, see `/usr/share/common-licenses/GPL-2'.<br>
+   </body>
+</html>

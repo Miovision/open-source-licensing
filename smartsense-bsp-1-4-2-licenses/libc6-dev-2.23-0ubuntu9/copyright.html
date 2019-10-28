@@ -1,0 +1,513 @@
+<html>
+   <body>
+This is the Debian prepackaged version of the GNU C Library version 2.23.<br>
+<br>
+It was put together by the GNU Libc Maintainers <debian-glibc@lists.debian.org><br>
+from <git://sourceware.org/git/glibc.git><br>
+<br>
+* Most of the GNU C library is under the following copyright:<br>
+<br>
+Copyright (C) 1991-2015 Free Software Foundation, Inc.<br>
+<br>
+The GNU C Library is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+The GNU C Library is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU Lesser General Public<br>
+License along with the GNU C Library; if not, write to the Free<br>
+Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA<br>
+02110-1301 USA<br>
+<br>
+On Debian systems, the complete text of the GNU Library<br>
+General Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.<br>
+<br>
+* The utilities associated with GNU C library is under the following<br>
+copyright:<br>
+<br>
+Copyright (C) 1991-2015 Free Software Foundation, Inc.<br>
+<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published<br>
+by the Free Software Foundation; version 2 of the License, or<br>
+(at your option) any later version.<br>
+<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU General Public License<br>
+along with this program; if not, write to the Free Software Foundation,<br>
+Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.<br>
+<br>
+On Debian systems, the complete text of the GNU Library<br>
+General Public License can be found in `/usr/share/common-licenses/GPL-2'.<br>
+<br>
+* All code incorporated from 4.4 BSD is distributed under the following<br>
+license:<br>
+<br>
+Copyright (C) 1991 Regents of the University of California.<br>
+All rights reserved.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. [This condition was removed.]<br>
+4. Neither the name of the University nor the names of its contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+* The DNS resolver code, taken from BIND 4.9.5, is copyrighted both by<br>
+UC Berkeley and by Digital Equipment Corporation.  The DEC portions<br>
+are under the following license:<br>
+<br>
+Portions Copyright (C) 1993 by Digital Equipment Corporation.<br>
+<br>
+Permission to use, copy, modify, and distribute this software for any<br>
+purpose with or without fee is hereby granted, provided that the above<br>
+copyright notice and this permission notice appear in all copies, and<br>
+that the name of Digital Equipment Corporation not be used in<br>
+advertising or publicity pertaining to distribution of the document or<br>
+software without specific, written prior permission.<br>
+<br>
+THE SOFTWARE IS PROVIDED ``AS IS'' AND DIGITAL EQUIPMENT CORP.<br>
+DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.  IN NO EVENT SHALL<br>
+DIGITAL EQUIPMENT CORPORATION BE LIABLE FOR ANY SPECIAL, DIRECT,<br>
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING<br>
+FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,<br>
+NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION<br>
+WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.<br>
+<br>
+* The ISC portions are under the following license:<br>
+<br>
+Portions Copyright (c) 1996-1999 by Internet Software Consortium.<br>
+<br>
+Permission to use, copy, modify, and distribute this software for any<br>
+purpose with or without fee is hereby granted, provided that the above<br>
+copyright notice and this permission notice appear in all copies.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS IS" AND INTERNET SOFTWARE CONSORTIUM DISCLAIMS<br>
+ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES<br>
+OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL INTERNET SOFTWARE<br>
+CONSORTIUM BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL<br>
+DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR<br>
+PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS<br>
+ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS<br>
+SOFTWARE.<br>
+<br>
+* The Sun RPC support (from rpcsrc-4.0) is covered by the following<br>
+license:<br>
+<br>
+Copyright (c) 2010, Oracle America, Inc.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are<br>
+met:<br>
+<br>
+* Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+* Redistributions in binary form must reproduce the above<br>
+copyright notice, this list of conditions and the following<br>
+disclaimer in the documentation and/or other materials<br>
+provided with the distribution.<br>
+* Neither the name of the "Oracle America, Inc." nor the names of its<br>
+contributors may be used to endorse or promote products derived<br>
+from this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS<br>
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE<br>
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,<br>
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE<br>
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,<br>
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+* The following CMU license covers some of the support code for Mach,<br>
+derived from Mach 3.0:<br>
+<br>
+Mach Operating System<br>
+Copyright (C) 1991,1990,1989 Carnegie Mellon University<br>
+All Rights Reserved.<br>
+<br>
+Permission to use, copy, modify and distribute this software and its<br>
+documentation is hereby granted, provided that both the copyright<br>
+notice and this permission notice appear in all copies of the<br>
+software, derivative works or modified versions, and any portions<br>
+thereof, and that both notices appear in supporting documentation.<br>
+<br>
+CARNEGIE MELLON ALLOWS FREE USE OF THIS SOFTWARE IN ITS ``AS IS''<br>
+CONDITION.  CARNEGIE MELLON DISCLAIMS ANY LIABILITY OF ANY KIND FOR<br>
+ANY DAMAGES WHATSOEVER RESULTING FROM THE USE OF THIS SOFTWARE.<br>
+<br>
+Carnegie Mellon requests users of this software to return to<br>
+<br>
+Software Distribution Coordinator<br>
+School of Computer Science<br>
+Carnegie Mellon University<br>
+Pittsburgh PA 15213-3890<br>
+<br>
+or Software.Distribution@CS.CMU.EDU any improvements or<br>
+extensions that they make and grant Carnegie Mellon the rights to<br>
+redistribute these changes.<br>
+<br>
+* The file if_ppp.h is under the following CMU license:<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. Neither the name of the University nor the names of its contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY CARNEGIE MELLON UNIVERSITY AND<br>
+CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,<br>
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF<br>
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<br>
+IN NO EVENT SHALL THE UNIVERSITY OR CONTRIBUTORS BE LIABLE FOR ANY<br>
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE<br>
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER<br>
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR<br>
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN<br>
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+* The following license covers the files from Intel's "Highly Optimized<br>
+Mathematical Functions for Itanium" collection:<br>
+<br>
+Intel License Agreement<br>
+<br>
+Copyright (c) 2000, Intel Corporation<br>
+<br>
+All rights reserved.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are<br>
+met:<br>
+<br>
+* Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+<br>
+* Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+* The name of Intel Corporation may not be used to endorse or promote<br>
+products derived from this software without specific prior written<br>
+permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL INTEL OR<br>
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,<br>
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,<br>
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR<br>
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF<br>
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+* The files inet/getnameinfo.c and sysdeps/posix/getaddrinfo.c are copyright<br>
+(C) by Craig Metz and are distributed under the following license:<br>
+<br>
+/* The Inner Net License, Version 2.00<br>
+<br>
+The author(s) grant permission for redistribution and use in source and<br>
+binary forms, with or without modification, of the software and documentation<br>
+provided that the following conditions are met:<br>
+<br>
+0. If you receive a version of the software that is specifically labelled<br>
+as not being for redistribution (check the version message and/or README),<br>
+you are not permitted to redistribute that version of the software in any<br>
+way or form.<br>
+1. All terms of the all other applicable copyrights and licenses must be<br>
+followed.<br>
+2. Redistributions of source code must retain the authors' copyright<br>
+notice(s), this list of conditions, and the following disclaimer.<br>
+3. Redistributions in binary form must reproduce the authors' copyright<br>
+notice(s), this list of conditions, and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+4. [The copyright holder has authorized the removal of this clause.]<br>
+5. Neither the name(s) of the author(s) nor the names of its contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY ITS AUTHORS AND CONTRIBUTORS ``AS IS'' AND ANY<br>
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br>
+DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE LIABLE FOR ANY<br>
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES<br>
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;<br>
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON<br>
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+If these license terms cause you a real problem, contact the author.  */<br>
+<br>
+* The file sunrpc/des_impl.c is copyright Eric Young:<br>
+<br>
+Copyright (C) 1992 Eric Young<br>
+Collected from libdes and modified for SECURE RPC by Martin Kuck 1994<br>
+This file is distributed under the terms of the GNU Lesser General<br>
+Public License, version 2.1 or later - see the file COPYING.LIB for details.<br>
+If you did not receive a copy of the license with this program, please<br>
+see <http://www.gnu.org/licenses/> to obtain a copy.<br>
+<br>
+* The libidn code is copyright Simon Josefsson, with portions copyright<br>
+The Internet Society, Tom Tromey and Red Hat, Inc.:<br>
+<br>
+Copyright (C) 2002, 2003, 2004, 2011  Simon Josefsson<br>
+<br>
+This file is part of GNU Libidn.<br>
+<br>
+GNU Libidn is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+GNU Libidn is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU Lesser General Public<br>
+License along with GNU Libidn; if not, see <http://www.gnu.org/licenses/>.<br>
+<br>
+* The following notice applies to portions of libidn/nfkc.c:<br>
+<br>
+This file contains functions from GLIB, including gutf8.c and<br>
+gunidecomp.c, all licensed under LGPL and copyright hold by:<br>
+<br>
+Copyright (C) 1999, 2000 Tom Tromey<br>
+Copyright 2000 Red Hat, Inc.<br>
+<br>
+* The following applies to portions of libidn/punycode.c and<br>
+libidn/punycode.h:<br>
+<br>
+This file is derived from RFC 3492bis written by Adam M. Costello.<br>
+<br>
+Disclaimer and license: Regarding this entire document or any<br>
+portion of it (including the pseudocode and C code), the author<br>
+makes no guarantees and is not responsible for any damage resulting<br>
+from its use.  The author grants irrevocable permission to anyone<br>
+to use, modify, and distribute it in any way that does not diminish<br>
+the rights of anyone else to use, modify, and distribute it,<br>
+provided that redistributed derivative works do not contain<br>
+misleading author or version information.  Derivative works need<br>
+not be licensed under similar terms.<br>
+<br>
+Copyright (C) The Internet Society (2003).  All Rights Reserved.<br>
+<br>
+This document and translations of it may be copied and furnished to<br>
+others, and derivative works that comment on or otherwise explain it<br>
+or assist in its implementation may be prepared, copied, published<br>
+and distributed, in whole or in part, without restriction of any<br>
+kind, provided that the above copyright notice and this paragraph are<br>
+included on all such copies and derivative works.  However, this<br>
+document itself may not be modified in any way, such as by removing<br>
+the copyright notice or references to the Internet Society or other<br>
+Internet organizations, except as needed for the purpose of<br>
+developing Internet standards in which case the procedures for<br>
+copyrights defined in the Internet Standards process must be<br>
+followed, or as required to translate it into languages other than<br>
+English.<br>
+<br>
+The limited permissions granted above are perpetual and will not be<br>
+revoked by the Internet Society or its successors or assigns.<br>
+<br>
+This document and the information contained herein is provided on an<br>
+"AS IS" basis and THE INTERNET SOCIETY AND THE INTERNET ENGINEERING<br>
+TASK FORCE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING<br>
+BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION<br>
+HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF<br>
+MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.<br>
+<br>
+* The file inet/rcmd.c is under a UCB copyright and the following:<br>
+<br>
+Copyright (C) 1998 WIDE Project.<br>
+All rights reserved.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. Neither the name of the project nor the names of its contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+* The file posix/runtests.c is copyright Tom Lord:<br>
+<br>
+Copyright 1995 by Tom Lord<br>
+<br>
+All Rights Reserved<br>
+<br>
+Permission to use, copy, modify, and distribute this software and its<br>
+documentation for any purpose and without fee is hereby granted,<br>
+provided that the above copyright notice appear in all copies and that<br>
+both that copyright notice and this permission notice appear in<br>
+supporting documentation, and that the name of the copyright holder not be<br>
+used in advertising or publicity pertaining to distribution of the<br>
+software without specific, written prior permission.<br>
+<br>
+Tom Lord DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,<br>
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO<br>
+EVENT SHALL TOM LORD BE LIABLE FOR ANY SPECIAL, INDIRECT OR<br>
+CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF<br>
+USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR<br>
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR<br>
+PERFORMANCE OF THIS SOFTWARE.<br>
+<br>
+* The posix/rxspencer tests are copyright Henry Spencer:<br>
+<br>
+Copyright 1992, 1993, 1994, 1997 Henry Spencer.  All rights reserved.<br>
+This software is not subject to any license of the American Telephone<br>
+and Telegraph Company or of the Regents of the University of California.<br>
+<br>
+Permission is granted to anyone to use this software for any purpose on<br>
+any computer system, and to alter it and redistribute it, subject<br>
+to the following restrictions:<br>
+<br>
+1. The author is not responsible for the consequences of use of this<br>
+software, no matter how awful, even if they arise from flaws in it.<br>
+<br>
+2. The origin of this software must not be misrepresented, either by<br>
+explicit claim or by omission.  Since few users ever read sources,<br>
+credits must appear in the documentation.<br>
+<br>
+3. Altered versions must be plainly marked as such, and must not be<br>
+misrepresented as being the original software.  Since few users<br>
+ever read sources, credits must appear in the documentation.<br>
+<br>
+4. This notice may not be removed or altered.<br>
+<br>
+* The file posix/PCRE.tests is copyright University of Cambridge:<br>
+<br>
+Copyright (c) 1997-2003 University of Cambridge<br>
+<br>
+Permission is granted to anyone to use this software for any purpose on any<br>
+computer system, and to redistribute it freely, subject to the following<br>
+restrictions:<br>
+<br>
+1. This software is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br>
+<br>
+2. The origin of this software must not be misrepresented, either by<br>
+explicit claim or by omission. In practice, this means that if you use<br>
+PCRE in software that you distribute to others, commercially or<br>
+otherwise, you must put a sentence like this<br>
+<br>
+Regular expression support is provided by the PCRE library package,<br>
+which is open source software, written by Philip Hazel, and copyright<br>
+by the University of Cambridge, England.<br>
+<br>
+somewhere reasonably visible in your documentation and in any relevant<br>
+files or online help data or similar. A reference to the ftp site for<br>
+the source, that is, to<br>
+<br>
+ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/<br>
+<br>
+should also be given in the documentation. However, this condition is not<br>
+intended to apply to whole chains of software. If package A includes PCRE,<br>
+it must acknowledge it, but if package B is software that includes package<br>
+A, the condition is not imposed on package B (unless it uses PCRE<br>
+independently).<br>
+<br>
+3. Altered versions must be plainly marked as such, and must not be<br>
+misrepresented as being the original software.<br>
+<br>
+4. If PCRE is embedded in any software that is released under the GNU<br>
+General Purpose Licence (GPL), or Lesser General Purpose Licence (LGPL),<br>
+then the terms of that licence shall supersede any condition above with<br>
+which it is incompatible.<br>
+<br>
+* Files from Sun fdlibm are copyright Sun Microsystems, Inc.:<br>
+<br>
+Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.<br>
+<br>
+Developed at SunPro, a Sun Microsystems, Inc. business.<br>
+Permission to use, copy, modify, and distribute this<br>
+software is freely granted, provided that this notice<br>
+is preserved.<br>
+<br>
+* Part of stdio-common/tst-printf.c is copyright C E Chew:<br>
+<br>
+(C) Copyright C E Chew<br>
+<br>
+Feel free to copy, use and distribute this software provided:<br>
+<br>
+1. you do not pretend that you wrote it<br>
+2. you leave this copyright notice intact.<br>
+<br>
+* Various long double libm functions are copyright Stephen L. Moshier:<br>
+<br>
+Copyright 2001 by Stephen L. Moshier <moshier@na-net.ornl.gov><br>
+<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+This library is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU Lesser General Public<br>
+License along with this library; if not, see<br>
+<http://www.gnu.org/licenses/>.  */<br>
+   </body>
+</html>

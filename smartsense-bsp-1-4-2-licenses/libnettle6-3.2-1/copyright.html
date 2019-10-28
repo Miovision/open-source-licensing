@@ -1,0 +1,352 @@
+<html>
+   <body>
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/<br>
+Upstream-Name: Nettle<br>
+Upstream-Contact: Niels Möller <nisse@lysator.liu.se><br>
+Source: http://www.lysator.liu.se/~nisse/nettle/<br>
+Copyright: © 2001-2011 Niels Möller<br>
+Some parts are Copyright © the Free Software Foundation and various<br>
+people. See below and source code comments for details.<br>
+License: LGPL-2.1+<br>
+Comment:<br>
+Nettle is distributed under the GNU Lesser General Public License<br>
+(LGPL). A few of the individual files are in the public domain. To<br>
+find the current status of particular files, you have to read the<br>
+copyright notices at the top of the files.<br>
+.<br>
+A list of the supported algorithms, their origins and licenses (from<br>
+the manual):<br>
+.<br>
+AES<br>
+The implementation of the AES cipher (also known as rijndael) is<br>
+written by Rafael Sevilla. Assembler for x86 by Rafael Sevilla and<br>
+Niels Möller, Sparc assembler by Niels Möller. Released under the<br>
+LGPL.<br>
+.<br>
+ARCFOUR<br>
+The implementation of the ARCFOUR (also known as RC4) cipher is<br>
+written by Niels Möller. Released under the LGPL.<br>
+.<br>
+ARCTWO<br>
+The implementation of the ARCTWO (also known as RC2) cipher is<br>
+written by Nikos Mavroyanopoulos and modified by Werner Koch and<br>
+Simon Josefsson. Released under the LGPL.<br>
+.<br>
+BLOWFISH<br>
+The implementation of the BLOWFISH cipher is written by Werner<br>
+Koch, copyright owned by the Free Software Foundation. Also hacked<br>
+by Simon Josefsson and Niels Möller. Released under the LGPL.<br>
+.<br>
+CAMELLIA<br>
+The C implementation is by Nippon Telegraph and Telephone<br>
+Corporation (NTT), heavily modified by Niels Möller. Assembler for<br>
+x86 and x86_64 by Niels Möller. Released under the LGPL.<br>
+.<br>
+CAST128<br>
+The implementation of the CAST128 cipher is written by Steve Reid.<br>
+Released into the public domain.<br>
+.<br>
+DES<br>
+The implementation of the DES cipher is written by Dana L. How, and<br>
+released under the LGPL.<br>
+.<br>
+MD2<br>
+The implementation of MD2 is written by Andrew Kuchling, and hacked<br>
+some by Andreas Sigfridsson and Niels Möller. Python Cryptography<br>
+Toolkit license (essentially public domain).<br>
+.<br>
+MD4<br>
+This is almost the same code as for MD5 below, with modifications<br>
+by Marcus Comstedt. Released into the public domain.<br>
+.<br>
+MD5<br>
+The implementation of the MD5 message digest is written by Colin<br>
+Plumb.  It has been hacked some more by Andrew Kuchling and Niels<br>
+Möller.  Released into the public domain.<br>
+.<br>
+SERPENT<br>
+The implementation of the SERPENT is based on the code in<br>
+libgcrypt, copyright owned by the Free Software Foundation.<br>
+Adapted to Nettle by Simon Josefsson and heavily modified by<br>
+Niels Möller. Assembly for x86_64 by Niels Möller. Released under<br>
+the LGPL.<br>
+.<br>
+SHA1<br>
+The C implementation of the SHA1 message digest is written by Peter<br>
+Gutmann, and hacked some more by Andrew Kuchling and Niels Möller.<br>
+Released into the public domain. Assembler for x86 by Niels Möller,<br>
+released under the LGPL.<br>
+.<br>
+SHA224, SHA256, SHA384, and SHA512<br>
+Written by Niels Möller, using Peter Gutmann's SHA1 code as a<br>
+model.  Released under the LGPL.<br>
+.<br>
+TWOFISH<br>
+The implementation of the TWOFISH cipher is written by Ruud de<br>
+Rooij.  Released under the LGPL.<br>
+.<br>
+RSA<br>
+Written by Niels Möller, released under the LGPL. Uses the GMP<br>
+library for bignum operations.<br>
+.<br>
+DSA<br>
+Written by Niels Möller, released under the LGPL. Uses the GMP<br>
+library for bignum operations.<br>
+<br>
+Files: *<br>
+Copyright: © 2001-2011 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: aes-set-*<br>
+Copyright: © 2000, 2001, 2002 Rafael R. Sevilla, Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: arctwo*<br>
+Copyright: © 2003 Nikos Mavroyanopoulos<br>
+© 2004 Simon Josefsson<br>
+© 2004 Free Software Foundation, Inc.<br>
+© 2002, 2004 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: base64.h base64-meta.c<br>
+Copyright: © 2002 Dan Egnor<br>
+© 2002 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: blowfish.c<br>
+Copyright: © 1998, 2001, 2002, 2003 Free Software Foundation, Inc.<br>
+© 2010 Simon Josefsson<br>
+License: LGPL-2.1+<br>
+<br>
+Files: blowfish.h<br>
+Copyright: © 1998, 2001 Free Software Foundation, Inc.<br>
+© 1998, 2001 Ray Dassen<br>
+© 1998, 2001 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: camellia-table.c camellia-crypt-internal.c<br>
+Copyright: © 2006, 2007 NTT (Nippon Telegraph and Telephone Corporation)<br>
+© 2010 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: der2dsa.c<br>
+Copyright: © 2005, 2009 Niels Möller<br>
+© 2009 Magnus Holmgren<br>
+License: LGPL-2.1+<br>
+<br>
+Files: desCode.h descode.README desdata.c desinfo.c<br>
+Copyright: © 2002 Dana L. How<br>
+License: LGPL-2+<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU Library General Public License as published by<br>
+the Free Software Foundation; either version 2 of the License, or<br>
+(at your option) any later version.<br>
+.<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU Library General Public License for more details.<br>
+.<br>
+You should have received a copy of the GNU Library General Public License<br>
+along with this program; if not, write to the Free Software<br>
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.<br>
+.<br>
+On Debian GNU/Linux systems, the complete text of the GNU Library<br>
+General Public License, version 2, can be found in<br>
+/usr/share/common-licenses/LGPL-2.<br>
+<br>
+Files: des.c des.h<br>
+Copyright: © 1992 Dana L. How<br>
+© 1997, 2001 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: gcm.c gcm.h<br>
+Copyright: © 2011 Katholieke Universiteit Leuven<br>
+© 2011 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: md2.c<br>
+Copyright: © ? Andrew Kuchling<br>
+© 2003 Andreas Sigfridsson<br>
+© 2003 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: md4.c<br>
+Copyright: © 2003 Marcus Comstedt<br>
+© 2003 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: md5.c md5-compress.c<br>
+Copyright: © Colin Plumb, Andrew Kuchling<br>
+© 2001 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: memxor.c<br>
+Copyright: © 1991,1993, 1995 Free Software Foundation, Inc.<br>
+© 2010 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: ripemd160.c ripemd160-compress.c<br>
+Copyright: © 1998, 2001, 2002, 2003 Free Software Foundation, Inc.<br>
+License: LGPL-2.1+<br>
+<br>
+Files: ripemd160-meta.c ripemd160.h<br>
+Copyright: © 2011 Andres Mejia<br>
+License: LGPL-2.1+<br>
+<br>
+Files: serpent-encrypt.c serpent-decrypt.c serpent-set-key.c<br>
+Copyright: © 1998 Ross Anderson, Eli Biham, Lars Knudsen<br>
+© 2003, 2004, 2005 Free Software Foundation, Inc.<br>
+© 2010, 2011 Simon Josefsson<br>
+© 2011 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: sha*<br>
+Copyright: © 2001, 2004 Peter Gutmann, Andrew Kuchling, Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: twofish*<br>
+Copyright: © 1999 Ruud de Rooij <ruud@debian.org><br>
+© 1999 J.H.M. Dassen (Ray) <jdassen@wi.LeidenUniv.nl><br>
+© 2001 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: dsa2sexp.c<br>
+Copyright: © 2002, 2009 Niels Möller<br>
+© 2009 Magnus Holmgren<br>
+License: LGPL-2.1+<br>
+<br>
+Files: testsuite/des-compat-test.c<br>
+Copyright: © 1995-1997 Eric Young (eay@cryptsoft.com)<br>
+License: other<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. All advertising materials mentioning features or use of this software<br>
+must display the following acknowledgement:<br>
+"This product includes cryptographic software written by<br>
+Eric Young (eay@cryptsoft.com)"<br>
+The word 'cryptographic' can be left out if the rouines from the library<br>
+being used are not cryptographic related :-).<br>
+4. If you include any Windows specific code (or a derivative thereof) from<br>
+the apps directory (application code) you must include an acknowledgement:<br>
+"This product includes software written by Tim Hudson (tjh@cryptsoft.com)"<br>
+.<br>
+THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+Files: tools/pkcs1-conv.c<br>
+Copyright: © 2005, 2009 Niels Möller<br>
+© 2009 Magnus Holmgren<br>
+License: LGPL-2.1+<br>
+<br>
+Files: x86*/aes-*-internal.asm<br>
+Copyright: © 2001, 2002, 2005, 2008 Rafael R. Sevilla<br>
+© 2001, 2002, 2005, 2008 Niels Möller<br>
+License: LGPL-2.1+<br>
+<br>
+Files: tools/getopt*<br>
+Copyright: © 1987-2001 Free Software Foundation, Inc.<br>
+License: GPL-2+<br>
+<br>
+Files: config.guess config.sub<br>
+Copyright: © 1992-2003 Free Software Foundation, Inc.<br>
+License: GPL-2+ with Autoconf exception<br>
+As a special exception to the GNU General Public License, if you<br>
+distribute this file as part of a program that contains a<br>
+configuration script generated by Autoconf, you may include it under<br>
+the same distribution terms that you use for the rest of that program.<br>
+<br>
+Files: debian/*<br>
+Copyright: none<br>
+License: public-domain<br>
+I believe that most files in debian/ hardly contains any creative<br>
+expression eligible for copyright.<br>
+<br>
+Files: debian/sexp-conv.1<br>
+Copyright: © 2002 Timshel Knoll <timshel@debian.org><br>
+© 2007 Magnus Holmgren<br>
+License: GPL-2<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation; version 2 dated June. 1991.<br>
+.<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br>
+.<br>
+You should have received a copy of the GNU General Public License<br>
+along with this program; if not, write to the Free Software<br>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA<br>
+02110-1301 USA.<br>
+.<br>
+On Debian GNU/Linux systems, the complete text of the GNU General<br>
+Public License, version 2, can be found in<br>
+/usr/share/common-licenses/GPL-2.<br>
+Comment:<br>
+This manpage was copied from the lsh-utils package. Timshel didn't<br>
+explicitly select a license for his packaging work, but I think that<br>
+it can be considered released under the same license as LSH itself.<br>
+<br>
+Files: debian/pkcs1-conv.1 debian/nettle-lfib-stream.1<br>
+Copyright: © 2007 Magnus Holmgren<br>
+License: GAP<br>
+Copying and distribution of this file, with or without modification,<br>
+are permitted in any medium without royalty provided the copyright<br>
+notice and this notice are preserved.<br>
+<br>
+License: LGPL-2.1+<br>
+The nettle library is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU Lesser General Public License as published by<br>
+the Free Software Foundation; either version 2.1 of the License, or (at your<br>
+option) any later version.<br>
+.<br>
+The nettle library is distributed in the hope that it will be useful, but<br>
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY<br>
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public<br>
+License for more details.<br>
+.<br>
+You should have received a copy of the GNU Lesser General Public<br>
+License along with this library; if not, write to the Free Software<br>
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA<br>
+.<br>
+On Debian GNU/Linux systems, the complete text of the newest version<br>
+of the GNU Lesser General Public License can be found in<br>
+/usr/share/common-licenses/LGPL.<br>
+<br>
+License: GPL-2+<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation; either version 2 of the License, or<br>
+(at your option) any later version.<br>
+.<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br>
+.<br>
+You should have received a copy of the GNU General Public License<br>
+along with this program; if not, write to the Free Software<br>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA<br>
+02110-1301 USA.<br>
+.<br>
+On Debian GNU/Linux systems, the complete text of the newest version<br>
+of the GNU General Public License can be found in<br>
+/usr/share/common-licenses/GPL.<br>
+   </body>
+</html>
