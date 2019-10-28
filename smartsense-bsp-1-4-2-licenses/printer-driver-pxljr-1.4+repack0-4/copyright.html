@@ -1,0 +1,133 @@
+<html>
+   <body>
+Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=174<br>
+Upstream-Name: pxljr<br>
+Source: http://hp-pxl-jetready.sourceforge.net/<br>
+The original tarball (as imported from Ubuntu) was in fact the<br>
+pxljr-1.3_wlibjpeg.tar.gz, that embeds libjpeg6b.<br>
+.<br>
+This tarball has been repacked to remove the libjpeg6b and the libijs source<br>
+files that were included. While the code from both libraries is free software<br>
+and could be shipped in this source tarball, it was found more convenient to<br>
+make sure the actual files don't appear in the tarball and thus cannot be<br>
+used in the building process.<br>
+<br>
+Files: *<br>
+Copyright: 2005 Hin-Tak Leung <hintak_leung@yahoo.co.uk><br>
+License: GPL-2+<br>
+<br>
+Files: i_main.c<br>
+Copyright: 2001-2002 artofcode LLC<br>
+Copyright: 2005 Hin-Tak Leung <hintak_leung@yahoo.co.uk><br>
+License: GPL-2+<br>
+<br>
+Files: jccolor.c<br>
+Copyright: 1991-1996, Thomas G. Lane.<br>
+Copyright: 2005 Hin-Tak Leung <hintak_leung@yahoo.co.uk><br>
+License: LibJPEG<br>
+<br>
+Files: jinclude.h jpegint.h<br>
+Copyright: 1991-1997, Thomas G. Lane.<br>
+License: LibJPEG<br>
+<br>
+Files: jdatadbf.c<br>
+Copyright: 2001 Dorian Goldstein, Thomas G. Lane.<br>
+Copyright: 2005 Hin-Tak Leung <hintak_leung@yahoo.co.uk><br>
+License: GPL-2+<br>
+<br>
+Files: debian/*<br>
+Copyright: 2007-2011 Till Kamppeter <till.kamppeter@gmail.com><br>
+Copyright: 2011 Didier Raboud <odyx@debian.org><br>
+License: GPL-2+<br>
+<br>
+Files: debian/local/apport-hook.py<br>
+Copyright: 2009 Canonical Ltd.<br>
+Author: Brian Murray <brian@ubuntu.com><br>
+License: GPL-2+<br>
+<br>
+License: GPL-2+<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the terms of the GNU General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2 of the License, or (at your option) any later<br>
+version.<br>
+.<br>
+This program is distributed in the hope that it will be<br>
+useful, but WITHOUT ANY WARRANTY; without even the implied<br>
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR<br>
+PURPOSE.  See the GNU General Public License for more<br>
+details.<br>
+.<br>
+You should have received a copy of the GNU General Public<br>
+License along with this package; if not, write to the Free<br>
+Software Foundation, Inc., 51 Franklin St, Fifth Floor,<br>
+Boston, MA  02110-1301 USA<br>
+.<br>
+On Debian systems, the full text of the GNU General Public<br>
+License version 2 can be found in the file<br>
+`/usr/share/common-licenses/GPL-2'.<br>
+<br>
+License: LibJPEG<br>
+The authors make NO WARRANTY or representation, either express or implied,<br>
+with respect to this software, its quality, accuracy, merchantability, or<br>
+fitness for a particular purpose.  This software is provided "AS IS", and you,<br>
+its user, assume the entire risk as to its quality and accuracy.<br>
+.<br>
+This software is copyright (C) 1991-2010, Thomas G. Lane, Guido Vollbeding.<br>
+All Rights Reserved except as specified below.<br>
+.<br>
+Permission is hereby granted to use, copy, modify, and distribute this<br>
+software (or portions thereof) for any purpose, without fee, subject to these<br>
+conditions:<br>
+(1) If any part of the source code for this software is distributed, then this<br>
+README file must be included, with this copyright and no-warranty notice<br>
+unaltered; and any additions, deletions, or changes to the original files<br>
+must be clearly indicated in accompanying documentation.<br>
+(2) If only executable code is distributed, then the accompanying<br>
+documentation must state that "this software is based in part on the work of<br>
+the Independent JPEG Group".<br>
+(3) Permission for use of this software is granted only if the user accepts<br>
+full responsibility for any undesirable consequences; the authors accept<br>
+NO LIABILITY for damages of any kind.<br>
+.<br>
+These conditions apply to any software derived from or based on the IJG code,<br>
+not just to the unmodified library.  If you use our work, you ought to<br>
+acknowledge us.<br>
+.<br>
+Permission is NOT granted for the use of any IJG author's name or company name<br>
+in advertising or publicity relating to this software or products derived from<br>
+it.  This software may be referred to only as "the Independent JPEG Group's<br>
+software".<br>
+.<br>
+We specifically permit and encourage the use of this software as the basis of<br>
+commercial products, provided that all warranty or liability claims are<br>
+assumed by the product vendor.<br>
+.<br>
+ansi2knr.c is included in this distribution by permission of L. Peter Deutsch,<br>
+sole proprietor of its copyright holder, Aladdin Enterprises of Menlo Park, CA.<br>
+ansi2knr.c is NOT covered by the above copyright and conditions, but instead<br>
+by the usual distribution terms of the Free Software Foundation; principally,<br>
+that you must include source code if you redistribute it.  (See the file<br>
+ansi2knr.c for full details.)  However, since ansi2knr.c is not needed as part<br>
+of any program generated from the IJG code, this does not limit you more than<br>
+the foregoing paragraphs do.<br>
+.<br>
+The Unix configuration script "configure" was produced with GNU Autoconf.<br>
+It is copyright by the Free Software Foundation but is freely distributable.<br>
+The same holds for its supporting scripts (config.guess, config.sub,<br>
+ltmain.sh).  Another support script, install-sh, is copyright by X Consortium<br>
+but is also freely distributable.<br>
+.<br>
+The IJG distribution formerly included code to read and write GIF files.<br>
+To avoid entanglement with the Unisys LZW patent, GIF reading support has<br>
+been removed altogether, and the GIF writer has been simplified to produce<br>
+"uncompressed GIFs".  This technique does not use the LZW algorithm; the<br>
+resulting GIF files are larger than usual, but are readable by all standard<br>
+GIF decoders.<br>
+.<br>
+We are required to state that<br>
+"The Graphics Interchange Format(c) is the Copyright property of<br>
+CompuServe Incorporated.  GIF(sm) is a Service Mark property of<br>
+CompuServe Incorporated."<br>
+   </body>
+</html>

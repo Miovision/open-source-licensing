@@ -1,0 +1,696 @@
+<html>
+   <body>
+This is the Debian GNU/Linux prepackaged version of the GNU compiler<br>
+collection, containing Ada, C, C++, Fortran 95, Java, Objective-C,<br>
+Objective-C++, and Treelang compilers, documentation, and support<br>
+libraries.  In addition, Debian provides the gdc compiler, either in<br>
+the same source package, or built from a separate same source package.<br>
+Packaging is done by the Debian GCC Maintainers<br>
+<debian-gcc@lists.debian.org>, with sources obtained from:<br>
+<br>
+ftp://gcc.gnu.org/pub/gcc/releases/  (for full releases)<br>
+svn://gcc.gnu.org/svn/gcc/           (for prereleases)<br>
+http://bitbucket.org/goshawk/gdc     (for D)<br>
+<br>
+The current gcc-6 source package is taken from the SVN gcc-6-branch.<br>
+<br>
+Changes: See changelog.Debian.gz<br>
+<br>
+Debian splits the GNU Compiler Collection into packages for each language,<br>
+library, and documentation as follows:<br>
+<br>
+Language       Compiler package  Library package    Documentation<br>
+---------------------------------------------------------------------------<br>
+Ada            gnat-6          libgnat-6        gnat-6-doc<br>
+C              gcc-6                              gcc-6-doc<br>
+C++            g++-6           libstdc++6         libstdc++6-6-doc<br>
+D              gdc-6<br>
+Fortran 95     gfortran-6      libgfortran3       gfortran-6-doc<br>
+Go             gccgo-6         libgo0<br>
+Java           gcj-6           libgcj10           libgcj-doc<br>
+Objective C    gobjc-6         libobjc2<br>
+Objective C++  gobjc++-6<br>
+<br>
+For some language run-time libraries, Debian provides source files,<br>
+development files, debugging symbols and libraries containing position-<br>
+independent code in separate packages:<br>
+<br>
+Language  Sources      Development   Debugging            Position-Independent<br>
+------------------------------------------------------------------------------<br>
+C++                                  libstdc++6-6-dbg  libstdc++6-6-pic<br>
+D         libphobos-6-dev<br>
+Java      libgcj10-src libgcj10-dev  libgcj10-dbg<br>
+<br>
+Additional packages include:<br>
+<br>
+All languages:<br>
+libgcc1, libgcc2, libgcc4       GCC intrinsics (platform-dependent)<br>
+gcc-6-base                    Base files common to all compilers<br>
+gcc-6-soft-float              Software floating point (ARM only)<br>
+gcc-6-source                  The sources with patches<br>
+<br>
+Ada:<br>
+libgnatvsn-dev, libgnatvsn6   GNAT version library<br>
+libgnatprj-dev, libgnatprj6   GNAT Project Manager library<br>
+<br>
+C:<br>
+cpp-6, cpp-6-doc            GNU C Preprocessor<br>
+libssp0-dev, libssp0            GCC stack smashing protection library<br>
+libquadmath0                    Math routines for the __float128 type<br>
+fixincludes                     Fix non-ANSI header files<br>
+<br>
+Java:<br>
+gij                             The Java bytecode interpreter and VM<br>
+libgcj-common                   Common files for the Java run-time<br>
+libgcj10-awt                    The Abstract Windowing Toolkit<br>
+libgcj10-jar                    Java ARchive for the Java run-time<br>
+<br>
+C, C++ and Fortran 95:<br>
+libgomp1-dev, libgomp1		GCC OpenMP (GOMP) support library<br>
+libitm1-dev, libitm1		GNU Transactional Memory Library<br>
+<br>
+Biarch support: On some 64-bit platforms which can also run 32-bit code,<br>
+Debian provides additional packages containing 32-bit versions of some<br>
+libraries.  These packages have names beginning with 'lib32' instead of<br>
+'lib', for example lib32stdc++6.  Similarly, on some 32-bit platforms which<br>
+can also run 64-bit code, Debian provides additional packages with names<br>
+beginning with 'lib64' instead of 'lib'.  These packages contain 64-bit<br>
+versions of the libraries.  (At this time, not all platforms and not all<br>
+libraries support biarch.)  The license terms for these lib32 or lib64<br>
+packages are identical to the ones for the lib packages.<br>
+<br>
+<br>
+COPYRIGHT STATEMENTS AND LICENSING TERMS<br>
+<br>
+<br>
+GCC is Copyright (C) 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994,<br>
+1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,<br>
+2008, 2009, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.<br>
+<br>
+GCC is free software; you can redistribute it and/or modify it under<br>
+the terms of the GNU General Public License as published by the Free<br>
+Software Foundation; either version 3, or (at your option) any later<br>
+version.<br>
+<br>
+GCC is distributed in the hope that it will be useful, but WITHOUT ANY<br>
+WARRANTY; without even the implied warranty of MERCHANTABILITY or<br>
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License<br>
+for more details.<br>
+<br>
+Files that have exception clauses are licensed under the terms of the<br>
+GNU General Public License; either version 3, or (at your option) any<br>
+later version.<br>
+<br>
+On Debian GNU/Linux systems, the complete text of the GNU General<br>
+Public License is in `/usr/share/common-licenses/GPL', version 3 of this<br>
+license in `/usr/share/common-licenses/GPL-3'.<br>
+<br>
+The following runtime libraries are licensed under the terms of the<br>
+GNU General Public License (v3 or later) with version 3.1 of the GCC<br>
+Runtime Library Exception (included in this file):<br>
+<br>
+- libgcc (libgcc/, gcc/libgcc2.[ch], gcc/unwind*, gcc/gthr*,<br>
+gcc/coretypes.h, gcc/crtstuff.c, gcc/defaults.h, gcc/dwarf2.h,<br>
+gcc/emults.c, gcc/gbl-ctors.h, gcc/gcov-io.h, gcc/libgcov.c,<br>
+gcc/tsystem.h, gcc/typeclass.h).<br>
+- libatomic<br>
+- libdecnumber<br>
+- libgomp<br>
+- libitm<br>
+- libssp<br>
+- libstdc++-v3<br>
+- libobjc<br>
+- libgfortran<br>
+- The libgnat-6 Ada support library and libgnatvsn library.<br>
+- Various config files in gcc/config/ used in runtime libraries.<br>
+- libvtv<br>
+<br>
+In contrast, libgnatprj is licensed under the terms of the pure GNU<br>
+General Public License.<br>
+<br>
+The libbacktrace library is licensed under the following terms:<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are<br>
+met:<br>
+<br>
+(1) Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+<br>
+(2) Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in<br>
+the documentation and/or other materials provided with the<br>
+distribution.<br>
+<br>
+(3) The name of the author may not be used to<br>
+endorse or promote products derived from this software without<br>
+specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR<br>
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br>
+DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,<br>
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES<br>
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR<br>
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,<br>
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING<br>
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+<br>
+The libsanitizer libraries (libasan, liblsan, libtsan, libubsan) are<br>
+licensed under the following terms:<br>
+<br>
+Copyright (c) 2009-2014 by the LLVM contributors.<br>
+<br>
+All rights reserved.<br>
+<br>
+Developed by:<br>
+<br>
+LLVM Team<br>
+<br>
+University of Illinois at Urbana-Champaign<br>
+<br>
+http://llvm.org<br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy of<br>
+this software and associated documentation files (the "Software"), to deal with<br>
+the Software without restriction, including without limitation the rights to<br>
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies<br>
+of the Software, and to permit persons to whom the Software is furnished to do<br>
+so, subject to the following conditions:<br>
+<br>
+* Redistributions of source code must retain the above copyright notice,<br>
+this list of conditions and the following disclaimers.<br>
+<br>
+* Redistributions in binary form must reproduce the above copyright notice,<br>
+this list of conditions and the following disclaimers in the<br>
+documentation and/or other materials provided with the distribution.<br>
+<br>
+* Neither the names of the LLVM Team, University of Illinois at<br>
+Urbana-Champaign, nor the names of its contributors may be used to<br>
+endorse or promote products derived from this Software without specific<br>
+prior written permission.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS<br>
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE<br>
+CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE<br>
+SOFTWARE.<br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+of this software and associated documentation files (the "Software"), to deal<br>
+in the Software without restriction, including without limitation the rights<br>
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+copies of the Software, and to permit persons to whom the Software is<br>
+furnished to do so, subject to the following conditions:<br>
+<br>
+The above copyright notice and this permission notice shall be included in<br>
+all copies or substantial portions of the Software.<br>
+<br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<br>
+THE SOFTWARE.<br>
+<br>
+<br>
+The libgcj library is licensed under the terms of the GNU General<br>
+Public License, with a special exception:<br>
+<br>
+Linking this library statically or dynamically with other modules<br>
+is making a combined work based on this library.  Thus, the terms<br>
+and conditions of the GNU General Public License cover the whole<br>
+combination.<br>
+<br>
+As a special exception, the copyright holders of this library give<br>
+you permission to link this library with independent modules to<br>
+produce an executable, regardless of the license terms of these<br>
+independent modules, and to copy and distribute the resulting<br>
+executable under terms of your choice, provided that you also<br>
+meet, for each linked independent module, the terms and conditions<br>
+of the license of that module.  An independent module is a module<br>
+which is not derived from or based on this library.  If you modify<br>
+this library, you may extend this exception to your version of the<br>
+library, but you are not obligated to do so.  If you do not wish<br>
+to do so, delete this exception statement from your version.<br>
+<br>
+The libffi library is licensed under the following terms:<br>
+<br>
+libffi - Copyright (c) 1996-2003  Red Hat, Inc.<br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining<br>
+a copy of this software and associated documentation files (the<br>
+``Software''), to deal in the Software without restriction, including<br>
+without limitation the rights to use, copy, modify, merge, publish,<br>
+distribute, sublicense, and/or sell copies of the Software, and to<br>
+permit persons to whom the Software is furnished to do so, subject to<br>
+the following conditions:<br>
+<br>
+The above copyright notice and this permission notice shall be included<br>
+in all copies or substantial portions of the Software.<br>
+<br>
+THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS<br>
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF<br>
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.<br>
+IN NO EVENT SHALL CYGNUS SOLUTIONS BE LIABLE FOR ANY CLAIM, DAMAGES OR<br>
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,<br>
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR<br>
+OTHER DEALINGS IN THE SOFTWARE.<br>
+<br>
+<br>
+The documentation is licensed under the GNU Free Documentation License (v1.2).<br>
+On Debian GNU/Linux systems, the complete text of this license is in<br>
+`/usr/share/common-licenses/GFDL-1.2'.<br>
+<br>
+<br>
+GCC RUNTIME LIBRARY EXCEPTION<br>
+<br>
+Version 3.1, 31 March 2009<br>
+<br>
+Copyright (C) 2009 Free Software Foundation, Inc. <http://fsf.org/><br>
+<br>
+Everyone is permitted to copy and distribute verbatim copies of this<br>
+license document, but changing it is not allowed.<br>
+<br>
+This GCC Runtime Library Exception ("Exception") is an additional<br>
+permission under section 7 of the GNU General Public License, version<br>
+3 ("GPLv3"). It applies to a given file (the "Runtime Library") that<br>
+bears a notice placed by the copyright holder of the file stating that<br>
+the file is governed by GPLv3 along with this Exception.<br>
+<br>
+When you use GCC to compile a program, GCC may combine portions of<br>
+certain GCC header files and runtime libraries with the compiled<br>
+program. The purpose of this Exception is to allow compilation of<br>
+non-GPL (including proprietary) programs to use, in this way, the<br>
+header files and runtime libraries covered by this Exception.<br>
+<br>
+0. Definitions.<br>
+<br>
+A file is an "Independent Module" if it either requires the Runtime<br>
+Library for execution after a Compilation Process, or makes use of an<br>
+interface provided by the Runtime Library, but is not otherwise based<br>
+on the Runtime Library.<br>
+<br>
+"GCC" means a version of the GNU Compiler Collection, with or without<br>
+modifications, governed by version 3 (or a specified later version) of<br>
+the GNU General Public License (GPL) with the option of using any<br>
+subsequent versions published by the FSF.<br>
+<br>
+"GPL-compatible Software" is software whose conditions of propagation,<br>
+modification and use would permit combination with GCC in accord with<br>
+the license of GCC.<br>
+<br>
+"Target Code" refers to output from any compiler for a real or virtual<br>
+target processor architecture, in executable form or suitable for<br>
+input to an assembler, loader, linker and/or execution<br>
+phase. Notwithstanding that, Target Code does not include data in any<br>
+format that is used as a compiler intermediate representation, or used<br>
+for producing a compiler intermediate representation.<br>
+<br>
+The "Compilation Process" transforms code entirely represented in<br>
+non-intermediate languages designed for human-written code, and/or in<br>
+Java Virtual Machine byte code, into Target Code. Thus, for example,<br>
+use of source code generators and preprocessors need not be considered<br>
+part of the Compilation Process, since the Compilation Process can be<br>
+understood as starting with the output of the generators or<br>
+preprocessors.<br>
+<br>
+A Compilation Process is "Eligible" if it is done using GCC, alone or<br>
+with other GPL-compatible software, or if it is done without using any<br>
+work based on GCC. For example, using non-GPL-compatible Software to<br>
+optimize any GCC intermediate representations would not qualify as an<br>
+Eligible Compilation Process.<br>
+<br>
+1. Grant of Additional Permission.<br>
+<br>
+You have permission to propagate a work of Target Code formed by<br>
+combining the Runtime Library with Independent Modules, even if such<br>
+propagation would otherwise violate the terms of GPLv3, provided that<br>
+all Target Code was generated by Eligible Compilation Processes. You<br>
+may then convey such a combination under terms of your choice,<br>
+consistent with the licensing of the Independent Modules.<br>
+<br>
+2. No Weakening of GCC Copyleft.<br>
+<br>
+The availability of this Exception does not imply any general<br>
+presumption that third-party software is unaffected by the copyleft<br>
+requirements of the license of GCC.<br>
+<br>
+<br>
+libquadmath/*.[hc]:<br>
+<br>
+Copyright (C) 2010 Free Software Foundation, Inc.<br>
+Written by Francois-Xavier Coudert  <fxcoudert@gcc.gnu.org><br>
+Written by Tobias Burnus  <burnus@net-b.de><br>
+<br>
+This file is part of the libiberty library.<br>
+Libiberty is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Library General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2 of the License, or (at your option) any later version.<br>
+<br>
+Libiberty is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Library General Public License for more details.<br>
+<br>
+libquadmath/gdtoa:<br>
+<br>
+The author of this software is David M. Gay.<br>
+<br>
+Copyright (C) 1998, 1999, 2000, 2001 by Lucent Technologies<br>
+All Rights Reserved<br>
+<br>
+Permission to use, copy, modify, and distribute this software and<br>
+its documentation for any purpose and without fee is hereby<br>
+granted, provided that the above copyright notice appear in all<br>
+copies and that both that the copyright notice and this<br>
+permission notice and warranty disclaimer appear in supporting<br>
+documentation, and that the name of Lucent or any of its entities<br>
+not be used in advertising or publicity pertaining to<br>
+distribution of the software without specific, written prior<br>
+permission.<br>
+<br>
+LUCENT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,<br>
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.<br>
+IN NO EVENT SHALL LUCENT OR ANY OF ITS ENTITIES BE LIABLE FOR ANY<br>
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES<br>
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER<br>
+IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,<br>
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF<br>
+THIS SOFTWARE.<br>
+<br>
+libquadmath/math:<br>
+<br>
+atanq.c, expm1q.c, j0q.c, j1q.c, log1pq.c, logq.c:<br>
+Copyright 2001 by Stephen L. Moshier <moshier@na-net.ornl.gov><br>
+<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+This library is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+coshq.c, erfq.c, jnq.c, lgammaq.c, powq.c, roundq.c:<br>
+Changes for 128-bit __float128 are<br>
+Copyright (C) 2001 Stephen L. Moshier <moshier@na-net.ornl.gov><br>
+and are incorporated herein by permission of the author.  The author<br>
+reserves the right to distribute this material elsewhere under different<br>
+copying permissions.  These modifications are distributed here under<br>
+the following terms:<br>
+<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+This library is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+ldexpq.c:<br>
+* Conversion to long double by Ulrich Drepper,<br>
+* Cygnus Support, drepper@cygnus.com.<br>
+<br>
+cosq_kernel.c, expq.c, sincos_table.c, sincosq.c, sincosq_kernel.c,<br>
+sinq_kernel.c, truncq.c:<br>
+Copyright (C) 1997, 1999 Free Software Foundation, Inc.<br>
+<br>
+The GNU C Library is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+The GNU C Library is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+isinfq.c:<br>
+* Written by J.T. Conklin <jtc@netbsd.org>.<br>
+* Change for long double by Jakub Jelinek <jj@ultra.linux.cz><br>
+* Public domain.<br>
+<br>
+llroundq.c, lroundq.c, tgammaq.c:<br>
+Copyright (C) 1997, 1999, 2002, 2004 Free Software Foundation, Inc.<br>
+This file is part of the GNU C Library.<br>
+Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997 and<br>
+Jakub Jelinek <jj@ultra.linux.cz>, 1999.<br>
+<br>
+The GNU C Library is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+The GNU C Library is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+log10q.c:<br>
+Cephes Math Library Release 2.2:  January, 1991<br>
+Copyright 1984, 1991 by Stephen L. Moshier<br>
+Adapted for glibc November, 2001<br>
+<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU Lesser General Public<br>
+License as published by the Free Software Foundation; either<br>
+version 2.1 of the License, or (at your option) any later version.<br>
+<br>
+This library is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+Lesser General Public License for more details.<br>
+<br>
+remaining files:<br>
+<br>
+* Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.<br>
+*<br>
+* Developed at SunPro, a Sun Microsystems, Inc. business.<br>
+* Permission to use, copy, modify, and distribute this<br>
+* software is freely granted, provided that this notice<br>
+* is preserved.<br>
+<br>
+<br>
+libjava/classpath/resource/gnu/java/locale/*<br>
+<br>
+They are copyrighted and covered by the terms of use:<br>
+http://www.unicode.org/copyright.html<br>
+<br>
+EXHIBIT 1<br>
+UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE<br>
+<br>
+Unicode Data Files include all data files under the directories<br>
+http://www.unicode.org/Public/ and http://www.unicode.org/reports/.<br>
+Unicode Software includes any source code published in the Unicode Standard or<br>
+under the directories http://www.unicode.org/Public/ and<br>
+http://www.unicode.org/reports/.<br>
+<br>
+NOTICE TO USER: Carefully read the following legal agreement. BY DOWNLOADING,<br>
+INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S DATA FILES ("DATA FILES"),<br>
+AND/OR SOFTWARE ("SOFTWARE"), YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY,<br>
+ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE,<br>
+DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.<br>
+<br>
+COPYRIGHT AND PERMISSION NOTICE<br>
+<br>
+Copyrigh (c) 1991-2011 Unicode, Inc. All rights reserved.<br>
+Distributed under the Terms of Use in http://www.unicode.org/copyright.html.<br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+of the Unicode data files and any associated documentation (the "Data Files")<br>
+or Unicode software and any associated documentation (the "Software") to deal<br>
+in the Data Files or Software without restriction, including without limitation<br>
+the rights to use, copy, modify, merge, publish, distribute, and/or sell copies<br>
+of the Data Files or Software, and to permit persons to whom the Data Files<br>
+or Software are furnished to do so, provided that (a) the above copyright notice(s)<br>
+and this permission notice appear with all copies of the Data Files or Software,<br>
+(b) both the above copyright notice(s) and this permission notice appear<br>
+in associated documentation, and (c) there is clear notice in each modified<br>
+Data File or in the Software as well as in the documentation associated with<br>
+the Data File(s) or Software that the data or software has been modified.<br>
+<br>
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,<br>
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.<br>
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE<br>
+FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES<br>
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF<br>
+CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION<br>
+WITH THE USE OR PERFORMANCE OF THE DATA FILES OR SOFTWARE.<br>
+<br>
+Except as contained in this notice, the name of a copyright holder shall not be used<br>
+in advertising or otherwise to promote the sale, use or other dealings in these<br>
+Data Files or Software without prior written authorization of the copyright holder.<br>
+<br>
+Unicode and the Unicode logo are trademarks of Unicode, Inc., and may be registered<br>
+in some jurisdictions. All other trademarks and registered trademarks mentioned<br>
+herein are the property of their respective owners.<br>
+<br>
+<br>
+gcc/go/gofrontend, libgo:<br>
+<br>
+Copyright (c) 2009 The Go Authors. All rights reserved.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions are<br>
+met:<br>
+<br>
+* Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+* Redistributions in binary form must reproduce the above<br>
+copyright notice, this list of conditions and the following disclaimer<br>
+in the documentation and/or other materials provided with the<br>
+distribution.<br>
+* Neither the name of Google Inc. nor the names of its<br>
+contributors may be used to endorse or promote products derived from<br>
+this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT<br>
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+<br>
+libcilkrts, libmpx:<br>
+Copyright (C) 2009-2014, Intel Corporation<br>
+All rights reserved.<br>
+<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+<br>
+* Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+* Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in<br>
+the documentation and/or other materials provided with the<br>
+distribution.<br>
+* Neither the name of Intel Corporation nor the names of its<br>
+contributors may be used to endorse or promote products derived<br>
+from this software without specific prior written permission.<br>
+<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT<br>
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,<br>
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,<br>
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS<br>
+OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED<br>
+AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY<br>
+WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+<br>
+D:<br>
+gdc-6                         GNU D Compiler<br>
+libphobos-6-dev               D standard runtime library<br>
+<br>
+The D source package is made up of the following components.<br>
+<br>
+The D front-end for GCC:<br>
+- d/*<br>
+<br>
+Copyright (C) 2004-2007 David Friedman<br>
+Modified by Vincenzo Ampolo, Michael Parrot, Iain Buclaw, (C) 2009, 2010<br>
+<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation; either version 2 of the License, or<br>
+(at your option) any later version.<br>
+<br>
+On Debian GNU/Linux systems, the complete text of the GNU General<br>
+Public License is in `/usr/share/common-licenses/GPL', version 2 of this<br>
+license in `/usr/share/common-licenses/GPL-2'.<br>
+<br>
+<br>
+The DMD Compiler implementation of the D programming language:<br>
+- d/dmd/*<br>
+<br>
+Copyright (c) 1999-2010 by Digital Mars<br>
+All Rights Reserved<br>
+written by Walter Bright<br>
+http://www.digitalmars.com<br>
+License for redistribution is by either the Artistic License or<br>
+the GNU General Public License (v1).<br>
+<br>
+On Debian GNU/Linux systems, the complete text of the GNU General<br>
+Public License is in `/usr/share/common-licenses/GPL', the Artistic<br>
+license in `/usr/share/common-licenses/Artistic'.<br>
+<br>
+<br>
+The Zlib data compression library:<br>
+- d/phobos/etc/c/zlib/*<br>
+<br>
+(C) 1995-2004 Jean-loup Gailly and Mark Adler<br>
+<br>
+This software is provided 'as-is', without any express or implied<br>
+warranty.  In no event will the authors be held liable for any damages<br>
+arising from the use of this software.<br>
+<br>
+Permission is granted to anyone to use this software for any purpose,<br>
+including commercial applications, and to alter it and redistribute it<br>
+freely, subject to the following restrictions:<br>
+<br>
+1. The origin of this software must not be misrepresented; you must not<br>
+claim that you wrote the original software. If you use this software<br>
+in a product, an acknowledgment in the product documentation would be<br>
+appreciated but is not required.<br>
+2. Altered source versions must be plainly marked as such, and must not be<br>
+misrepresented as being the original software.<br>
+3. This notice may not be removed or altered from any source distribution.<br>
+<br>
+<br>
+The Phobos standard runtime library:<br>
+- d/phobos/*<br>
+<br>
+Unless otherwise marked within the file, each file in the source<br>
+is under the following licenses:<br>
+<br>
+Copyright (C) 2004-2005 by Digital Mars, www.digitalmars.com<br>
+Written by Walter Bright<br>
+<br>
+This software is provided 'as-is', without any express or implied<br>
+warranty. In no event will the authors be held liable for any damages<br>
+arising from the use of this software.<br>
+<br>
+Permission is granted to anyone to use this software for any purpose,<br>
+including commercial applications, and to alter it and redistribute it<br>
+freely, in both source and binary form, subject to the following<br>
+restrictions:<br>
+<br>
+o  The origin of this software must not be misrepresented; you must not<br>
+claim that you wrote the original software. If you use this software<br>
+in a product, an acknowledgment in the product documentation would be<br>
+appreciated but is not required.<br>
+o  Altered source versions must be plainly marked as such, and must not<br>
+be misrepresented as being the original software.<br>
+o  This notice may not be removed or altered from any source<br>
+distribution.<br>
+<br>
+By plainly marking modifications, something along the lines of adding to each<br>
+file that has been changed a "Modified by Foo Bar" line<br>
+underneath the "Written by" line would be adequate.<br>
+<br>
+   </body>
+</html>

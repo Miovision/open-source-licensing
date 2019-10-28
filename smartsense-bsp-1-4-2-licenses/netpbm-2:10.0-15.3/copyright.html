@@ -1,0 +1,422 @@
+<html>
+   <body>
+This package was debianised by Steve McIntyre<br>
+<stevem@chiark.greenend.org.uk>, finishing on Sun 7th October 2001.<br>
+The maintainership was transfered in August 2003 to Andreas Barth<br>
+<aba@not.so.argh.org>, first as cooperative maintainership and<br>
+sponsored by Steve.<br>
+<br>
+Packaging and keeping the package current is not simple, for details see<br>
+README.Debian. We consider http://netpbm.alioth.debian.org/ the<br>
+technical upstream, and this release can be exported out of alioth by<br>
+cvs -z3 -d:pserver:anonymous@cvs.alioth.debian.org:/cvsroot/netpbm export   -r debian-9-25-2 netpbm<br>
+<br>
+<br>
+Copyright:<br>
+==========<br>
+<br>
+Netpbm has a very complicated licensing setup, as it is a collection<br>
+of hundreds of small utility programs, each with an individual<br>
+copyright/license. From inspection of the source and documentation in<br>
+the package, I believe the following programs are DFSG-free. They have<br>
+a variety of licenses, which I have summarised below for convenience.<br>
+<br>
+A:  The most common netpbm license - clearly the original from Jef Poskanzer:<br>
+<br>
+Permission to use, copy, modify, and distribute this software and its<br>
+documentation for any purpose and without fee is hereby granted, provided<br>
+that the above copyright notice appear in all copies and that both that<br>
+copyright notice and this permission notice appear in supporting<br>
+documentation.  This software is provided "as is" without express or<br>
+implied warranty.<br>
+<br>
+The core libp[gbnp]m library code all also seems to follow this license.<br>
+<br>
+B:  The standard BSD license. See /usr/share/common-licenses/BSD<br>
+<br>
+C:  GNU General Public License v2. See /usr/share/common-licenses/GPL.<br>
+<br>
+D:  The Independent JPEG Group license:<br>
+<br>
+Permission is hereby granted to use, copy, modify, and distribute this<br>
+software (or portions thereof) for any purpose, without fee, subject to these<br>
+conditions:<br>
+(1) If any part of the source code for this software is distributed, then this<br>
+README file must be included, with this copyright and no-warranty notice<br>
+unaltered; and any additions, deletions, or changes to the original files<br>
+must be clearly indicated in accompanying documentation.<br>
+(2) If only executable code is distributed, then the accompanying<br>
+documentation must state that "this software is based in part on the work of<br>
+the Independent JPEG Group".<br>
+(3) Permission for use of this software is granted only if the user accepts<br>
+full responsibility for any undesirable consequences; the authors accept<br>
+NO LIABILITY for damages of any kind.<br>
+<br>
+These conditions apply to any software derived from or based on the IJG code,<br>
+not just to the unmodified library.  If you use our work, you ought to<br>
+acknowledge us.<br>
+<br>
+Permission is NOT granted for the use of any IJG author's name or company name<br>
+in advertising or publicity relating to this software or products derived from<br>
+it.  This software may be referred to only as "the Independent JPEG Group's<br>
+software".<br>
+<br>
+We specifically permit and encourage the use of this software as the basis of<br>
+commercial products, provided that all warranty or liability claims are<br>
+assumed by the product vendor.<br>
+<br>
+E:  This software is copyrighted as noted below.  It may be freely copied,<br>
+modified, and redistributed, provided that the copyright notice is<br>
+preserved on all copies.<br>
+<br>
+There is no warranty or other guarantee of fitness for this software,<br>
+it is provided solely "as is".  Bug reports or fixes may be sent<br>
+to the author, who may or may not act on them as he desires.<br>
+<br>
+You may not include this software in a program or other software product<br>
+without supplying the source, or without informing the end-user that the<br>
+source is available for no extra charge.<br>
+<br>
+If you modify this software, you should include a notice giving the<br>
+name of the person performing the modification, the date of modification,<br>
+and the reason for such modification.<br>
+<br>
+F:  The program and documentation may be freely distributed by anyone in source<br>
+or binary format. Please clearly note any changes.<br>
+<br>
+G:  Public domain:<br>
+<br>
+This software is in the public domain.  Permission to use, copy,<br>
+modify, and distribute this software and its documentation for any<br>
+purpose and without fee is hereby granted, without any conditions or<br>
+restrictions.<br>
+<br>
+H:  Public domain, slightly different wording:<br>
+<br>
+Permission  to  use, copy, modify, and distribute this software and<br>
+its documentation  for  any  purpose  and  without  fee  is  hereby<br>
+granted,  without any conditions or restrictions.  This software is<br>
+provided "as is" without express or implied warranty.<br>
+<br>
+H1: Public domain, even another wording:<br>
+<br>
+Contributed to the public domain.<br>
+<br>
+H2: Public domain, even another wording:<br>
+<br>
+Contributed to the public domain. This software is provided in<br>
+the hope that it will be useful, but without warranty.<br>
+<br>
+I:  A variation on the BSD license<br>
+<br>
+Permission to use, copy, modify, distribute, and  sell  this<br>
+software  and  its  documentation  for any purpose is hereby<br>
+granted without  fee,  provided  that  the  above  copyright<br>
+notice  appear  in  all  copies and that both that copyright<br>
+notice and this permission notice appear in supporting documentation,<br>
+and  that  the  name  of the  Smithsonian Astrophysical<br>
+Observatory not be used in advertising or publicity<br>
+pertaining to distribution of the software without specific,<br>
+written  prior  permission.   The Smithsonian  Astrophysical<br>
+Observatory makes no representations about  the  suitability<br>
+of  this  software for any purpose.  It is provided  "as is"<br>
+without express or implied warranty.<br>
+THE  SMITHSONIAN  ASTROPHYSICAL  OBSERVATORY  DISCLAIMS  ALL<br>
+WARRANTIES  WITH  REGARD  TO  THIS  SOFTWARE,  INCLUDING ALL<br>
+IMPLIED  WARRANTIES  OF  MERCHANTABILITY AND FITNESS, IN  NO<br>
+EVENT SHALL THE  SMITHSONIAN  ASTROPHYSICAL  OBSERVATORY  BE<br>
+LIABLE FOR  ANY SPECIAL, INDIRECT  OR  CONSEQUENTIAL DAMAGES<br>
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS  OF USE,  DATA<br>
+OR  PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR<br>
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION  WITH<br>
+THE  USE OR PERFORMANCE OF THIS SOFTWARE.<br>
+<br>
+<br>
+Programs actually included in this package:<br>
+<br>
+411toppm:      (B) 2001      Steve Allen <sla@alumni.caltech.edu><br>
+anytopnm:      (A) 1991      Jef Poskanzer<br>
+asciitopgm:    (A) 1989      Wilson H. Bent, Jr<br>
+atktopbm:      (A) 1991      Bill Janssen<br>
+bioradtopgm:   (A) 1993      Oliver Trepte <oliver@fysik4.kth.se><br>
+bmptopnm:      (A) 1992      David W. Sanderson (as bmptoppm)<br>
+brushtopbm:    (A) 1988      Jef Poskanzer<br>
+cmuwmtopbm:    (A) 1989      Jef Poskanzer<br>
+eyuvtoppm:     (B) 1995      The Regents of the University of California<br>
+fiascotopnm:   (C) 1994-2000 Ullrich Hafner <hafner@bigfoot.de><br>
+fitstopnm:     (A) 1989      Jef Poskanzer<br>
+fstopgm:       (A) 1989      Jef Poskanzer<br>
+g3topbm:       (A) 1989      Paul Haeberli <paul@manray.sgi.com><br>
+gemtopnm:      (A) 1988      Diomidis D. Spinellis<br>
+giftopnm:      (A) 1990-1993 David Koblas <koblas@netcom.com><br>
+gouldtoppm:    (A) 1990      Stephen P. Lesniewski<br>
+hipstopgm:     (A) 1989      Jef Poskanzer<br>
+icontopbm:     (A) 1988      Jef Poskanzer<br>
+ilbmtoppm:     (A) 1989      Jef Poskanzer<br>
+imgtoppm:      (A) 1989      Jef Poskanzer<br>
+jpegtopnm:     (D) 1991-2000 Thomas G. Lane, Bryan Henderson<br>
+leaftoppm:     (A) 1994      Bill O'Donnell<br>
+lispmtopgm:    (A) 1988      Jef Poskanzer, Jamie Zawinski<br>
+macptopbm:     (A) 1988      Jef Poskanzer<br>
+mdatopbm:      (C) 1999      John Elliott <jce@seasip.demon.co.uk><br>
+mgrtopbm:      (A) 1989      Jef Poskanzer<br>
+mtvtoppm:      (A) 1989      Jef Poskanzer<br>
+neotoppm:      (D) 2001      Teemu Hukkanen <tjhukkan@iki.fi><br>
+palmtopnm:     (A) 1995-2000 Ian Goldberg, Bill Janssen<br>
+pamcut:        (A) 1989      Jef Poskanzer<br>
+pamdeinterlace (H1) 2001     Bryan Henderson<br>
+pamdice        (H1) 2001     Bryan Henderson<br>
+pamfile:       (A) 1991      Jef Poskanzer<br>
+pamoil:        (A) 1990      Wilson Bent <whb@hoh-2.att.com><br>
+pamstack       (H1) 2002      Bryan Henderson<br>
+pamstretch     (C) 1998,2000 Russell Marks (as pnminterp)<br>
+pamstretch-gen (H1) 1999      Russell Marks (as pnminterp-gen)<br>
+pbmclean:      (A) 1989-2001 Jef Poskanzer, Angus Duggan, Michael Sternberg<br>
+pbmlife:       (A) 1988-1991 Jef Poskanzer<br>
+pbmmake:       (A) 1988      Jef Poskanzer<br>
+pbmmask:       (A) 1989-1991 Jef Poskanzer<br>
+pbmpage:       (C) 1998      Tim Norman<br>
+pbmpscale:     (A) 1989-1990 Jef Poskanzer, Angus Duggan<br>
+pbmreduce:     (A) 1989      Jef Poskanzer<br>
+pbmtextps:     (A) 2002      James McCann<br>
+pbmtext:       (A) 1991      Jef Poskanzer<br>
+pbmto10x:      (A) 1990-1994 Ken Yap<br>
+pbmtoascii:    (A) 1988-1992 Jef Poskanzer<br>
+pbmtoatk:      (A) 1991      Bill Janssen<br>
+pbmtobbnbg:    (A) 1989      Mike Parker<br>
+pbmtocmuwm:    (A) 1989      Jef Poskanzer<br>
+pbmtoepsi:     (A) 1988      Jef Poskanzer<br>
+pbmtoepson:    (A) 1990      Jef Poskanzer, John Tiller <tiller@galois.msfc.nasa.gov><br>
+pbmtog3:       (A) 1989      Paul Haeberli <paul@manray.sgi.com><br>
+pbmtogem:      (A) 1988      Jef Poskanzer, David Beckemeyer<br>
+pbmtogo:       (A) 1988-1989 Jef Poskanzer, Michael Haberler, Bo Thide'<br>
+pbmtoicon:     (A) 1988      Jef Poskanzer<br>
+pbmtolj:       (A) 1988      Jef Poskanzer, Michael Haberler<br>
+pbmtomacp:     (A) 1988      Douwe vand der Schaaf<br>
+pbmtomda:      (C) 1999      John Elliott <jce@seasip.demon.co.uk><br>
+pbmtomgr:      (A) 1989      Jef Poskanzer<br>
+pbmtonokia:    (A) 2001      OMS Open Media System GmbH, Tim Rühsen <tim.ruehsen@openmediasystem.de><br>
+pbmtopgm:      (A) 1989-1990 Jef Poskanzer, Angus Duggan<br>
+pbmtopi3:      (A) 1988      David Beckemeyer and Jef Poskanzer<br>
+pbmtoplot:     (A) 1990      Arthur David Olson<br>
+pbmtoppa:      (C) 1998      Tim Norman<br>
+pbmtopsg3:     (C) 2001      Kristof Koehler <kristof@fachschaft.physik.uni-karlsruhe.de><br>
+pbmtoptx:      (A) 1988      Jef Poskanzer<br>
+pbmtowbmp:     (A) 1999      Terje Sannum <terje@looplab.com><br>
+pbmtox10bm:    (A) 1988      Jef Poskanzer<br>
+pbmtoxbm:      (A) 1988      Jef Poskanzer<br>
+pbmtoybm:      (A) 1991      Jamie Zawinski and Jef Poskanzer<br>
+pbmtozinc:     (A) 1988      James Darrell McCauley <jdm5548@diamond.tamu.edu>, Jef Poskanzer<br>
+pbmupc:        (A) 1988      Jef Poskanzer<br>
+pcxtoppm:      (A) 1990      Michael Davidson<br>
+pgmbentley:    (A) 1990      Wilson Bent <whb@hoh-2.att.com><br>
+pgmcrater:     (H) 1989      John Walker <kelvin@autodesk.com><br>
+pgmedge:       (A) 1989      Jef Poskanzer<br>
+pgmenhance:    (A) 1989-1991 Jef Poskanzer<br>
+pgmhist:       (A) 1989      Jef Poskanzer<br>
+pgmkernel:     (A) 1992      Alberto Accomazzi, Smithsonian Astrophysical Observatory<br>
+pgmnoise:      (A) 1993      Frank Neumann<br>
+pgmramp:       (A) 1989      Jef Poskanzer<br>
+pgmslice:      (C) 2000      Jos Dingjan <jos@tuatha.org><br>
+pgmtexture:    (A) 1991      Texas Agricultural Experiment Station, James Darrell McCauley<br>
+pgmtofs:       (A) 1991      Jef Poskanzer<br>
+pgmtolispm:    (A) 1991      Jamie Zawinski and Jef Poskanzer<br>
+pgmtopbm:      (A) 1989      Jef Poskanzer<br>
+pgmtoppm:      (A) 1991      Jef Poskanzer<br>
+pi1toppm:      (A) 1991      Steve Belczyk <seb3@gte.com> and Jef Poskanzer<br>
+pi3topbm:      (A) 1988      David Beckemeyer and Diomidis D. Spinellis<br>
+pjtoppm:       (A) 1990      Christos Zoulas <christos@ee.cornell.edu><br>
+pngtopnm:      (A) 1995-1998 Alexander Lehmann <alex@hal.rhein-main.de>, Willem van Schaik <willem@schaik.com><br>
+pnmalias:      (A) 1992      Alberto Accomazzi, Smithsonian Astrophysical Observatory<br>
+pnmarith:      (A) 1989-1991 Jef Poskanzer<br>
+pnmcat:        (A) 1989-1991 Jef Poskanzer<br>
+pnmcolormap    (A) 1989,1991 Jef Poskanzer<br>
+(A) 2001      Bryan Henderson<br>
+pnmcomp:       (A) 1992      David Koblas<br>
+pnmconvol:     (A) 1989-1995 Jef Poskanzer, Mike Burns <burns@chem.psu.edu><br>
+pnmcrop:       (A) 1988      Jef Poskanzer<br>
+pnmcut:        (A) 1989      Jef Poskanzer<br>
+pnmdepth:      (A) 1989-1991 Jef Poskanzer<br>
+pnmenlarge:    (A) 1989      Jef Poskanzer<br>
+pnmfile:       (A) 1991      Jef Poskanzer<br>
+pnmflip:       (A) 1989      Jef Poskanzer<br>
+pnmgamma:      (A) 1991      Jef Poskanzer and Bill Davidson<br>
+pnmhisteq:     (H) 1995      John Walker <kelvin@fourmalib.ch><br>
+pnmhistmap:    (A) 1993      Wilson H. Bent, Jr <whb@usc.edu><br>
+pnmindex:      (A) 1991      Jef Poskanzer<br>
+pnminvert:     (A) 1989      Jef Poskanzer<br>
+pnmmargin:     (A) 1991      Jef Poskanzer<br>
+pnmmontage:    (A) 2000      Ben Olmstead<br>
+pnmnlfilt:     (A) 1993      Graeme W. Gill <graeme@labtam.oz.au><br>
+pnmnorm:       (A) 1989,1991 Jef Poskanzer (as pgmnorm)<br>
+(A)           Michael Mauldin (fbnorm-filter in "Fuzzy Pixmap")<br>
+(A)           Wilson H. Bent, Jr. (whb@usc.edu) (as ppmnorm)<br>
+(A) 2002      Bryan Henderson<br>
+pnmpad:        (A) 1989      Jef Poskanzer<br>
+(A) 1990      Angus Duggan<br>
+(A) 2002      Martin van Beilen<br>
+pnmpaste:      (A) 1989      Jef Poskanzer<br>
+pnmpsnr:       (C) 1994-2000 Ullrich Hafner <hafner@bigfoot.de><br>
+pnmquant       (H1) 2002      Bryan Henderson<br>
+pnmremap       (A) 1989,1991 Jef Poskanzer (as ppmquant)<br>
+(A) 2001      Bryan Henderson<br>
+pnmrotate:     (A) 1989-1991 Jef Poskanzer<br>
+pnmscale:      (A) 1989-1991 Jef Poskanzer<br>
+pnmscalefixed: (A) 1989-1991 Jef Poskanzer<br>
+pnmshear:      (A) 1989-1991 Jef Poskanzer<br>
+pnmsmooth:     (A) 1984      Mike Burns <burns@chem.psu.edu><br>
+pnmsplit:      (H1) 2000      Bryan Henderson <bryanh@giraffe-data.com><br>
+pnmtile:       (A) 1989      Jef Poskanzer<br>
+pnmtoddif:     (A) 1992      Digital Equipment Corporation, Burkhard Neidecker-Lutz<br>
+pnmtofiasco:   (C) 1994-2000 Ullrich Hafner <hafner@bigfoot.de><br>
+pnmtofits:     (C) 1989      Wilson H. Bent <whb@hoh-2.att.com><br>
+pnmtojpeg:     (D) 1991-2001 Thomas G. Lane, Bryan Henderson<br>
+pnmtopalm:     (A) 1995-2000 Ian Goldberg, Bill Janssen<br>
+pnmtoplainpnm: (A) 1991      Jef Poskanzer<br>
+pnmtopng:      (A) 1995-1998 Alexander Lehmann <alex@hal.rhein-main.de>, Willem van Schaik <willem@schaik.com><br>
+pnmtops:       (A) 1989      Jef Poskanzer<br>
+pnmtorast:     (A) 1989-1991 Jef Poskanzer<br>
+pnmtorle:      (E) 1994      Minnesota Supercomputer Center, Inc, Wes Barris <wes@msc.edu><br>
+pnmtosgi:      (A) 1994      Ingo Wilken <Ingo.Wilken@informatik.uni-oldenburg.de><br>
+pnmtosir:      (A) 1991      Marvin Landis<br>
+pnmtotiff:     (A) 1990      Sun Microsystems, Inc, Jef Poskanzer<br>
+pnmtotiffcmyk: (C) 1999      Andrew Cooke (Jara Software) <jara@andrewcooke.free-online.co.uk><br>
+pnmtoxwd:      (A) 1989-1991 Jef Poskanzer<br>
+ppm3d:         (A) 1989      Jef Poskanzer<br>
+ppmbrighten:   (A) 1989-1990 Jef Poskanzer, Brian Moffet<br>
+ppmchange:     (A) 1991      Wilson H. Bent, Jr<br>
+ppmcie:        (H) 1995      John Walker <kelvin@fourmilab.ch><br>
+ppmcolormask:  (H1) 2000      Bryan Henderson <bryanh@giraffe-data.com><br>
+ppmcolors      (H1) 2001     Bryan Henderson<br>
+ppmdim:        (A) 1993      Frank Neumann<br>
+ppmdist:       (A) 1993      Dan Stromberg<br>
+ppmdither:     (A) 1991      Christos Zoulas<br>
+ppmfade:       (?) 1994      Minnesota Supercomputer Center, Inc, Wes Barris <wes@msc.edu><br>
+ppmflash:      (A) 1993      Frank Neumann<br>
+ppmforge:      (H) 1989      John Walker <kelvin@autodesk.com><br>
+ppmhist:       (A) 1989      Jef Poskanzer<br>
+ppmlabel:      (H) 1995      John Walker <kelvin@fourmilab.ch><br>
+ppmmake:       (A) 1989      Jef Poskanzer<br>
+ppmmix:        (A) 1993      Frank Neumann<br>
+ppmntsc:       (E) 1993      Minnesota Supercomputer Center, Inc, Wes Barris <wes@msc.edu><br>
+ppmpat:        (A) 1989-1991 Jef Poskanzer<br>
+ppmquant:      (A) 1989-1991 Jef Poskanzer<br>
+ppmquantall:   (A) 1991      Jef Poskanzer<br>
+ppmqvga:       (F) 1991-1992 Bill Davidsen, Lyle Rains <lrains@netcom.com><br>
+ppmrainbow:    (H2) 2001      Arjen Bax <arjen.bax@cmg.nl><br>
+ppmrelief:     (A) 1990      Wilson H. Bent, Jr<br>
+ppmshadow:     (G) 1997      John Walker <kelvin@fourmilab.ch><br>
+ppmshift:      (A) 1993      Frank Neumann<br>
+ppmspread:     (A) 1993      Frank Neumann<br>
+ppmtoacad:     (H) 1991      John Walker <kelvin@autodesk.com><br>
+ppmtobmp:      (A) 1992      David W. Sanderson<br>
+ppmtoeyuv:     (B) 1995      The Regents of the University of California<br>
+ppmtoicr:      (A) 1990      Kanthan Pillay <svpillay@Princeton.EDU><br>
+ppmtoilbm:     (A) 1989      Jef Poskanzer<br>
+ppmtoleaf:     (A) 1994      Bill O'Donnell<br>
+ppmtolj:       (A) 2000      Jonathan Melvin <jonathan.melvin@heywood.co.uk><br>
+ppmtomap:      (A) 1989      Jef Poskanzer<br>
+ppmtomitsu:    (A) 1992-1993 S.Petra Zeidler<br>
+ppmtompeg:     (B) 1995      The Regents of the University of California<br>
+ppmtoneo:      (D) 2001      Teemu Hukkanen <tjhukkan@iki.fi><br>
+ppmtopcx:      (B) 1994      Ingo Wilken <Ingo.Wilken@informatik.uni-oldenburg.de><br>
+ppmtopgm:      (A) 1989      Jef Poskanzer<br>
+ppmtopi1:      (A) 1991      Jef Poskanzer and Steve Belczyk<br>
+ppmtopict:     (A) 1990      Ken Yap <ken@cs.rochester.edu><br>
+ppmtopj:       (A) 1990      Christos Zoulas <christos@ee.cornell.edu><br>
+ppmtopuzz:     (A) 1991      Jef Poskanzer<br>
+ppmtorgb3:     (A) 1991      Jef Poskanzer<br>
+ppmtosixel:    (A) 1991      Rick Vinci<br>
+ppmtotga:      (A) 1989-1991 Mark Shand and Jef Poskanzer<br>
+ppmtouil:      (A) 1990      Mark W. Snitily, Jef Poskanzer<br>
+ppmtowinicon:  (A) 2000      Lee Benfield <lee@recoil.org><br>
+ppmtoxpm:      (A) 1990      Mark W. Snitily<br>
+ppmtoyuv:      (A) 1987-1991 Abekas Video Systems Inc, DHD PostImage Inc<br>
+ppmtoyuvsplit: (A) 1993      Andre Beck <Andre_Beck@IRS.Inf.TU-Dresden.de><br>
+ppmtv:         (A) 1993      Frank Neumann<br>
+psidtopgm:     (A) 1989      Jef Poskanzer<br>
+pstopnm:       (I) 1992      Smithsonian Astrophysical Observatory, Alberto Accomazzi<br>
+qrttoppm:      (A) 1989      Jef Poskanzer<br>
+rasttopnm:     (A) 1989-1991 Jef Poskanzer<br>
+rawtopgm:      (A) 1989      Jef Poskanzer<br>
+rawtoppm:      (A) 1991      Jef Poskanzer<br>
+rgb3toppm:     (A) 1991      Jef Poskanzer<br>
+rletopnm:      (E) 1994      Minnesota Supercomputer Center, Inc, Wes Barris <wes@msc.edu><br>
+sbigtopgm:     (A) 1998      John Walker<br>
+sgitopnm:      (A) 1994      Ingo Wilken <Ingo.Wilken@informatik.uni-oldenburg.de><br>
+sirtopnm:      (A) 1991      Marvin Landis<br>
+sldtoppm:      (H) 1991      John Walker <kelvin@autodesk.com><br>
+spctoppm:      (A) 1991      Jef Poskanzer and Steve Belczyk<br>
+sputoppm:      (A) 1991      Jef Poskanzer and Steve Belczyk<br>
+st4topgm:      (A) 2003      Justin Pryzby <justinpryzby@users.sf.net><br>
+tifftopnm:     (A) 1990      Sun Microsystems, Inc, Jef Poskanzer<br>
+tgatoppm:      (A) 1989      Jef Poskanzer<br>
+thinkjettopbm: (A) 2001      W. Eric Norum <eric.norum@usask.ca><br>
+wbmptopbm:     (A) 1999      Terje Sannum <terje@looplab.com><br>
+winicontoppm:  (A) 2000      Lee Benfield <lee@recoil.org><br>
+xbmtopbm:      (A) 1988      Jef Poskanzer<br>
+ximtoppm:      (A) 1991      Jef Poskanzer<br>
+xpmtoppm:      (A) 1991      Jef Poskanzer<br>
+xvminitoppm:   (A) 1993      Ingo Wilken <Ingo.Wilken@informatik.uni-oldenburg.de><br>
+xwdtopnm:      (A) 1989-1991 Jef Poskanzer<br>
+ybmtopbm:      (A) 1988      Jamie Zawinski and Jef Poskanzer<br>
+yuvsplittoppm: (A) 1993      Marcel Wijkstra <wijkstra@fwi.uva.nl><br>
+yuvtoppm:      (A) 1987-1991 Jef Poskanzer, Abekas Video Systems Inc., DHD PostImage Inc.<br>
+zeisstopnm:    (A) 1993      Oliver Trepte <oliver@fysik4.kth.se><br>
+<br>
+<br>
+<br>
+The following packages were included in this package, but replaced:<br>
+[ bmptoppm:     (A) 1992      David W. Sanderson ]<br>
+[ gemtopbm:      (A) 1988      Diomidis D. Spinellis ]<br>
+[ pgmnorm:       (A) 1989-1991 Jef Poskanzer ]<br>
+[ pnminterp:     (C) 1998-2000 Russell Marks <russell.marks@ntlworld.com> ]<br>
+[ pnminterp-gen: (C) 1998-2000 Russell Marks <russell.marks@ntlworld.com> ]<br>
+[ pnmnoraw:      (A) 1991      Jef Poskanzer ]<br>
+[ picttoppm:     (A) 1989-1993 George Phillips <phillips@cs.ubc.ca> [security]]<br>
+[ ppmnorm:       (A) 1989-1991 Jef Poskanzer, Wilson H. Bent, Jr <whb@usc.edu> ]<br>
+[ ppmsvgalib:    (H1) 2002      Bryan Henderson [never included in debian]]<br>
+<br>
+<br>
+<br>
+Not distributed due to patent issues:<br>
+[ jbigtopnm:     (C) 2000      Markus Kuhn <mkuhn@acm.org> ]<br>
+[ pnmtojbig:     (C) 2000      Markus Kuhn <mkuhn@acm.org> ]<br>
+filter to create GIFs - patent restricted. (http://www.unisys.com/unisys/lzw/<br>
+[ ppmtogif:      (A) 1989      Jef Poskanzer ]<br>
+<br>
+===============================================================================<br>
+NON-FREE:<br>
+<br>
+The following programs have restrictions on their use or source:<br>
+<br>
+hpcdtoppm package:<br>
+==================<br>
+hpcdtoppm pcdindex<br>
+<br>
+*  Copyright (c) 1992, 1993, 1994 by Hadmut Danisch (danisch@ira.uka.de).<br>
+*  Permission to use and distribute this software and its<br>
+*  documentation for noncommercial use and without fee is hereby granted,<br>
+*  provided that the above copyright notice appear in all copies and that<br>
+*  both that copyright notice and this permission notice appear in<br>
+*  supporting documentation. It is not allowed to sell this software in<br>
+*  any way. This software is not public domain.<br>
+<br>
+<br>
+===================================================================================================<br>
+UNKNOWN, SO NOT DISTRIBUTED:<br>
+<br>
+The following programs are in the upstream source package, but do not<br>
+have sufficient copyright and license information to be redistributed:<br>
+<br>
+pamchannel:  No copyright / license text found<br>
+pamtopnm:    No copyright / license text found<br>
+pbmto4425:   No copyright / license text found<br>
+pbmtoln03:   No copyright / license text found<br>
+pbmtolps:    No copyright / license text found<br>
+pbmtopk:     No copyright / license text found<br>
+pktopbm:     No copyright / license text found<br>
+ppmtopjxl:   No copyright / license text found<br>
+spottopgm:   No copyright / license text found<br>
+   </body>
+</html>

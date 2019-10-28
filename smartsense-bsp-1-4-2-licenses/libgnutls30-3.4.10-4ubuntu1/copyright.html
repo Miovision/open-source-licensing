@@ -1,0 +1,429 @@
+<html>
+   <body>
+This package was debianized by Ivo Timmermans <ivo@debian.org> on<br>
+Fri,  3 Aug 2001 10:00:42 +0200.<br>
+It was later taken over by Matthias Urlichs <smurf@debian.org> and is now<br>
+maintained by Andreas Metzler <ametzler@debian.org> Eric Dorland<br>
+<eric@debian.org>, James Westby <jw+debian@jameswestby.net><br>
+<br>
+<br>
+It was downloaded from ftp://ftp.gnutls.org/gcrypt/gnutls/<br>
+<br>
+Upstream Authors:<br>
+Simon Josefsson *simon [at] josefsson.org*<br>
+Current maintainer; draft TLS 1.2 support.<br>
+<br>
+Nikos Mavrogiannopoulos *nmav [at] gnutls.org*<br>
+Original author and maintainer of GnuTLS.<br>
+<br>
+Fabio Fiorina *Fabio.Fiorina [at] alcatel.it*<br>
+ASN.1 structures parser library (libtasn1).<br>
+<br>
+Timo Schulz *twoaday [at] freakmail.de*<br>
+OpenPGP support (OpenCDK library).<br>
+<br>
+Andrew McDonald *andrew [at] mcdonald.org.uk*<br>
+OpenSSL compatible interface.<br>
+<br>
+Ludovic Courtes *ludo [at] gnu.org*<br>
+Guile bindings, OpenPGP bug fixes.<br>
+<br>
+Mario Lenz *m [at] riolenz.de*<br>
+Fixes to OpenCDK.<br>
+<br>
+Howard Chu *hyc [at] symas.com*<br>
+APIs to extract X.500 DN's from Certificates.<br>
+<br>
+Ivo Timmermans *ivo [at] o2w.nl*<br>
+Man pages, OpenCDK, fixes.<br>
+<br>
+Stefan Walter *stef [at] memberwebs.com*<br>
+PKCS8 fix, PKCS #11 backend move to p11-kit.<br>
+<br>
+Yoshisato YANAGISAWA *yanagisawa [at] csg.is.titech.ac.jp*<br>
+Camellia support.<br>
+<br>
+Emile Van Bergen *emile [at] e-advies.nl*<br>
+TLS/IA fixes.<br>
+<br>
+Joe Orton *jorton [at] redhat.com*<br>
+Certificate name import/export, build fixes, test vectors.<br>
+<br>
+Daniel Kahn Gillmor *dkg-debian.org [at] fifthhorseman.net*<br>
+OpenPGP discussion and improvements.<br>
+<br>
+David Marín Carreño *davefx [at] gmail.com*<br>
+Added gnutls_x509_crq_get_key_id.<br>
+<br>
+Daiki Ueno *ueno [at] unixuser.org*<br>
+Added TLS Session Ticket (RFC 5077) support,<br>
+finished client-side TLS 1.2 support.<br>
+<br>
+Brad Hards *bradh [at] frogmouth.net*<br>
+Add X.509 Issuer Alternative Name functions.<br>
+<br>
+Boyan Kasarov *bkasarov [at] gmail.com*<br>
+C++ fixes.<br>
+<br>
+Steve Dispensa *dispensa [at] phonefactor.com*<br>
+Initial TLS safe renegotiation patch.<br>
+<br>
+Jonathan Bastien-Filiatrault *joe [at] x2a.org*<br>
+Fix TLS-version checks.<br>
+Redesign and implementation of the buffering layer.<br>
+Initial DTLS implementation.<br>
+<br>
+Ruslan Ijbulatov (LRN) *lrn1986 [at] gmail.com*<br>
+Win32 patches.<br>
+<br>
+Andy Polyakov *appro [at] openssl.org*<br>
+AES-NI and Padlock assembler code (at lib/accelerated/intel/asm/)<br>
+<br>
+David Woodhouse *dwmw2 [at] infradead.org*<br>
+DTLS 0.9 implementation.<br>
+<br>
+Olga Smolenchuk *olyasib12 [at] gmail.com*<br>
+DTLS/TLS heartbeat implementation.<br>
+<br>
+Ilya Tumaykin *itumaykin [at] gmail.com*<br>
+Elliptic curve support improvements (wmNAF implementation and others).<br>
+<br>
+Martin Storjo *martin [at] martin.st*<br>
+DTLS-SRTP support.<br>
+<br>
+<br>
+License: The main library is licensed under GNU Lesser<br>
+General Public License (LGPL) version 2.1+, Gnutls Extra (which is currently<br>
+just the openssl wrapper library), build system, testsuite and commandline<br>
+utilities are licenced under the GNU General Public License version 3+.  The<br>
+Guile bindings use the same license as the respective underlying library,<br>
+i.e. LGPLv2.1+ for the main library and GPLv3+ for Gnutls extra.<br>
+<br>
+However to be able to use and link against libgnutls a program needs to be<br>
+available under a license compatible with LGPLv3+ or GPLv2+ since GnuTLS<br>
+requires nettle which requires GMP. GMP (>= 6.0.0) is dual licensed<br>
+LGPLv3+ or GPLv2+.<br>
+<br>
+Copyright:<br>
+--------------------<br>
+/* -*- c -*-<br>
+* Copyright (C) 2000-2016 Free Software Foundation, Inc.<br>
+*<br>
+* Author: Nikos Mavrogiannopoulos<br>
+*<br>
+* This file is part of GnuTLS.<br>
+*<br>
+* The GnuTLS is free software; you can redistribute it and/or<br>
+* modify it under the terms of the GNU Lesser General Public License<br>
+* as published by the Free Software Foundation; either version 2.1 of<br>
+* the License, or (at your option) any later version.<br>
+*<br>
+* This library is distributed in the hope that it will be useful, but<br>
+* WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU<br>
+* Lesser General Public License for more details.<br>
+*<br>
+* You should have received a copy of the GNU Lesser General Public License<br>
+* along with this program.  If not, see <http://www.gnu.org/licenses/><br>
+*<br>
+*/<br>
+--------------------<br>
+/*<br>
+* Copyright (C) 2004-2015 Free Software Foundation, Inc.<br>
+* Copyright (c) 2002 Andrew McDonald <andrew@mcdonald.org.uk><br>
+*<br>
+* This file is part of GnuTLS-EXTRA.<br>
+*<br>
+* GnuTLS-extra is free software: you can redistribute it and/or modify<br>
+* it under the terms of the GNU General Public License as published by<br>
+* the Free Software Foundation, either version 3 of the License, or<br>
+* (at your option) any later version.<br>
+*<br>
+* GnuTLS-extra is distributed in the hope that it will be useful,<br>
+* but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+* GNU General Public License for more details.<br>
+*<br>
+* You should have received a copy of the GNU General Public License<br>
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.<br>
+*/<br>
+--------------------<br>
+<br>
+The documentation is distributed under the terms of the GNU Free<br>
+Documentation License (FDL):<br>
+--------------------<br>
+Copyright (C) 2001-2015 Free Software Foundation, Inc.<br>
+Copyright (C) 2001-2015 Nikos Mavrogiannopoulos<br>
+<br>
+Permission is granted to copy, distribute and/or modify this<br>
+document under the terms of the GNU Free Documentation License,<br>
+Version 1.3 or any later version published by the Free Software<br>
+Foundation; with no Invariant Sections, no Front-Cover Texts, and<br>
+no Back-Cover Texts.  A copy of the license is included in the<br>
+section entitled "GNU Free Documentation License".<br>
+--------------------<br>
+<br>
+--------------------<br>
+From December 2012 onwards FSF is not the sole copyright holder of GnuTLS<br>
+anymore (See <http://article.gmane.org/gmane.network.gnutls.general/3026>),<br>
+the headers currently also list these authors/copyright holders::<br>
+* Nikos Mavrogiannopoulos<br>
+* KU Leuven<br>
+* INRIA Paris-Rocquencourt<br>
+* Lucas Fisher<br>
+* Sean Buckheister<br>
+* Frank Morgner<br>
+* Bardenheuer GmbH, Munich and Bundesdruckerei GmbH, Berlin<br>
+* Adam Sampson<br>
+* Christian Grothoff<br>
+* Andrew McDonald <andrew@mcdonald.org.uk<br>
+* Red Hat<br>
+* Paul Sheer<br>
+--------------------<br>
+<br>
+<br>
+<br>
+On Debian GNU/Linux systems, the complete text of the latest version of<br>
+the GNU Lesser General Public License can be found in<br>
+`/usr/share/common-licenses/LGPL' v3 of the license in<br>
+`/usr/share/common-licenses/LGPL-3'; the GNU General Public License can<br>
+be found in `/usr/share/common-licenses/GPL' (version 3 in<br>
+/usr/share/common-licenses/GPL-3) The GNU Free Documentation<br>
+License is available under /usr/share/common-licenses/GFDL-1.3.<br>
+<br>
+============================================<br>
+<br>
+Excerpt from upstream's README:<br>
+<br>
+LICENSING<br>
+=========<br>
+<br>
+Since GnuTLS version 3.1.10, the core library has been released under<br>
+the GNU Lesser General Public License (LGPL) version 2.1 or later.<br>
+<br>
+Note, however, that version 6.0.0 and later of the gmplib library used<br>
+by GnuTLS are distributed under a LGPLv3+ or GPLv2+ dual license, and<br>
+as such binaries of this library need to adhere to either LGPLv3+ or<br>
+GPLv2+ license.<br>
+<br>
+<br>
+<br>
+<br>
+The GNU LGPL applies to the main GnuTLS library, while the<br>
+included applications as well as gnutls-openssl<br>
+library are under the GNU GPL version 3.  The gnutls library is<br>
+located in the lib/ and libdane/ directories, while the applications<br>
+in src/ and, the gnutls-openssl library is at extra/.<br>
+<br>
+For any copyright year range specified as YYYY-ZZZZ in this package<br>
+note that the range specifies every single year in that closed interval.<br>
+============================================<br>
+============================================<br>
+<br>
+Non FSF code<br>
+<br>
+============================================<br>
+crywrap is shipped with GnuTLS.<br>
+Upstream Authors: Gergely Nagy <algernon@bonehunter.rulez.org><br>
+Nikos Mavrogiannopoulos<br>
+License: GPLv3+<br>
+<br>
+Copyright:<br>
+--------------------<br>
+* Copyright (C) 2003, 2004 Gergely Nagy <algernon@bonehunter.rulez.org><br>
+* Copyright (C) 2011 Nikos Mavrogiannopoulos<br>
+*<br>
+* This file is part of CryWrap.<br>
+*<br>
+* CryWrap is free software; you can redistribute it and/or modify<br>
+* it under the terms of the GNU General Public License as published by<br>
+* the Free Software Foundation, either version 3 of the License, or<br>
+* (at your option) any later version.<br>
+*<br>
+* CryWrap is distributed in the hope that it will be useful,<br>
+* but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+* GNU General Public License for more details.<br>
+*<br>
+* You should have received a copy of the GNU General Public License<br>
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.<br>
+--------------------<br>
+<br>
+crywrap documentation (manpage):<br>
+Upstream Author: Gergely Nagy <algernon@bonehunter.rulez.org><br>
+License: nonstandard, see below<br>
+Copyright:<br>
+--------------------<br>
+." This manual is for CRYWrap<br>
+."<br>
+." Copyright (C) 2003 Gergely Nagy <algernon@@bonehunter.rulez.org><br>
+."<br>
+." Permission is granted to make and distribute verbatim copies of this<br>
+." manual provided the copyright notice and this permission notice are<br>
+." preserved on all copies.<br>
+."<br>
+." Permission is granted to copy and distribute modified versions of this<br>
+." manual under the conditions for verbatim copying, provided that the<br>
+." entire resulting derived work is distributed under the terms of a<br>
+." permission notice identical to this one.<br>
+."<br>
+." Permission is granted to copy and distribute translations of this<br>
+." manual into another language, under the above conditions for modified<br>
+." versions, except that this permission notice may be stated in a<br>
+." translation approved by the Author.<br>
+--------------------<br>
+<br>
+============================================<br>
+<br>
+lib/accelerated/x86 contains code by Andy Polyakov <appro@openssl.org>,<br>
+copyright is not assigned to the FSF. The code is licensed under the<br>
+CRYPTOGAMS license.<br>
+<br>
+--------------------<br>
+# Copyright (c) 2011-2013, Andy Polyakov by <appro@openssl.org><br>
+# All rights reserved.<br>
+#<br>
+# Redistribution and use in source and binary forms, with or without<br>
+# modification, are permitted provided that the following conditions<br>
+# are met:<br>
+#<br>
+#     * Redistributions of source code must retain copyright notices,<br>
+#      this list of conditions and the following disclaimer.<br>
+#<br>
+#     * Redistributions in binary form must reproduce the above<br>
+#      copyright notice, this list of conditions and the following<br>
+#      disclaimer in the documentation and/or other materials<br>
+#      provided with the distribution.<br>
+#<br>
+#     * Neither the name of the Andy Polyakov nor the names of its<br>
+#      copyright holder and contributors may be used to endorse or<br>
+#      promote products derived from this software without specific<br>
+#      prior written permission.<br>
+#<br>
+# ALTERNATIVELY, provided that this notice is retained in full, this<br>
+# product may be distributed under the terms of the GNU General Public<br>
+# License (GPL), in which case the provisions of the GPL apply INSTEAD OF<br>
+# those given above.<br>
+#<br>
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS<br>
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT<br>
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+--------------------<br>
+<br>
+============================================<br>
+<br>
+lib/extras/randomart.*<br>
+<br>
+<br>
+Upstream Authors: Markus Friedl<br>
+Alexander von Gernler<br>
+<br>
+Copyright:<br>
+* Copyright (c) 2000, 2001 Markus Friedl.  All rights reserved.<br>
+* Copyright (c) 2008 Alexander von Gernler.  All rights reserved.<br>
+License:<br>
+* Redistribution and use in source and binary forms, with or without<br>
+* modification, are permitted provided that the following conditions<br>
+* are met:<br>
+* 1. Redistributions of source code must retain the above copyright<br>
+*    notice, this list of conditions and the following disclaimer.<br>
+* 2. Redistributions in binary form must reproduce the above copyright<br>
+*    notice, this list of conditions and the following disclaimer in the<br>
+*    documentation and/or other materials provided with the distribution.<br>
+*<br>
+* THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR<br>
+* IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES<br>
+* OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<br>
+* IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,<br>
+* INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT<br>
+* NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+* DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+* THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF<br>
+* THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+============================================<br>
+<br>
+lib/accelerated/x86/elf/aes-ssse3-x86.s<br>
+lib/accelerated/x86/macosx/aes-ssse3-x86.s<br>
+<br>
+Upstream Authors: Mike Hamburg (Stanford University)<br>
+<br>
+Copyright:<br>
+* Mike Hamburg (Stanford University), 2009.<br>
+License:<br>
+Public domain.<br>
+<br>
+============================================<br>
+<br>
+lib/inet_pton.c<br>
+<br>
+Upstream Authors: Internet Software Consortium<br>
+<br>
+Copyright/License:<br>
+* Copyright (c) 1996,1999 by Internet Software Consortium.<br>
+*<br>
+* Permission to use, copy, modify, and distribute this software for any<br>
+* purpose with or without fee is hereby granted, provided that the above<br>
+* copyright notice and this permission notice appear in all copies.<br>
+*<br>
+* THE SOFTWARE IS PROVIDED "AS IS" AND INTERNET SOFTWARE CONSORTIUM DISCLAIMS<br>
+* ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES<br>
+* OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL INTERNET SOFTWARE<br>
+* CONSORTIUM BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL<br>
+* DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR<br>
+* PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS<br>
+* ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS<br>
+* SOFTWARE.<br>
+<br>
+============================================<br>
+<br>
+lib/vasprintf.c<br>
+Upstream Authors: David Woodhouse <dwmw2@infradead.org><br>
+Copyright: 2008-2014 Intel Corporation<br>
+License: LGPL2.1<br>
+Comment: This code is not used on Debian/*, since we have a working<br>
+vasprintf() in glibc.<br>
+<br>
+lib/extras/hex.*<br>
+Author: Rusty Russell <rusty@rustcorp.com.au><br>
+Comment: http://ccodearchive.net/info/str/hex.html<br>
+License: CC0 license<br>
+Statement of Purpose<br>
+<br>
+The laws of most jurisdictions throughout the world automatically confer exclusive Copyright and Related Rights (defined below) upon the creator and subsequent owner(s) (each and all, an "owner") of an original work of authorship and/or a database (each, a "Work").<br>
+<br>
+Certain owners wish to permanently relinquish those rights to a Work for the purpose of contributing to a commons of creative, cultural and scientific works ("Commons") that the public can reliably and without fear of later claims of infringement build upon, modify, incorporate in other works, reuse and redistribute as freely as possible in any form whatsoever and for any purposes, including without limitation commercial purposes. These owners may contribute to the Commons to promote the ideal of a free culture and the further production of creative, cultural and scientific works, or to gain reputation or greater distribution for their Work in part through the use and efforts of others.<br>
+<br>
+For these and/or other purposes and motivations, and without any expectation of additional consideration or compensation, the person associating CC0 with a Work (the "Affirmer"), to the extent that he or she is an owner of Copyright and Related Rights in the Work, voluntarily elects to apply CC0 to the Work and publicly distribute the Work under its terms, with knowledge of his or her Copyright and Related Rights in the Work and the meaning and intended legal effect of CC0 on those rights.<br>
+<br>
+1. Copyright and Related Rights. A Work made available under CC0 may be protected by copyright and related or neighboring rights ("Copyright and Related Rights"). Copyright and Related Rights include, but are not limited to, the following:<br>
+<br>
+the right to reproduce, adapt, distribute, perform, display, communicate, and translate a Work;<br>
+moral rights retained by the original author(s) and/or performer(s);<br>
+publicity and privacy rights pertaining to a person's image or likeness depicted in a Work;<br>
+rights protecting against unfair competition in regards to a Work, subject to the limitations in paragraph 4(a), below;<br>
+rights protecting the extraction, dissemination, use and reuse of data in a Work;<br>
+database rights (such as those arising under Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, and under any national implementation thereof, including any amended or successor version of such directive); and<br>
+other similar, equivalent or corresponding rights throughout the world based on applicable law or treaty, and any national implementations thereof.<br>
+<br>
+2. Waiver. To the greatest extent permitted by, but not in contravention of, applicable law, Affirmer hereby overtly, fully, permanently, irrevocably and unconditionally waives, abandons, and surrenders all of Affirmer's Copyright and Related Rights and associated claims and causes of action, whether now known or unknown (including existing as well as future claims and causes of action), in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each member of the public at large and to the detriment of Affirmer's heirs and successors, fully intending that such Waiver shall not be subject to revocation, rescission, cancellation, termination, or any other legal or equitable action to disrupt the quiet enjoyment of the Work by the public as contemplated by Affirmer's express Statement of Purpose.<br>
+<br>
+3. Public License Fallback. Should any part of the Waiver for any reason be judged legally invalid or ineffective under applicable law, then the Waiver shall be preserved to the maximum extent permitted taking into account Affirmer's express Statement of Purpose. In addition, to the extent the Waiver is so judged Affirmer hereby grants to each affected person a royalty-free, non transferable, non sublicensable, non exclusive, irrevocable and unconditional license to exercise Affirmer's Copyright and Related Rights in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "License"). The License shall be deemed effective as of the date CC0 was applied by Affirmer to the Work. Should any part of the License for any reason be judged legally invalid or ineffective under applicable law, such partial invalidity or ineffectiveness shall not invalidate the remainder of the License, and in such case Affirmer hereby affirms that he or she will not (i) exercise any of his or her remaining Copyright and Related Rights in the Work or (ii) assert any associated claims and causes of action with respect to the Work, in either case contrary to Affirmer's express Statement of Purpose.<br>
+<br>
+4. Limitations and Disclaimers.<br>
+<br>
+No trademark or patent rights held by Affirmer are waived, abandoned, surrendered, licensed or otherwise affected by this document.<br>
+Affirmer offers the Work as-is and makes no representations or warranties of any kind concerning the Work, express, implied, statutory or otherwise, including without limitation warranties of title, merchantability, fitness for a particular purpose, non infringement, or the absence of latent or other defects, accuracy, or the present or absence of errors, whether or not discoverable, all to the greatest extent permissible under applicable law.<br>
+Affirmer disclaims responsibility for clearing rights of other persons that may apply to the Work or any use thereof, including without limitation any person's Copyright and Related Rights in the Work. Further, Affirmer disclaims responsibility for obtaining any necessary consents, permissions or other rights required for any use of the Work.<br>
+Affirmer understands and acknowledges that Creative Commons is not a party to this document and has no duty or obligation with respect to this CC0 or use of the Work.<br>
+   </body>
+</html>
