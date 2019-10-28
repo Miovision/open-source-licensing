@@ -1,0 +1,449 @@
+<html>
+   <body>
+<br>
+/***************************************************************************<br>
+* COPYING -- Describes the terms under which Nmap is distributed.  A copy *<br>
+* of the GNU GPL is appended to this file.                                *<br>
+*                                                                         *<br>
+***********************IMPORTANT NMAP LICENSE TERMS************************<br>
+*                                                                         *<br>
+* The Nmap Security Scanner is (C) 1996-2006 Insecure.Com LLC. Nmap is    *<br>
+* also a registered trademark of Insecure.Com LLC.  This program is free  *<br>
+* software; you may redistribute and/or modify it under the terms of the  *<br>
+* GNU General Public License as published by the Free Software            *<br>
+* Foundation; Version 2 with the clarifications and exceptions described  *<br>
+* below.  This guarantees your right to use, modify, and redistribute     *<br>
+* this software under certain conditions.  If you wish to embed Nmap      *<br>
+* technology into proprietary software, we sell alternative licenses      *<br>
+* (contact sales@insecure.com).  Dozens of software vendors already       *<br>
+* license Nmap technology such as host discovery, port scanning, OS       *<br>
+* detection, and version detection.                                       *<br>
+*                                                                         *<br>
+* Note that the GPL places important restrictions on "derived works", yet *<br>
+* it does not provide a detailed definition of that term.  To avoid       *<br>
+* misunderstandings, we consider an application to constitute a           *<br>
+* "derivative work" for the purpose of this license if it does any of the *<br>
+* following:                                                              *<br>
+* o Integrates source code from Nmap                                      *<br>
+* o Reads or includes Nmap copyrighted data files, such as                *<br>
+*   nmap-os-fingerprints or nmap-service-probes.                          *<br>
+* o Executes Nmap and parses the results (as opposed to typical shell or  *<br>
+*   execution-menu apps, which simply display raw Nmap output and so are  *<br>
+*   not derivative works.)                                                *<br>
+* o Integrates/includes/aggregates Nmap into a proprietary executable     *<br>
+*   installer, such as those produced by InstallShield.                   *<br>
+* o Links to a library or executes a program that does any of the above   *<br>
+*                                                                         *<br>
+* The term "Nmap" should be taken to also include any portions or derived *<br>
+* works of Nmap.  This list is not exclusive, but is just meant to        *<br>
+* clarify our interpretation of derived works with some common examples.  *<br>
+* These restrictions only apply when you actually redistribute Nmap.  For *<br>
+* example, nothing stops you from writing and selling a proprietary       *<br>
+* front-end to Nmap.  Just distribute it by itself, and point people to   *<br>
+* http://insecure.org/nmap/ to download Nmap.                             *<br>
+*                                                                         *<br>
+* We don't consider these to be added restrictions on top of the GPL, but *<br>
+* just a clarification of how we interpret "derived works" as it applies  *<br>
+* to our GPL-licensed Nmap product.  This is similar to the way Linus     *<br>
+* Torvalds has announced his interpretation of how "derived works"        *<br>
+* applies to Linux kernel modules.  Our interpretation refers only to     *<br>
+* Nmap - we don't speak for any other GPL products.                       *<br>
+*                                                                         *<br>
+* If you have any questions about the GPL licensing restrictions on using *<br>
+* Nmap in non-GPL works, we would be happy to help.  As mentioned above,  *<br>
+* we also offer alternative license to integrate Nmap into proprietary    *<br>
+* applications and appliances.  These contracts have been sold to dozens  *<br>
+* of software vendors, and generally include a perpetual license as well  *<br>
+* as providing for priority support and updates as well as helping to     *<br>
+* fund the continued development of Nmap technology.  Please email        *<br>
+* sales@insecure.com for further information.                             *<br>
+*                                                                         *<br>
+* As a special exception to the GPL terms, Insecure.Com LLC grants        *<br>
+* permission to link the code of this program with any version of the     *<br>
+* OpenSSL library which is distributed under a license identical to that  *<br>
+* listed in the included Copying.OpenSSL file, and distribute linked      *<br>
+* combinations including the two. You must obey the GNU GPL in all        *<br>
+* respects for all of the code used other than OpenSSL.  If you modify    *<br>
+* this file, you may extend this exception to your version of the file,   *<br>
+* but you are not obligated to do so.                                     *<br>
+*                                                                         *<br>
+* If you received these files with a written license agreement or         *<br>
+* contract stating terms other than the terms above, then that            *<br>
+* alternative license agreement takes precedence over these comments.     *<br>
+*                                                                         *<br>
+* Source is provided to this software because we believe users have a     *<br>
+* right to know exactly what a program is going to do before they run it. *<br>
+* This also allows you to audit the software for security holes (none     *<br>
+* have been found so far).                                                *<br>
+*                                                                         *<br>
+* Source code also allows you to port Nmap to new platforms, fix bugs,    *<br>
+* and add new features.  You are highly encouraged to send your changes   *<br>
+* to fyodor@insecure.org for possible incorporation into the main         *<br>
+* distribution.  By sending these changes to Fyodor or one the            *<br>
+* Insecure.Org development mailing lists, it is assumed that you are      *<br>
+* offering Fyodor and Insecure.Com LLC the unlimited, non-exclusive right *<br>
+* to reuse, modify, and relicense the code.  Nmap will always be          *<br>
+* available Open Source, but this is important because the inability to   *<br>
+* relicense code has caused devastating problems for other Free Software  *<br>
+* projects (such as KDE and NASM).  We also occasionally relicense the    *<br>
+* code to third parties as discussed above.  If you wish to specify       *<br>
+* special license conditions of your contributions, just say so when you  *<br>
+* send them.                                                              *<br>
+*                                                                         *<br>
+* This program is distributed in the hope that it will be useful, but     *<br>
+* WITHOUT ANY WARRANTY; without even the implied warranty of              *<br>
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU       *<br>
+* General Public License for more details at                              *<br>
+* http://www.gnu.org/copyleft/gpl.html , or in the COPYING file included  *<br>
+* with Nmap.                                                              *<br>
+*                                                                         *<br>
+***************************************************************************/<br>
+<br>
+GNU General Public License<br>
+<br>
+----------------------------------------------------------------------------<br>
+<br>
+Table of Contents<br>
+<br>
+* GNU GENERAL PUBLIC LICENSE<br>
+o Preamble<br>
+o TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION<br>
+o How to Apply These Terms to Your New Programs<br>
+<br>
+----------------------------------------------------------------------------<br>
+<br>
+GNU GENERAL PUBLIC LICENSE<br>
+<br>
+Version 2, June 1991<br>
+<br>
+Copyright (C) 1989, 1991 Free Software Foundation, Inc.<br>
+59 Temple Place - Suite 330, Boston, MA  02111-1307, USA<br>
+<br>
+Everyone is permitted to copy and distribute verbatim copies<br>
+of this license document, but changing it is not allowed.<br>
+<br>
+Preamble<br>
+<br>
+The licenses for most software are designed to take away your freedom to<br>
+share and change it. By contrast, the GNU General Public License is intended<br>
+to guarantee your freedom to share and change free software--to make sure<br>
+the software is free for all its users. This General Public License applies<br>
+to most of the Free Software Foundation's software and to any other program<br>
+whose authors commit to using it. (Some other Free Software Foundation<br>
+software is covered by the GNU Library General Public License instead.) You<br>
+can apply it to your programs, too.<br>
+<br>
+When we speak of free software, we are referring to freedom, not price. Our<br>
+General Public Licenses are designed to make sure that you have the freedom<br>
+to distribute copies of free software (and charge for this service if you<br>
+wish), that you receive source code or can get it if you want it, that you<br>
+can change the software or use pieces of it in new free programs; and that<br>
+you know you can do these things.<br>
+<br>
+To protect your rights, we need to make restrictions that forbid anyone to<br>
+deny you these rights or to ask you to surrender the rights. These<br>
+restrictions translate to certain responsibilities for you if you distribute<br>
+copies of the software, or if you modify it.<br>
+<br>
+For example, if you distribute copies of such a program, whether gratis or<br>
+for a fee, you must give the recipients all the rights that you have. You<br>
+must make sure that they, too, receive or can get the source code. And you<br>
+must show them these terms so they know their rights.<br>
+<br>
+We protect your rights with two steps: (1) copyright the software, and (2)<br>
+offer you this license which gives you legal permission to copy, distribute<br>
+and/or modify the software.<br>
+<br>
+Also, for each author's protection and ours, we want to make certain that<br>
+everyone understands that there is no warranty for this free software. If<br>
+the software is modified by someone else and passed on, we want its<br>
+recipients to know that what they have is not the original, so that any<br>
+problems introduced by others will not reflect on the original authors'<br>
+reputations.<br>
+<br>
+Finally, any free program is threatened constantly by software patents. We<br>
+wish to avoid the danger that redistributors of a free program will<br>
+individually obtain patent licenses, in effect making the program<br>
+proprietary. To prevent this, we have made it clear that any patent must be<br>
+licensed for everyone's free use or not licensed at all.<br>
+<br>
+The precise terms and conditions for copying, distribution and modification<br>
+follow.<br>
+<br>
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION<br>
+<br>
+0. This License applies to any program or other work which contains a notice<br>
+placed by the copyright holder saying it may be distributed under the terms<br>
+of this General Public License. The "Program", below, refers to any such<br>
+program or work, and a "work based on the Program" means either the Program<br>
+or any derivative work under copyright law: that is to say, a work<br>
+containing the Program or a portion of it, either verbatim or with<br>
+modifications and/or translated into another language. (Hereinafter,<br>
+translation is included without limitation in the term "modification".) Each<br>
+licensee is addressed as "you".<br>
+<br>
+Activities other than copying, distribution and modification are not covered<br>
+by this License; they are outside its scope. The act of running the Program<br>
+is not restricted, and the output from the Program is covered only if its<br>
+contents constitute a work based on the Program (independent of having been<br>
+made by running the Program). Whether that is true depends on what the<br>
+Program does.<br>
+<br>
+1. You may copy and distribute verbatim copies of the Program's source code<br>
+as you receive it, in any medium, provided that you conspicuously and<br>
+appropriately publish on each copy an appropriate copyright notice and<br>
+disclaimer of warranty; keep intact all the notices that refer to this<br>
+License and to the absence of any warranty; and give any other recipients of<br>
+the Program a copy of this License along with the Program.<br>
+<br>
+You may charge a fee for the physical act of transferring a copy, and you<br>
+may at your option offer warranty protection in exchange for a fee.<br>
+<br>
+2. You may modify your copy or copies of the Program or any portion of it,<br>
+thus forming a work based on the Program, and copy and distribute such<br>
+modifications or work under the terms of Section 1 above, provided that you<br>
+also meet all of these conditions:<br>
+<br>
+* a) You must cause the modified files to carry prominent notices stating<br>
+that you changed the files and the date of any change.<br>
+<br>
+* b) You must cause any work that you distribute or publish, that in<br>
+whole or in part contains or is derived from the Program or any part<br>
+thereof, to be licensed as a whole at no charge to all third parties<br>
+under the terms of this License.<br>
+<br>
+* c) If the modified program normally reads commands interactively when<br>
+run, you must cause it, when started running for such interactive use<br>
+in the most ordinary way, to print or display an announcement including<br>
+an appropriate copyright notice and a notice that there is no warranty<br>
+(or else, saying that you provide a warranty) and that users may<br>
+redistribute the program under these conditions, and telling the user<br>
+how to view a copy of this License. (Exception: if the Program itself<br>
+is interactive but does not normally print such an announcement, your<br>
+work based on the Program is not required to print an announcement.)<br>
+<br>
+These requirements apply to the modified work as a whole. If identifiable<br>
+sections of that work are not derived from the Program, and can be<br>
+reasonably considered independent and separate works in themselves, then<br>
+this License, and its terms, do not apply to those sections when you<br>
+distribute them as separate works. But when you distribute the same sections<br>
+as part of a whole which is a work based on the Program, the distribution of<br>
+the whole must be on the terms of this License, whose permissions for other<br>
+licensees extend to the entire whole, and thus to each and every part<br>
+regardless of who wrote it.<br>
+<br>
+Thus, it is not the intent of this section to claim rights or contest your<br>
+rights to work written entirely by you; rather, the intent is to exercise<br>
+the right to control the distribution of derivative or collective works<br>
+based on the Program.<br>
+<br>
+In addition, mere aggregation of another work not based on the Program with<br>
+the Program (or with a work based on the Program) on a volume of a storage<br>
+or distribution medium does not bring the other work under the scope of this<br>
+License.<br>
+<br>
+3. You may copy and distribute the Program (or a work based on it, under<br>
+Section 2) in object code or executable form under the terms of Sections 1<br>
+and 2 above provided that you also do one of the following:<br>
+<br>
+* a) Accompany it with the complete corresponding machine-readable source<br>
+code, which must be distributed under the terms of Sections 1 and 2<br>
+above on a medium customarily used for software interchange; or,<br>
+<br>
+* b) Accompany it with a written offer, valid for at least three years,<br>
+to give any third party, for a charge no more than your cost of<br>
+physically performing source distribution, a complete machine-readable<br>
+copy of the corresponding source code, to be distributed under the<br>
+terms of Sections 1 and 2 above on a medium customarily used for<br>
+software interchange; or,<br>
+<br>
+* c) Accompany it with the information you received as to the offer to<br>
+distribute corresponding source code. (This alternative is allowed only<br>
+for noncommercial distribution and only if you received the program in<br>
+object code or executable form with such an offer, in accord with<br>
+Subsection b above.)<br>
+<br>
+The source code for a work means the preferred form of the work for making<br>
+modifications to it. For an executable work, complete source code means all<br>
+the source code for all modules it contains, plus any associated interface<br>
+definition files, plus the scripts used to control compilation and<br>
+installation of the executable. However, as a special exception, the source<br>
+code distributed need not include anything that is normally distributed (in<br>
+either source or binary form) with the major components (compiler, kernel,<br>
+and so on) of the operating system on which the executable runs, unless that<br>
+component itself accompanies the executable.<br>
+<br>
+If distribution of executable or object code is made by offering access to<br>
+copy from a designated place, then offering equivalent access to copy the<br>
+source code from the same place counts as distribution of the source code,<br>
+even though third parties are not compelled to copy the source along with<br>
+the object code.<br>
+<br>
+4. You may not copy, modify, sublicense, or distribute the Program except as<br>
+expressly provided under this License. Any attempt otherwise to copy,<br>
+modify, sublicense or distribute the Program is void, and will automatically<br>
+terminate your rights under this License. However, parties who have received<br>
+copies, or rights, from you under this License will not have their licenses<br>
+terminated so long as such parties remain in full compliance.<br>
+<br>
+5. You are not required to accept this License, since you have not signed<br>
+it. However, nothing else grants you permission to modify or distribute the<br>
+Program or its derivative works. These actions are prohibited by law if you<br>
+do not accept this License. Therefore, by modifying or distributing the<br>
+Program (or any work based on the Program), you indicate your acceptance of<br>
+this License to do so, and all its terms and conditions for copying,<br>
+distributing or modifying the Program or works based on it.<br>
+<br>
+6. Each time you redistribute the Program (or any work based on the<br>
+Program), the recipient automatically receives a license from the original<br>
+licensor to copy, distribute or modify the Program subject to these terms<br>
+and conditions. You may not impose any further restrictions on the<br>
+recipients' exercise of the rights granted herein. You are not responsible<br>
+for enforcing compliance by third parties to this License.<br>
+<br>
+7. If, as a consequence of a court judgment or allegation of patent<br>
+infringement or for any other reason (not limited to patent issues),<br>
+conditions are imposed on you (whether by court order, agreement or<br>
+otherwise) that contradict the conditions of this License, they do not<br>
+excuse you from the conditions of this License. If you cannot distribute so<br>
+as to satisfy simultaneously your obligations under this License and any<br>
+other pertinent obligations, then as a consequence you may not distribute<br>
+the Program at all. For example, if a patent license would not permit<br>
+royalty-free redistribution of the Program by all those who receive copies<br>
+directly or indirectly through you, then the only way you could satisfy both<br>
+it and this License would be to refrain entirely from distribution of the<br>
+Program.<br>
+<br>
+If any portion of this section is held invalid or unenforceable under any<br>
+particular circumstance, the balance of the section is intended to apply and<br>
+the section as a whole is intended to apply in other circumstances.<br>
+<br>
+It is not the purpose of this section to induce you to infringe any patents<br>
+or other property right claims or to contest validity of any such claims;<br>
+this section has the sole purpose of protecting the integrity of the free<br>
+software distribution system, which is implemented by public license<br>
+practices. Many people have made generous contributions to the wide range of<br>
+software distributed through that system in reliance on consistent<br>
+application of that system; it is up to the author/donor to decide if he or<br>
+she is willing to distribute software through any other system and a<br>
+licensee cannot impose that choice.<br>
+<br>
+This section is intended to make thoroughly clear what is believed to be a<br>
+consequence of the rest of this License.<br>
+<br>
+8. If the distribution and/or use of the Program is restricted in certain<br>
+countries either by patents or by copyrighted interfaces, the original<br>
+copyright holder who places the Program under this License may add an<br>
+explicit geographical distribution limitation excluding those countries, so<br>
+that distribution is permitted only in or among countries not thus excluded.<br>
+In such case, this License incorporates the limitation as if written in the<br>
+body of this License.<br>
+<br>
+9. The Free Software Foundation may publish revised and/or new versions of<br>
+the General Public License from time to time. Such new versions will be<br>
+similar in spirit to the present version, but may differ in detail to<br>
+address new problems or concerns.<br>
+<br>
+Each version is given a distinguishing version number. If the Program<br>
+specifies a version number of this License which applies to it and "any<br>
+later version", you have the option of following the terms and conditions<br>
+either of that version or of any later version published by the Free<br>
+Software Foundation. If the Program does not specify a version number of<br>
+this License, you may choose any version ever published by the Free Software<br>
+Foundation.<br>
+<br>
+10. If you wish to incorporate parts of the Program into other free programs<br>
+whose distribution conditions are different, write to the author to ask for<br>
+permission. For software which is copyrighted by the Free Software<br>
+Foundation, write to the Free Software Foundation; we sometimes make<br>
+exceptions for this. Our decision will be guided by the two goals of<br>
+preserving the free status of all derivatives of our free software and of<br>
+promoting the sharing and reuse of software generally.<br>
+<br>
+NO WARRANTY<br>
+<br>
+11. BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR<br>
+THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN<br>
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES<br>
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED<br>
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF<br>
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO<br>
+THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM<br>
+PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR<br>
+CORRECTION.<br>
+<br>
+12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING<br>
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR<br>
+REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,<br>
+INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING<br>
+OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO<br>
+LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR<br>
+THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER<br>
+PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGES.<br>
+<br>
+END OF TERMS AND CONDITIONS<br>
+<br>
+How to Apply These Terms to Your New Programs<br>
+<br>
+If you develop a new program, and you want it to be of the greatest possible<br>
+use to the public, the best way to achieve this is to make it free software<br>
+which everyone can redistribute and change under these terms.<br>
+<br>
+To do so, attach the following notices to the program. It is safest to<br>
+attach them to the start of each source file to most effectively convey the<br>
+exclusion of warranty; and each file should have at least the "copyright"<br>
+line and a pointer to where the full notice is found.<br>
+<br>
+one line to give the program's name and an idea of what it does.<br>
+Copyright (C) 19yy  name of author<br>
+<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the terms of the GNU General Public License<br>
+as published by the Free Software Foundation; either version 2<br>
+of the License, or (at your option) any later version.<br>
+<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU General Public License<br>
+along with this program; if not, write to the Free Software<br>
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.<br>
+<br>
+Also add information on how to contact you by electronic and paper mail.<br>
+<br>
+If the program is interactive, make it output a short notice like this when<br>
+it starts in an interactive mode:<br>
+<br>
+Gnomovision version 69, Copyright (C) 19yy name of author<br>
+Gnomovision comes with ABSOLUTELY NO WARRANTY; for details<br>
+type `show w'.  This is free software, and you are welcome<br>
+to redistribute it under certain conditions; type `show c'<br>
+for details.<br>
+<br>
+The hypothetical commands `show w' and `show c' should show the appropriate<br>
+parts of the General Public License. Of course, the commands you use may be<br>
+called something other than `show w' and `show c'; they could even be<br>
+mouse-clicks or menu items--whatever suits your program.<br>
+<br>
+You should also get your employer (if you work as a programmer) or your<br>
+school, if any, to sign a "copyright disclaimer" for the program, if<br>
+necessary. Here is a sample; alter the names:<br>
+<br>
+Yoyodyne, Inc., hereby disclaims all copyright<br>
+interest in the program `Gnomovision'<br>
+(which makes passes at compilers) written<br>
+by James Hacker.<br>
+<br>
+signature of Ty Coon, 1 April 1989<br>
+Ty Coon, President of Vice<br>
+<br>
+This General Public License does not permit incorporating your program into<br>
+proprietary programs. If your program is a subroutine library, you may<br>
+consider it more useful to permit linking proprietary applications with the<br>
+library. If this is what you want to do, use the GNU Library General Public<br>
+License instead of this License.<br>
+   </body>
+</html>

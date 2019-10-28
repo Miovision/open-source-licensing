@@ -1,0 +1,396 @@
+<html>
+   <body>
+This package was debianized by Philip Hands <phil@hands.com> on 31 Oct 1999<br>
+(with help from  Dan Brosemer <odin@linuxfreak.com>)<br>
+<br>
+It was downloaded from here:<br>
+ftp://ftp.fu-berlin.de/unix/security/openssh/openssh-2.3.0p1.tar.gz<br>
+<br>
+worldwide mirrors are listed here:<br>
+http://www.openssh.com/ftp.html<br>
+<br>
+The Debian-specific parts of the package were initially derived from the<br>
+original ssh package, which has since been renamed as ssh-nonfree.<br>
+<br>
+The Debian patch is distributed under the terms of the GPL, which you<br>
+can find in /usr/share/common-licenses/GPL-2.<br>
+<br>
+In addition, as a special exception, Matthew Vernon gives permission<br>
+to link the code of the Debian patch with any version of the OpenSSH<br>
+code which is distributed under a license identical to that listed in<br>
+the included Copyright file, and distribute linked combinations<br>
+including the two.  You must obey the GNU General Public License in<br>
+all respects for all of the code used other than OpenSSH.  If you<br>
+modify this file, you may extend this exception to your version of the<br>
+file, but you are not obligated to do so.  If you do not wish to do<br>
+so, delete this exception statement from your version.<br>
+<br>
+The upstream source for this package is a combination of the ssh<br>
+branch that is being maintained by the OpenBSD team (starting from<br>
+the last version of SSH that was distributed under a free license),<br>
+and porting work by Damien Miller <damien@ibs.com.au> to get it<br>
+working on Linux.  Other people also contributed to this, and are<br>
+credited in /usr/share/doc/ssh/README.<br>
+<br>
+This package contains Kerberos version 5 patches from<br>
+http://www.sxw.org.uk/computing/patches/openssh.html; this is Copyright<br>
+(c) 2001-2009 Simon Wilkinson and provided under the standard 2-term BSD<br>
+licence used elsewhere in OpenSSH.<br>
+<br>
+Copyright:<br>
+<br>
+Code in helper.[ch] is Copyright Internet Business Solutions and is<br>
+released under a X11-style license (see source file for details).<br>
+<br>
+(A)RC4 code in rc4.[ch] is Copyright Damien Miller. It too is under a<br>
+X11-style license (see source file for details).<br>
+<br>
+make-ssh-known-hosts is Copyright Tero Kivinen <Tero.Kivinen@hut.fi>,<br>
+and is distributed under the GPL (see source file for details).<br>
+<br>
+The copyright for the original SSH version follows.  It has been<br>
+modified with [comments] to reflect the changes that the OpenBSD folks<br>
+have made:<br>
+<br>
+This file is part of the OpenSSH software.<br>
+<br>
+The licences which components of this software fall under are as<br>
+follows.  First, we will summarize and say that all components<br>
+are under a BSD licence, or a licence more free than that.<br>
+<br>
+OpenSSH contains no GPL code.<br>
+<br>
+1)<br>
+* Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland<br>
+*                    All rights reserved<br>
+*<br>
+* As far as I am concerned, the code I have written for this software<br>
+* can be used freely for any purpose.  Any derived versions of this<br>
+* software must be clearly marked as such, and if the derived work is<br>
+* incompatible with the protocol description in the RFC file, it must be<br>
+* called by a name other than "ssh" or "Secure Shell".<br>
+<br>
+[Tatu continues]<br>
+*  However, I am not implying to give any licenses to any patents or<br>
+* copyrights held by third parties, and the software includes parts that<br>
+* are not under my direct control.  As far as I know, all included<br>
+* source code is used in accordance with the relevant license agreements<br>
+* and can be used freely for any purpose (the GNU license being the most<br>
+* restrictive); see below for details.<br>
+<br>
+[However, none of that term is relevant at this point in time.  All of<br>
+these restrictively licenced software components which he talks about<br>
+have been removed from OpenSSH, i.e.,<br>
+<br>
+- RSA is no longer included, found in the OpenSSL library<br>
+- IDEA is no longer included, its use is deprecated<br>
+- DES is now external, in the OpenSSL library<br>
+- GMP is no longer used, and instead we call BN code from OpenSSL<br>
+- Zlib is now external, in a library<br>
+- The make-ssh-known-hosts script is no longer included<br>
+- TSS has been removed<br>
+- MD5 is now external, in the OpenSSL library<br>
+- RC4 support has been replaced with ARC4 support from OpenSSL<br>
+- Blowfish is now external, in the OpenSSL library<br>
+<br>
+[The licence continues]<br>
+<br>
+Note that any information and cryptographic algorithms used in this<br>
+software are publicly available on the Internet and at any major<br>
+bookstore, scientific library, and patent office worldwide.  More<br>
+information can be found e.g. at "http://www.cs.hut.fi/crypto".<br>
+<br>
+The legal status of this program is some combination of all these<br>
+permissions and restrictions.  Use only at your own responsibility.<br>
+You will be responsible for any legal consequences yourself; I am not<br>
+making any claims whether possessing or using this is legal or not in<br>
+your country, and I am not taking any responsibility on your behalf.<br>
+<br>
+<br>
+NO WARRANTY<br>
+<br>
+BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY<br>
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN<br>
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES<br>
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED<br>
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF<br>
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS<br>
+TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE<br>
+PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,<br>
+REPAIR OR CORRECTION.<br>
+<br>
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING<br>
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR<br>
+REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,<br>
+INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING<br>
+OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED<br>
+TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY<br>
+YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER<br>
+PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE<br>
+POSSIBILITY OF SUCH DAMAGES.<br>
+<br>
+2)<br>
+The 32-bit CRC compensation attack detector in deattack.c was<br>
+contributed by CORE SDI S.A. under a BSD-style license.<br>
+<br>
+* Cryptographic attack detector for ssh - source code<br>
+*<br>
+* Copyright (c) 1998 CORE SDI S.A., Buenos Aires, Argentina.<br>
+*<br>
+* All rights reserved. Redistribution and use in source and binary<br>
+* forms, with or without modification, are permitted provided that<br>
+* this copyright notice is retained.<br>
+*<br>
+* THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED<br>
+* WARRANTIES ARE DISCLAIMED. IN NO EVENT SHALL CORE SDI S.A. BE<br>
+* LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR<br>
+* CONSEQUENTIAL DAMAGES RESULTING FROM THE USE OR MISUSE OF THIS<br>
+* SOFTWARE.<br>
+*<br>
+* Ariel Futoransky <futo@core-sdi.com><br>
+* <http://www.core-sdi.com><br>
+<br>
+3)<br>
+ssh-keyscan was contributed by David Mazieres under a BSD-style<br>
+license.<br>
+<br>
+* Copyright 1995, 1996 by David Mazieres <dm@lcs.mit.edu>.<br>
+*<br>
+* Modification and redistribution in source and binary forms is<br>
+* permitted provided that due credit is given to the author and the<br>
+* OpenBSD project by leaving this copyright notice intact.<br>
+<br>
+4)<br>
+The Rijndael implementation by Vincent Rijmen, Antoon Bosselaers<br>
+and Paulo Barreto is in the public domain and distributed<br>
+with the following license:<br>
+<br>
+* @version 3.0 (December 2000)<br>
+*<br>
+* Optimised ANSI C code for the Rijndael cipher (now AES)<br>
+*<br>
+* @author Vincent Rijmen <vincent.rijmen@esat.kuleuven.ac.be><br>
+* @author Antoon Bosselaers <antoon.bosselaers@esat.kuleuven.ac.be><br>
+* @author Paulo Barreto <paulo.barreto@terra.com.br><br>
+*<br>
+* This code is hereby placed in the public domain.<br>
+*<br>
+* THIS SOFTWARE IS PROVIDED BY THE AUTHORS ''AS IS'' AND ANY EXPRESS<br>
+* OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
+* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+* ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE<br>
+* LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+* CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF<br>
+* SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR<br>
+* BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,<br>
+* WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE<br>
+* OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,<br>
+* EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+5)<br>
+One component of the ssh source code is under a 3-clause BSD license,<br>
+held by the University of California, since we pulled these parts from<br>
+original Berkeley code.<br>
+<br>
+* Copyright (c) 1983, 1990, 1992, 1993, 1995<br>
+*      The Regents of the University of California.  All rights reserved.<br>
+*<br>
+* Redistribution and use in source and binary forms, with or without<br>
+* modification, are permitted provided that the following conditions<br>
+* are met:<br>
+* 1. Redistributions of source code must retain the above copyright<br>
+*    notice, this list of conditions and the following disclaimer.<br>
+* 2. Redistributions in binary form must reproduce the above copyright<br>
+*    notice, this list of conditions and the following disclaimer in the<br>
+*    documentation and/or other materials provided with the distribution.<br>
+* 3. Neither the name of the University nor the names of its contributors<br>
+*    may be used to endorse or promote products derived from this software<br>
+*    without specific prior written permission.<br>
+*<br>
+* THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND<br>
+* ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+* ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE<br>
+* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+* OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+* HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+* LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+* OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+* SUCH DAMAGE.<br>
+<br>
+6)<br>
+Remaining components of the software are provided under a standard<br>
+2-term BSD licence with the following names as copyright holders:<br>
+<br>
+Markus Friedl<br>
+Theo de Raadt<br>
+Niels Provos<br>
+Dug Song<br>
+Aaron Campbell<br>
+Damien Miller<br>
+Kevin Steves<br>
+Daniel Kouril<br>
+Wesley Griffin<br>
+Per Allansson<br>
+Nils Nordman<br>
+Simon Wilkinson<br>
+<br>
+Portable OpenSSH additionally includes code from the following copyright<br>
+holders, also under the 2-term BSD license:<br>
+<br>
+Ben Lindstrom<br>
+Tim Rice<br>
+Andre Lucas<br>
+Chris Adams<br>
+Corinna Vinschen<br>
+Cray Inc.<br>
+Denis Parker<br>
+Gert Doering<br>
+Jakob Schlyter<br>
+Jason Downs<br>
+Juha Yrjölä<br>
+Michael Stone<br>
+Networks Associates Technology, Inc.<br>
+Solar Designer<br>
+Todd C. Miller<br>
+Wayne Schroeder<br>
+William Jones<br>
+Darren Tucker<br>
+Sun Microsystems<br>
+The SCO Group<br>
+Daniel Walsh<br>
+Red Hat, Inc<br>
+Simon Vallet / Genoscope<br>
+<br>
+* Redistribution and use in source and binary forms, with or without<br>
+* modification, are permitted provided that the following conditions<br>
+* are met:<br>
+* 1. Redistributions of source code must retain the above copyright<br>
+*    notice, this list of conditions and the following disclaimer.<br>
+* 2. Redistributions in binary form must reproduce the above copyright<br>
+*    notice, this list of conditions and the following disclaimer in the<br>
+*    documentation and/or other materials provided with the distribution.<br>
+*<br>
+* THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR<br>
+* IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES<br>
+* OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<br>
+* IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,<br>
+* INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT<br>
+* NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+* DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+* THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF<br>
+* THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+8) Portable OpenSSH contains the following additional licenses:<br>
+<br>
+a) md5crypt.c, md5crypt.h<br>
+<br>
+* "THE BEER-WARE LICENSE" (Revision 42):<br>
+* <phk@login.dknet.dk> wrote this file.  As long as you retain this<br>
+* notice you can do whatever you want with this stuff. If we meet<br>
+* some day, and you think this stuff is worth it, you can buy me a<br>
+* beer in return.   Poul-Henning Kamp<br>
+<br>
+b) snprintf replacement<br>
+<br>
+* Copyright Patrick Powell 1995<br>
+* This code is based on code written by Patrick Powell<br>
+* (papowell@astart.com) It may be used for any purpose as long as this<br>
+* notice remains intact on all source code distributions<br>
+<br>
+c) Compatibility code (openbsd-compat)<br>
+<br>
+Apart from the previously mentioned licenses, various pieces of code<br>
+in the openbsd-compat/ subdirectory are licensed as follows:<br>
+<br>
+Some code is licensed under a 3-term BSD license, to the following<br>
+copyright holders:<br>
+<br>
+Todd C. Miller<br>
+Theo de Raadt<br>
+Damien Miller<br>
+Eric P. Allman<br>
+The Regents of the University of California<br>
+Constantin S. Svintsoff<br>
+<br>
+* Redistribution and use in source and binary forms, with or without<br>
+* modification, are permitted provided that the following conditions<br>
+* are met:<br>
+* 1. Redistributions of source code must retain the above copyright<br>
+*    notice, this list of conditions and the following disclaimer.<br>
+* 2. Redistributions in binary form must reproduce the above copyright<br>
+*    notice, this list of conditions and the following disclaimer in the<br>
+*    documentation and/or other materials provided with the distribution.<br>
+* 3. Neither the name of the University nor the names of its contributors<br>
+*    may be used to endorse or promote products derived from this software<br>
+*    without specific prior written permission.<br>
+*<br>
+* THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND<br>
+* ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+* ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE<br>
+* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+* OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+* HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+* LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+* OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+* SUCH DAMAGE.<br>
+<br>
+Some code is licensed under an ISC-style license, to the following<br>
+copyright holders:<br>
+<br>
+Internet Software Consortium.<br>
+Todd C. Miller<br>
+Reyk Floeter<br>
+Chad Mynhier<br>
+<br>
+* Permission to use, copy, modify, and distribute this software for any<br>
+* purpose with or without fee is hereby granted, provided that the above<br>
+* copyright notice and this permission notice appear in all copies.<br>
+*<br>
+* THE SOFTWARE IS PROVIDED "AS IS" AND TODD C. MILLER DISCLAIMS ALL<br>
+* WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES<br>
+* OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL TODD C. MILLER BE LIABLE<br>
+* FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES<br>
+* WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION<br>
+* OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN<br>
+* CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.<br>
+<br>
+Some code is licensed under a MIT-style license to the following<br>
+copyright holders:<br>
+<br>
+Free Software Foundation, Inc.<br>
+<br>
+* Permission is hereby granted, free of charge, to any person obtaining a  *<br>
+* copy of this software and associated documentation files (the            *<br>
+* "Software"), to deal in the Software without restriction, including      *<br>
+* without limitation the rights to use, copy, modify, merge, publish,      *<br>
+* distribute, distribute with modifications, sublicense, and/or sell       *<br>
+* copies of the Software, and to permit persons to whom the Software is    *<br>
+* furnished to do so, subject to the following conditions:                 *<br>
+*                                                                          *<br>
+* The above copyright notice and this permission notice shall be included  *<br>
+* in all copies or substantial portions of the Software.                   *<br>
+*                                                                          *<br>
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS  *<br>
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF               *<br>
+* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.   *<br>
+* IN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,   *<br>
+* DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR    *<br>
+* OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR    *<br>
+* THE USE OR OTHER DEALINGS IN THE SOFTWARE.                               *<br>
+*                                                                          *<br>
+* Except as contained in this notice, the name(s) of the above copyright   *<br>
+* holders shall not be used in advertising or otherwise to promote the     *<br>
+* sale, use or other dealings in this Software without prior written       *<br>
+* authorization.                                                           *<br>
+****************************************************************************/<br>
+<br>
+<br>
+------<br>
+$OpenBSD: LICENCE,v 1.19 2004/08/30 09:18:08 markus Exp $<br>
+   </body>
+</html>

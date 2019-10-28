@@ -1,0 +1,2723 @@
+<html>
+   <body>
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/<br>
+Upstream-Name: perl<br>
+Source: http://www.perl.com/CPAN/src/5.0/<br>
+Comment:<br>
+This package was debianized by Brendan O'Dea <bod@debian.org> on<br>
+Thu, 17 Aug 2000 16:10:54 +1000.<br>
+.<br>
+Upstream Authors:<br>
+.<br>
+Larry Wall et. al. (see /usr/share/doc/perl/AUTHORS).<br>
+.<br>
+Last checked against: Perl 5.22.1<br>
+<br>
+Files: *<br>
+Copyright:<br>
+Perl is Copyright (C) 1987-2015 by Larry Wall and others. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of either:<br>
+.<br>
+a) the GNU General Public License as published by the Free Software<br>
+Foundation; either version 1, or (at your option) any later<br>
+version, or<br>
+.<br>
+b) the "Artistic License" which comes with Perl.<br>
+----------------------------------------<br>
+The directories ext/, dist/, and cpan/ contain separate distributions<br>
+that have been bundled with the Perl core. The copyright and license<br>
+status of these have been detailed separately below.<br>
+.<br>
+It is assumed that all the other files are part of Perl and share the<br>
+above copyright and license information unless explicitly specified<br>
+differently. Only the exceptions have been detailed below.<br>
+.<br>
+As a small portion of the files are indeed licensed differently from<br>
+the above, all the other licenses have been collected and/or duplicated<br>
+at the end of this file to facilitate review.<br>
+<br>
+Files: perlio.c<br>
+Copyright:<br>
+Copyright (c) 1996-2006, Nick Ing-Simmons<br>
+Copyright (c) 2006, 2007, 2008 Larry Wall and others<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is a part of Perl itself, licensed as above.<br>
+<br>
+Files: malloc.c<br>
+Copyright:<br>
+Modifications Copyright Ilya Zakharevich 1996-99.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is a part of Perl itself, licensed as above.<br>
+<br>
+Files: pp_sort.c<br>
+Copyright:<br>
+Copyright (C) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000,<br>
+2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 by Larry Wall and others<br>
+.<br>
+Copyright (C) Tom Horsley, 1997. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is a part of Perl itself, licensed as above.<br>
+<br>
+Files: mro.c<br>
+Copyright:<br>
+Copyright (c) 2007 Brandon L Black<br>
+Copyright (c) 2007, 2008 Larry Wall and others<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is a part of Perl itself, licensed as above.<br>
+<br>
+Files: perl.c<br>
+Copyright:<br>
+Copyright 1987-2011, Larry Wall<br>
+MS-DOS port Copyright (c) 1989, 1990, Diomidis Spinellis<br>
+OS/2 port Copyright (c) 1990, 1991, Raymond Chen, Kai Uwe Rommel<br>
+Version 5 port Copyright (c) 1994-2002, Andreas Kaiser, Ilya Zakharevich<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is a part of Perl itself, licensed as above.<br>
+----------------------------------------<br>
+These copyright notices are embedded in the code, and possibly apply<br>
+to other files as well.<br>
+<br>
+Files: time64.c<br>
+Copyright:<br>
+Copyright (c) 2007-2008  Michael G Schwern<br>
+.<br>
+This software originally derived from Paul Sheer's pivotal_gmtime_r.c.<br>
+License: Expat<br>
+<br>
+Files:<br>
+regcomp.c<br>
+regexec.c<br>
+Copyright:<br>
+Copyright (c) 1986 by University of Toronto.<br>
+Written by Henry Spencer.  Not derived from licensed software.<br>
+.<br>
+Alterations to Henry's code are...<br>
+Copyright (C) 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,<br>
+2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008<br>
+by Larry Wall and others<br>
+.<br>
+NOTE: this is derived from Henry Spencer's regexp code, and should not<br>
+confused with the original package (see point 3 below).  Thanks, Henry!<br>
+License: REGCOMP, and GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+The "alterations to Henry's code" have the following license information:<br>
+.<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: hv_func.h<br>
+Copyright:<br>
+Paul Hsieh (c) 2004<br>
+License: HSIEH-DERIVATIVE or HSIEH-BSD or LGPL-2.1<br>
+Comment:<br>
+----------------------------------------<br>
+The first two alternative licenses, as retrieved at<br>
+Thu, 09 May 2013 00:00:38 +0300<br>
+are included at the end of this file.<br>
+.<br>
+Part of this file carries the following comment:<br>
+.<br>
+FYI: This is the "Super-Fast" algorithm mentioned by Bob Jenkins in<br>
+(http://burtleburtle.net/bob/hash/doobs.html)<br>
+It is by Paul Hsieh (c) 2004 and is analysed here<br>
+http://www.azillionmonkeys.com/qed/hash.html<br>
+license terms are here:<br>
+http://www.azillionmonkeys.com/qed/weblicense.html<br>
+.<br>
+As of Thu, 09 May 2013 00:02:53 +0300, the "weblicense.html" document<br>
+states:<br>
+.<br>
+Unless otherwise accompanied by another included license, the text<br>
+and explicitly rendered exposition of all content under this website<br>
+is covered by the Paul Hsieh exposition license.<br>
+.<br>
+For the specific coverage of raw source code (only) obtained from<br>
+this website, you have the option of using the old-style BSD license<br>
+to use the code instead of other the licenses. This option has been<br>
+provided for people who can't figure out what I talking about with my<br>
+derivative license, or who are using a old-style BSD compatible license.<br>
+.<br>
+Unless otherwise accompanied by another included license, derivative<br>
+work by taking portions or ideas from the above mentioned exposition<br>
+are covered by the Paul Hsieh derivative license.<br>
+.<br>
+Examples: Unless covered by another accompanying license, source code<br>
+shown on my website can be used freely under the derivative license,<br>
+(and may be distributed under a public domain license, whether compiled<br>
+into another program or not, for example) however the font, comments,<br>
+colors or any layout details associated to that source code in its<br>
+exposition are covered by the exposition license.<br>
+.<br>
+The entire English text describing the code is also covered under the<br>
+exposition license and thus cannot be copied at all outside the limits<br>
+of fair use.<br>
+.<br>
+Images and graphics shown on this website are entirely covered by the<br>
+exposition license.<br>
+.<br>
+If a proprietary vendor wishes to create a closed source object code<br>
+based product using source covered by the derivative license they may<br>
+do so. However if this vendor then wished to distribute the original<br>
+source code, they may not apply any licensing terms which contradict<br>
+the original derivative license covering the derivative code.<br>
+.<br>
+If your code is compatible with the old style BSD license and you<br>
+wish to avoid the burden of explicitely protecting code you obtained<br>
+from here from misrepresentation then you can simply cover it with<br>
+the old-style BSD license.<br>
+.<br>
+It is therefore assumed that the relevant part of the Perl source<br>
+is licensed under either the "Paul Hsieh derivative license" or<br>
+the "the old-style BSD license", which have been included at<br>
+the end of file with the codenames HSIEH-DERIVATIVE and HSIEH-BSD.<br>
+.<br>
+Additionally, the "hash.html" document has this statement for the<br>
+relevant source code:<br>
+.<br>
+IMPORTANT NOTE: Since there has been a lot of interest for the code<br>
+below, I have decided to additionally provide it under the LGPL 2.1<br>
+license. This provision applies to the code below only and not to any<br>
+other code including other source archives or listings from this site<br>
+unless otherwise specified.<br>
+.<br>
+The LGPL 2.1 is not necessarily a more liberal license than my<br>
+derivative license, but this additional licensing makes the code<br>
+available to more developers. Note that this does not give you<br>
+multi-licensing rights. You can only use the code under one of the<br>
+licenses at a time.<br>
+.<br>
+and links to the full LGPL 2.1 license terms at<br>
+http://www.gnu.org/licenses/lgpl-2.1.txt<br>
+<br>
+Files: perly.h<br>
+Copyright:<br>
+Copyright (C) 1984, 1989-1990, 2000-2012 Free Software Foundation, Inc.<br>
+License: GPL-3+-WITH-BISON-EXCEPTION<br>
+<br>
+Files: mkppport<br>
+Copyright:<br>
+Copyright 2006 by Marcus Holland-Moritz <mhx@cpan.org>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: lib/unicore/*.txt<br>
+Copyright:<br>
+Copyright (c) 1991-2014 Unicode, Inc.<br>
+License: Unicode<br>
+Comment:<br>
+The license is given as<br>
+.<br>
+For terms of use, see http://www.unicode.org/terms_of_use.html<br>
+.<br>
+See the end of this file for the full text of this license as downloaded<br>
+from the above URL on Tue, 26 Apr 2011 14:41:24 +0300.<br>
+<br>
+Files: lib/deprecate.pm<br>
+Copyright:<br>
+Copyright (C) 2009, 2011<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself, either Perl version 5.10.0 or,<br>
+at your option, any later version of Perl 5 you may have available.<br>
+<br>
+Files: lib/Exporter.pm<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software. You can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: lib/FindBin.pm<br>
+Copyright:<br>
+Copyright (c) 1995 Graham Barr & Nick Ing-Simmons. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: symbian/*<br>
+Copyright:<br>
+Copyright (c) Nokia 2004-2005.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+All files are licensed under the same terms as Perl itself.<br>
+<br>
+Files: symbian/PerlUiS90.rss<br>
+Copyright:<br>
+Copyright (c) 2006 Alexander Smishlajev. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+The PerlUi class is licensed under the same terms as Perl itself.<br>
+<br>
+Files: README.symbian<br>
+Copyright:<br>
+Copyright (c) 2004-2005 Nokia.  All rights reserved.<br>
+Copyright (c) 2006-2007 Jarkko Hietaniemi.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+The Symbian port is licensed under the same terms as Perl itself.<br>
+<br>
+Files: t/op/split_unicode.t<br>
+Copyright:<br>
+Copyright (c) 1991-2006 Unicode, Inc.<br>
+License: GPL-1+ or Artistic, and Unicode<br>
+Comment:<br>
+----------------------------------------<br>
+The test data was extracted from the Unicode Character Database.<br>
+.<br>
+It is assumed that the test code is licensed under the same terms<br>
+as Perl.<br>
+<br>
+Files: regen/reentr.pl<br>
+Copyright: Copyright (c) 2002,2003 Jarkko Hietaniemi<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files:<br>
+Porting/checkansi.pl<br>
+Porting/valgrindpp.pl<br>
+Copyright:<br>
+Copyright 2003, 2007 by Marcus Holland-Moritz <mhx@cpan.org>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: Porting/config_h.pl<br>
+Copyright:<br>
+Copyright (C) 2005-2012 by H.Merijn Brand (m)'12 [22-09-2012]<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: Porting/git-deltatool<br>
+Copyright:<br>
+This software is copyright (c) 2010 by David Golden.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under the same<br>
+terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: NetWare/*<br>
+Copyright:<br>
+Copyright (C) 2000-01, 2002 Novell, Inc. All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files:<br>
+vms/vms.c<br>
+vms/vmsish.h<br>
+Copyright:<br>
+Copyright (C) 1993-2015 by Charles Bailey and others.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: x2p/s2p.PL<br>
+Copyright: unknown<br>
+License: S2P<br>
+<br>
+Files: win32/fcrypt.c<br>
+Copyright:<br>
+Copyright (C) 1993 Eric Young - see README for more details<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is a part of Perl itself, licensed as above.<br>
+<br>
+Files: cpan/Archive-Tar/*<br>
+Copyright: 2002 - 2009 Jos Boumans <kane@cpan.org>. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you may redistribute and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/AutoLoader/*<br>
+dist/SelfLoader/*<br>
+Copyright: This package has the same copyright and license as the perl core:<br>
+Copyright (C) 1993, 1994, 1995, 1996, 1997, 1998, 1999,<br>
+2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2012<br>
+by Larry Wall and others<br>
+.<br>
+All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This package has the same copyright and license as the perl core.<br>
+<br>
+Files: cpan/autodie/*<br>
+Copyright: 2008-2009, Paul Fenwick <pjf@perltraining.com.au><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software, you may distribute it under the<br>
+same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/autodie/lib/autodie/exception/system.pm<br>
+cpan/autodie/lib/autodie/exception.pm<br>
+Copyright: 2008-2009, Paul Fenwick <pjf@perltraining.com.au><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software.  You may modify and/or redistribute this<br>
+code under the same terms as Perl 5.10 itself, or, at your option,<br>
+any later version of Perl 5.<br>
+<br>
+Files: cpan/autodie/lib/autodie/Scope/GuardStack.pm<br>
+Copyright: Copyright 2013, Niels Thykier <niels@thykier.net><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software.  You may modify and/or redistribute this<br>
+code under the same terms as Perl 5.10 itself, or, at your option,<br>
+any later version of Perl 5.<br>
+<br>
+Files: cpan/B-<br>
+Copyright:<br>
+Copyright (c) 1996, 1997 Malcolm Beattie<br>
+Copyright (c) 2008, 2010, 2013, 2014 Reini Urban<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of either:<br>
+.<br>
+a) the GNU General Public License as published by the Free<br>
+Software Foundation; either version 1, or (at your option) any<br>
+later version, or<br>
+.<br>
+b) the "Artistic License" which comes with this kit.<br>
+<br>
+Files: cpan/Compress-Raw-Bzip2/*<br>
+Copyright: Copyright (c) 2005-2013 Paul Marquess. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Compress-Raw-Bzip2/bzip2-src/*<br>
+Copyright: Copyright(C) 1996-2010 Julian Seward. All rights reserved<br>
+Comment:<br>
+----------------------------------------<br>
+cpan/Compress-Raw-Bzip2/bzip2-src/README states:<br>
+Note that the files bzip2.c, bzip2recover.c, bzlib.c & decompress.c<br>
+have been modified to allow them to build with a C++ compiler.<br>
+The file bzip2-src/bzip2-cpp.patch contains the patch<br>
+that was used to modify the original source.<br>
+but the patch has apparently been filtered out when including the software<br>
+into the Perl core distribution.<br>
+License: BZIP<br>
+<br>
+Files: cpan/Compress-Raw-Zlib/*<br>
+Copyright: Copyright (c) 2005-2013 Paul Marquess. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Compress-Raw-Zlib/zlib-src/*<br>
+Copyright:<br>
+Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler<br>
+License: ZLIB<br>
+<br>
+Files: cpan/Config-Perl-V/*<br>
+Copyright:<br>
+Copyright (C) 2009-2015 H.Merijn Brand<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/CPAN/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/CPAN/lib/App/Cpan.pm<br>
+cpan/CPAN/scripts/cpan<br>
+Copyright: (c) 2001-2014, brian d foy, All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may redistribute this under the same terms as Perl itself.<br>
+<br>
+Files: cpan/CPAN-Meta/*<br>
+Copyright:<br>
+This software is copyright (c) 2010 by David Golden and Ricardo Signes.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files:<br>
+cpan/CPAN-Meta/lib/CPAN/Meta/History/Meta_1_0.pod<br>
+cpan/CPAN-Meta/lib/CPAN/Meta/History/Meta_1_1.pod<br>
+cpan/CPAN-Meta/lib/CPAN/Meta/History/Meta_1_2.pod<br>
+cpan/CPAN-Meta/lib/CPAN/Meta/History/Meta_1_3.pod<br>
+cpan/CPAN-Meta/lib/CPAN/Meta/History/Meta_1_4.pod<br>
+Copyright: Ken Williams<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/CPAN-Meta-Requirements/*<br>
+Copyright:<br>
+This software is copyright (c) 2010 by David Golden and Ricardo Signes.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/CPAN-Meta-YAML/*<br>
+Copyright:<br>
+This software is copyright (c) 2010 by Adam Kennedy.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/DB_File/*<br>
+Copyright: Copyright (c) 1995-2014 Paul Marquess. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Devel-DProf/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There are no copyright or license notices in this distribution. It<br>
+is assumed that the copyright and license of Perl itself applies here<br>
+as well.<br>
+.<br>
+This is supported by the README of the separate CPAN distribution at<br>
+<http://search.cpan.org/~flora/Devel-DProf-20110228.00/>, which states:<br>
+.<br>
+This software is copyright (c) 2011 by The Perl 5 Porters.<br>
+.<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/Devel-PPPort/*<br>
+Copyright:<br>
+Version 3.x, Copyright (C) 2004-2010, Marcus Holland-Moritz.<br>
+Version 2.x, Copyright (C) 2001, Paul Marquess.<br>
+Version 1.x, Copyright (C) 1999, Kenneth Albanowski.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Digest/*<br>
+Copyright:<br>
+Copyright 1998-2006 Gisle Aas.<br>
+Copyright 1995,1996 Neil Winton.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Digest-MD5/*<br>
+Copyright:<br>
+Copyright 1998-2003 Gisle Aas.<br>
+Copyright 1995-1996 Neil Winton.<br>
+Copyright 1990-1992 RSA Data Security, Inc.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Digest-SHA/*<br>
+Copyright:<br>
+Copyright (C) 2003-2015 Mark Shelor, All Rights Reserved<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Encode/*<br>
+Copyright: Copyright 2002-2014 Dan Kogai <dankogai@cpan.org><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Encode/bin/encguess<br>
+Copyright: 2015 Michael LaGrasta and Dan Kogai<br>
+License: Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the terms of the the Artistic License (2.0).<br>
+<br>
+Files: cpan/encoding-warnings/*<br>
+Copyright:<br>
+Copyright 2004, 2005, 2006, 2007 by Audrey Tang <cpan@audreyt.org>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/experimental/*<br>
+Copyright:<br>
+This software is copyright (c) 2013 by Leon Timmermans.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/ExtUtils-Constant/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There are no copyright or license notices in this distribution. It<br>
+is assumed that the copyright and license of Perl itself applies here<br>
+as well.<br>
+.<br>
+This is supported by the README of the separate CPAN distribution at<br>
+<http://search.cpan.org/dist/ExtUtils-Constant/>, which states:<br>
+.<br>
+You may distribute this work under the terms of either the GNU General<br>
+Public License or the Artistic License, as specified in perl's README<br>
+file.<br>
+.<br>
+Copyright © 2001, 2002, 2005 Nicholas Clark<br>
+<br>
+Files: cpan/ExtUtils-MakeMaker/lib/ExtUtils/MakeMaker/Locale.pm<br>
+Copyright: 2010 Gisle Aas <gisle@aas.no><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/ExtUtils-Manifest/lib/ExtUtils/Manifest.pm<br>
+Copyright: 1996- by Andreas Koenig<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/File-Fetch/*<br>
+cpan/IPC-Cmd/*<br>
+cpan/Module-Load/*<br>
+cpan/Module-Load-Conditional/*<br>
+cpan/Module-Loaded/*<br>
+cpan/Package-Constants/*<br>
+cpan/Params-Check/*<br>
+Copyright:<br>
+There are no copyright notices in these distributions.<br>
+Their author is Jos Boumans <kane@cpan.org>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you may redistribute and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/File-Path/*<br>
+Copyright:<br>
+This module is copyright (C) Charles Bailey, Tim Bunce and<br>
+David Landgren 1995-2013. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/File-Temp/*<br>
+Copyright:<br>
+This software is copyright (c) 2013 by Tim Jenness and the UK Particle<br>
+Physics and Astronomy Research Council.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/Filter-Util-Call/*<br>
+Copyright:<br>
+Copyright (c) 1995-2011 Paul Marquess. All rights reserved.<br>
+Copyright (c) 2011-2014 Reini Urban. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Getopt-Long/*<br>
+Copyright:<br>
+Module Getopt::Long is Copyright 1990,2015 by Johan Vromans.<br>
+License: GPL-2+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the terms of the Perl Artistic License or the<br>
+GNU General Public License as published by the Free Software<br>
+Foundation; either version 2 of the License, or (at your option) any<br>
+later version.<br>
+<br>
+Files: cpan/HTTP-Tiny/*<br>
+Copyright:<br>
+This software is copyright (c) 2015 by Christian Hansen.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/IO-Compress/*<br>
+Copyright:<br>
+Copyright (c) 1995-2013 Paul Marquess. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/IO-Zlib/*<br>
+Copyright:<br>
+Copyright (c) 1998-2004 Tom Hughes <tom@compton.nu>. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute<br>
+it and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/IPC-SysV/*<br>
+Copyright:<br>
+Version 2.x, Copyright (C) 2007-2010, Marcus Holland-Moritz.<br>
+Version 1.x, Copyright (c) 1997, Graham Barr.<br>
+Version 1.x, Copyright (c) 1999, Graham Barr.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/JSON-PP/*<br>
+Copyright:<br>
+Copyright 2007-2014 by Makamaka Hannyaharamitu<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/libnet/*<br>
+Copyright:<br>
+(C) 1995-2007 Graham Barr. All rights reserved.<br>
+(C) 2013-2014 Steve Hay. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/libnet/Makefile.PL<br>
+Copyright:<br>
+Copyright (C) 2014 Steve Hay.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public License<br>
+or the Artistic License, as specified in the LICENCE file.<br>
+<br>
+Files: cpan/List-Util/*<br>
+Copyright:<br>
+Copyright (c) 1997-2009 Graham Barr <gbarr@pobox.com>. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Scalar-List-Utils/lib/Scalar/Util.pm<br>
+Copyright:<br>
+Copyright (c) 1997-2007 Graham Barr <gbarr@pobox.com>. All rights reserved.<br>
+Copyright (c) 1999 Tuomas J. Lukka <lukka@iki.fi>. All rights reserved.<br>
+Copyright (C) 2004, 2008  Matthijs van Duin.  All rights reserved.<br>
+Copyright (C) 2014 cPanel Inc.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Scalar-List-Utils/lib/Sub/Util.pm<br>
+Copyright: (c) 2014 Paul Evans <leonerd@leonerd.org.uk>. All rights reserved<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+<br>
+Files: cpan/Locale-Codes/*<br>
+Copyright:<br>
+Copyright (C) 1997-2001 Canon Research Centre Europe (CRE).<br>
+Copyright (C) 2001-2010 Neil Bowers<br>
+Copyright (c) 1996-2015 Sullivan Beck<br>
+Copyright (c) 2001      Michael Hennecke<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Locale-Maketext-Simple/*<br>
+Copyright:<br>
+Copyright 2003, 2004, 2005, 2006 by Audrey Tang <cpan@audreyt.org><br>
+License: Expat or GPL-1+ or Artistic<br>
+Comment:<br>
+This software is released under the MIT license cited below.  Additionally,<br>
+when this software is distributed with Perl Kit, Version 5, you may also<br>
+redistribute it and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/Locale-Maketext-Simple/t/po_with_i_default/i_default.po<br>
+cpan/Locale-Maketext-Simple/t/po_with_i_default/fr.po<br>
+cpan/Locale-Maketext-Simple/t/po_with_i_default/en.po<br>
+cpan/Locale-Maketext-Simple/t/po_without_i_default/en.po<br>
+cpan/Locale-Maketext-Simple/t/po_without_i_default/fr.po<br>
+Copyright:<br>
+Copyright (C) All Perl Hackers everywhere<br>
+Ton Voon <ton.voon@opsera.com>, 2009.<br>
+License: Expat or GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+It is assumed that these translations are licensed under the same terms as<br>
+the rest of the Locale-Maketext-Simple distribution.<br>
+<br>
+Files: cpan/Math-Complex/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Memoize/*<br>
+Copyright:<br>
+Copyright 1998, 1999, 2000, 2001, 2012 M-J. Dominus.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you may redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+.<br>
+You may copy and distribute this program under the same terms as<br>
+Perl itself.  If in doubt, write to mjd-perl-memoize+@plover.com for<br>
+a license.<br>
+<br>
+Files: cpan/MIME-Base64/*<br>
+Copyright:<br>
+Copyright 1995-2004,2010 Gisle Aas <gisle@ActiveState.com><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/MIME-Base64/Base64.xs<br>
+Copyright:<br>
+Copyright 1997-2004 Gisle Aas<br>
+Copyright (c) 1991 Bell Communications Research, Inc. (Bellcore)<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+.<br>
+The tables and some of the code that used to be here was borrowed from<br>
+metamail, which comes with this message:<br>
+.<br>
+Copyright (c) 1991 Bell Communications Research, Inc. (Bellcore)<br>
+.<br>
+Permission to use, copy, modify, and distribute this material<br>
+for any purpose and without fee is hereby granted, provided<br>
+that the above copyright notice and this permission notice<br>
+appear in all copies, and that the name of Bellcore not be<br>
+used in advertising or publicity pertaining to this<br>
+material without the specific, prior written permission<br>
+of an authorized representative of Bellcore.  BELLCORE<br>
+MAKES NO REPRESENTATIONS ABOUT THE ACCURACY OR SUITABILITY<br>
+OF THIS MATERIAL FOR ANY PURPOSE.  IT IS PROVIDED "AS IS",<br>
+WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.<br>
+<br>
+Files: cpan/Module-Metadata/*<br>
+Copyright:<br>
+Copyright (c) 2001-2011 Ken Williams.  All rights reserved.<br>
+Copyright (c) 2010-2011 Matt Trout and David Golden. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/NEXT/*<br>
+Copyright:<br>
+Copyright (c) 2000-2001, Damian Conway. All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software. It may be used, redistributed<br>
+and/or modified under the same terms as Perl itself.<br>
+<br>
+Files: cpan/parent/*<br>
+Copyright:<br>
+Copyright (c) 2007-10 Max Maischein <corion@cpan.org><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is released under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Parse-CPAN-Meta/*<br>
+Copyright:<br>
+This software is copyright (c) 2014 by Adam Kennedy and Contributors.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/PerlIO-via-QuotedPrint/*<br>
+Copyright:<br>
+Copyright (c) 2002-2004,2012 Elizabeth Mattijsen.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Perl-OSType/*<br>
+Copyright:<br>
+This software is copyright (c) 2015 by David Golden.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This is free software; you can redistribute it and/or modify it under<br>
+the same terms as the Perl 5 programming language system itself.<br>
+<br>
+Files: cpan/Pod-Checker/*<br>
+Copyright:<br>
+Copyright (C) 1994-2000 by Bradford Appleton. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is part of "PodParser". PodParser is free software;<br>
+you can redistribute it and/or modify it under the same terms<br>
+as Perl itself.<br>
+<br>
+Files: cpan/Pod-Escapes/*<br>
+Copyright:<br>
+Copyright (c) 2001-2004 Sean M. Burke.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/podlators/*<br>
+Copyright:<br>
+Copyright 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,<br>
+2010, 2012, 2013 Russ Allbery <rra@stanford.edu><br>
+Copyright 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,<br>
+2010, 2012, 2013, 2014, 2015 Russ Allbery <rra@cpan.org><br>
+Substantial contributions by Sean Burke <sburke@cpan.org><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/podlators/lib/Pod/Text/Overstrike.pm<br>
+Copyright:<br>
+Copyright 2000 Joe Smith <Joe.Smith@inwap.com>.<br>
+Copyright 2001, 2004, 2008 Russ Allbery <rra@stanford.edu>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Pod-Parser/*<br>
+Copyright:<br>
+Copyright (C) 1996-2000 by Bradford Appleton. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+PodParser is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Pod-Parser/lib/Pod/PlainText.pm<br>
+Copyright:<br>
+Copyright 1999-2000 by Russ Allbery <rra@stanford.edu><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Pod-Parser/lib/Pod/ParseUtils.pm<br>
+Copyright:<br>
+Copyright (C) 1999-2000 by Marek Rouchal. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is part of "PodParser". PodParser is free software;<br>
+you can redistribute it and/or modify it under the same terms<br>
+as Perl itself.<br>
+<br>
+Files: cpan/Pod-Parser/t/pod/contains_pod.t<br>
+Copyright:<br>
+Copyright (C) 2005  Joshua Hoblitt<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+This file has no explicit license notice, but it is assumed that it<br>
+is licensed under the same terms as the rest of the distribution.<br>
+<br>
+Files: cpan/Pod-Simple/*<br>
+Copyright:<br>
+Copyright (c) 2002-2004 Sean M. Burke.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Pod-Simple/lib/Pod/Simple/XHTML.pm<br>
+Copyright:<br>
+Copyright (c) 2003-2005 Allison Randal.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/Pod-Simple/t/perlfaq.pod<br>
+cpan/Pod-Simple/t/perlfaqo.txt<br>
+Copyright:<br>
+Copyright (c) 1997-1999 Tom Christiansen and Nathan Torkington.<br>
+All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+This document  is part of the perlfaq distribution. A newer version<br>
+of it is also included in pod/perlfaq3.pod.<br>
+.<br>
+The license notice in the document is:<br>
+.<br>
+When included as an integrated part of the Standard Distribution<br>
+of Perl or of its documentation (printed or otherwise), this works is<br>
+covered under Perl's Artistic License.  For separate distributions of<br>
+all or part of this FAQ outside of that, see L<perlfaq>.<br>
+.<br>
+Irrespective of its distribution, all code examples here are in the public<br>
+domain.  You are permitted and encouraged to use this code and any<br>
+derivatives thereof in your own programs for fun or for profit as you<br>
+see fit.  A simple comment in the code giving credit to the FAQ would<br>
+be courteous but is not required.<br>
+.<br>
+The corresponding license in pod/perlfaq.pod is:<br>
+.<br>
+This document is available under the same terms as Perl itself. Code<br>
+examples in all the perlfaq documents are in the public domain. Use<br>
+them as you see fit (and at your own risk with no warranty from anyone).<br>
+<br>
+Files: cpan/Pod-Usage/*<br>
+Copyright:<br>
+Copyright (C) 1996-2000 by Bradford Appleton. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This file is part of "PodParser". PodParser is free software;<br>
+you can redistribute it and/or modify it under the same terms<br>
+as Perl itself.<br>
+<br>
+Files: cpan/Shell/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There are no copyright or license notices in this distribution. It<br>
+is assumed that the copyright and license of Perl itself applies here<br>
+as well.<br>
+.<br>
+This is supported by the README of the separate CPAN distribution at<br>
+<http://search.cpan.org/~ferreira/Shell-0.72/>, which states:<br>
+.<br>
+Copyright (C) 2005 by Perl 5 Porters<br>
+.<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Sys-Syslog/*<br>
+Copyright:<br>
+Copyright (C) 1990-2012 by Larry Wall and others.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Sys-Syslog/fallback/syslog.h<br>
+Copyright:<br>
+Copyright (c) 1982, 1986, 1988, 1993<br>
+The Regents of the University of California.  All rights reserved.<br>
+License: BSD-3-clause-with-weird-numbering<br>
+<br>
+Files: cpan/Term-ANSIColor/*<br>
+Copyright:<br>
+Copyright 1996 Zenin<br>
+Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2005, 2006, 2008, 2009,<br>
+2010, 2011, 2012, 2013 Russ Allbery <rra@stanford.edu><br>
+Copyright 2012 Kurt Starsinic <kstarsinic@gmail.com><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Term-ANSIColor/t/stringify.t<br>
+Copyright:<br>
+Copyright 2011 Revilo Reegiles<br>
+Copyright 2011 Russ Allbery <rra@stanford.edu><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/Term-ANSIColor/t/lib/Test/RRA.pm<br>
+cpan/Term-ANSIColor/t/lib/Test/RRA/*<br>
+Copyright: 2013, 2014 The Board of Trustees of the Leland Stanford Junior University<br>
+License: Expat<br>
+<br>
+Files: cpan/Term-Cap/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There are no copyright or license notices included. The file<br>
+cpan/Term-Cap/Cap.pm refers to a README file, but that has apparently<br>
+been filtered out when bundling the software into the Perl core<br>
+distribution.<br>
+.<br>
+The referenced README file is available at<br>
+<http://cpansearch.perl.org/src/JSTOWE/Term-Cap-1.12/README>, and it<br>
+states:<br>
+.<br>
+Copyright 1995-2007 (c) perl5 porters.<br>
+.<br>
+This software is free software and can be modified and distributed under<br>
+the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test/*<br>
+Copyright:<br>
+Copyright (c) 1998-2000 Joshua Nathaniel Pritikin.<br>
+Copyright (c) 2001-2002 Michael G. Schwern.<br>
+Copyright (c) 2002-2004 Sean M. Burke.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This package is free software and is provided "as is" without express<br>
+or implied warranty.  It may be used, redistributed and/or modified<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Harness/*<br>
+Copyright:<br>
+Copyright (c) 2007-2011, Andy Armstrong <andy@hexten.net>. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Harness/lib/TAP/Parser.pm<br>
+Copyright:<br>
+Copyright 2006-2008 Curtis "Ovid" Poe, all rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Harness/lib/TAP/Parser/YAMLish/Reader.pm<br>
+Copyright:<br>
+Copyright 2007-2011 Andy Armstrong.<br>
+Portions copyright 2006-2008 Adam Kennedy.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Simple/*<br>
+Copyright:<br>
+Copyright 2001-2008 by Michael G Schwern <schwern@pobox.com>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Simple/lib/Test/Builder.pm<br>
+Copyright:<br>
+Copyright 2002-2008 by chromatic <chromatic@wgz.org> and<br>
+Michael G Schwern E<schwern@pobox.com>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Simple/lib/Test/Builder/Tester/Color.pm<br>
+Copyright:<br>
+Copyright Mark Fowler <mark@twoshortplanks.com> 2002.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Simple/lib/Test/Builder/Tester.pm<br>
+Copyright:<br>
+Copyright Mark Fowler <mark@twoshortplanks.com> 2002, 2004.<br>
+.<br>
+Some code taken from Test::More and Test::Catch, written by by<br>
+Michael G Schwern <schwern@pobox.com>.  Hence, those parts<br>
+Copyright Michael G Schwern 2001.  Used and distributed with<br>
+permission.<br>
+.<br>
+This module is copyright 2005 Fergal Daly <fergal@esatclear.ie>, some parts<br>
+are based on other people's work.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Simple/lib/Test/Tutorial.pod<br>
+Copyright:<br>
+Copyright 2001 by Michael G Schwern <schwern@pobox.com>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This documentation is free; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+.<br>
+Irrespective of its distribution, all code examples in these files<br>
+are hereby placed into the public domain.  You are permitted and<br>
+encouraged to use this code in your own programs for fun<br>
+or for profit as you see fit.  A simple comment in the code giving<br>
+credit would be courteous but is not required.<br>
+<br>
+Files: cpan/Test-Simple/lib/Test/Builder/IO/Scalar.pm<br>
+Copyright:<br>
+Copyright (c) 1996 by Eryq.  All rights reserved.<br>
+Copyright (c) 1999,2001 by ZeeGee Software Inc.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Test-Simple/lib/Test/Tester/CaptureRunner.pm<br>
+Copyright: Copyright 2003 by Fergal Daly <fergal@esatclear.ie>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it<br>
+and/or modify it under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+cpan/Test-Simple/lib/Test/use/ok.pm<br>
+cpan/Test-Simple/lib/ok.pm<br>
+Copyright: none<br>
+To the extent possible under law, 唐鳳 has waived all copyright and related<br>
+or neighboring rights to L<Test-use-ok><br>
+License:  CC0-1.0<br>
+Comment:<br>
+----------------------------------------<br>
+The file links to http://creativecommons.org/publicdomain/zero/1.0/<br>
+and the full license text as retrieved from there can be found at the<br>
+end of this file.<br>
+<br>
+Files: cpan/Text-Balanced/*<br>
+Copyright:<br>
+Copyright 1997 - 2001 Damian Conway. All Rights Reserved.<br>
+Some (minor) parts copyright 2009 Adam Kennedy.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software. It may be used, redistributed and/or<br>
+modified under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Text-ParseWords/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There are no copyright notices or license information in this distribution.<br>
+It is assumed that the software is licensed under the same terms as<br>
+Perl itself. This is supported by the Makefile.PL file of the separate<br>
+CPAN distribution at<br>
+<http://cpansearch.perl.org/src/CHORNY/Text-ParseWords-3.27/Makefile.PL>.<br>
+<br>
+Files: cpan/Text-Tabs/*<br>
+Copyright:<br>
+Copyright (C) 1996-2009 David Muir Sharnoff.<br>
+Copyright (C) 2005 Aristotle Pagaltzis<br>
+Copyright (C) 2012-2013 Google, Inc.<br>
+License: TEXT-TABS<br>
+<br>
+Files: cpan/Tie-File/*<br>
+Copyright:<br>
+Tie::File version 0.97 is copyright (C) 2003 Mark Jason Dominus.<br>
+License: GPL-2+ or Artistic<br>
+Comment:<br>
+This library is free software; you may redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+.<br>
+These terms are your choice of any of (1) the Perl Artistic Licence,<br>
+or (2) version 2 of the GNU General Public License as published by the<br>
+Free Software Foundation, or (3) any later version of the GNU General<br>
+Public License.<br>
+<br>
+Files:<br>
+cpan/Tie-RefHash/*<br>
+cpan/Win32API-File/*<br>
+dist/bignum/*<br>
+dist/ExtUtils-Install/*<br>
+dist/Math-BigInt/*<br>
+dist/Math-BigInt-FastCalc/*<br>
+dist/Math-BigRat/*<br>
+dist/Thread-Queue/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+----------------------------------------<br>
+These distributions include no copyright notices but have<br>
+the same explicit licensing information.<br>
+<br>
+Files: cpan/Time-HiRes/*<br>
+Copyright:<br>
+Copyright (c) 1996-2002 Douglas E. Wegscheid.  All rights reserved.<br>
+Copyright (c) 2002-2010 Jarkko Hietaniemi.<br>
+Copyright (c) 2011, 2012 Andrew Main (Zefram) <zefram@fysh.org><br>
+All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Time-Local/*<br>
+Copyright:<br>
+Copyright (c) 1997-2003 Graham Barr, 2003-2007 David Rolsky.<br>
+All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Time-Piece/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software, you may distribute it under the same<br>
+terms as Perl.<br>
+<br>
+Files: cpan/Time-Piece/Piece.xs<br>
+Copyright:<br>
+strptime copied from freebsd with the following copyright:<br>
+Copyright (c) 1994 Powerdog Industries.  All rights reserved.<br>
+License: GPL-1+ or Artistic, and BSD-4-clause-POWERDOG<br>
+Comment:<br>
+----------------------------------------<br>
+The strptime function is licensed under the BSD-like license included<br>
+below. It is assumed that the other parts are licensed under the same<br>
+terms as the rest of the distribution.<br>
+<br>
+Files: cpan/Unicode-Collate/*<br>
+Copyright:<br>
+This module is Copyright(C) 2001-2014, SADAHIRO Tomoyuki. Japan. All<br>
+rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Unicode-Collate/Collate/allkeys.txt<br>
+Copyright:<br>
+Copyright (c) 2001-2014 Unicode, Inc.<br>
+License: Unicode<br>
+Comment:<br>
+For terms of use, see http://www.unicode.org/terms_of_use.html<br>
+----------------------------------------<br>
+See below for the full text of this license as downloaded from the above URL<br>
+on Tue, 26 Apr 2011 14:41:24 +0300.<br>
+<br>
+Files: cpan/Unicode-Normalize/*<br>
+Copyright:<br>
+Copyright(C) 2001-2012, SADAHIRO Tomoyuki. Japan. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: cpan/Win32/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There are no copyright notices or license information in this distribution.<br>
+It is assumed that the software is licensed under the same terms as<br>
+Perl itself. This is supported by the META.yml file of the separate<br>
+CPAN distribution at <http://cpansearch.perl.org/src/JDB/Win32-0.44/META.yml><br>
+<br>
+Files: dist/Attribute-Handlers/*<br>
+Copyright:<br>
+Copyright (c) 2001-2009, Damian Conway. All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software. It may be used, redistributed<br>
+and/or modified under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+dist/autouse/*<br>
+dist/base/*<br>
+dist/constant/*<br>
+dist/Devel-SelfStubber/*<br>
+dist/Dumpvalue/*<br>
+dist/Env/*<br>
+dist/ExtUtils-Command/*<br>
+dist/ExtUtils-Manifest/*<br>
+dist/I18N-Collate/*<br>
+dist/if/*<br>
+dist/Safe/*<br>
+ext/Fcntl/*<br>
+ext/FileCache/*<br>
+ext/GDBM_File/*<br>
+ext/IPC-Open2/*<br>
+ext/IPC-Open3/*<br>
+ext/NDBM_File/*<br>
+ext/ODBM_File/*<br>
+ext/Opcode/*<br>
+ext/PerlIO-encoding/*<br>
+ext/PerlIO-scalar/*<br>
+ext/PerlIO-via/*<br>
+ext/POSIX/*<br>
+ext/re/*<br>
+ext/Socket/*<br>
+ext/Sys-Hostname/*<br>
+ext/Tie-Hash-NamedCapture/*<br>
+ext/Tie-Memoize/*<br>
+ext/VMS-DCLsym/*<br>
+ext/VMS-Stdio/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There is no copyright or license information in these distributions.<br>
+It is assumed that they are licensed under the same terms as Perl itself.<br>
+<br>
+Files: dist/B-Deparse/*<br>
+Copyright:<br>
+Copyright (c) 1998-2000, 2002, 2003, 2004, 2005, 2006 Stephen McCamant.<br>
+All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software; you can redistribute and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: dist/Carp/*<br>
+Copyright:<br>
+Copyright (c) 1994-2012 Larry Wall<br>
+Copyright (c) 2011, 2012 Andrew Main (Zefram) <zefram@fysh.org><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software. It may be used, redistributed<br>
+and/or modified under the same terms as Perl itself.<br>
+<br>
+Files: dist/Data-Dumper/*<br>
+Copyright:<br>
+Copyright (c) 1996-98 Gurusamy Sarathy. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: dist/ExtUtils-CBuilder/*<br>
+Copyright:<br>
+Copyright (c) 2003-2005 Ken Williams.  All rights reserved.<br>
+Copyright (c) 2012 Ken Williams.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: dist/ExtUtils-ParseXS/*<br>
+Copyright:<br>
+Copyright 2002-2012 by Ken Williams, David Golden and other contributors.<br>
+All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+.<br>
+Based on the ExtUtils::xsubpp code by Larry Wall and the Perl 5<br>
+Porters, which was released under the same license terms.<br>
+<br>
+Files: dist/Filter-Simple/*<br>
+Copyright:<br>
+Copyright (c) 2000-2008, Damian Conway. All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software. It may be used, redistributed<br>
+and/or modified under the same terms as Perl itself.<br>
+<br>
+Files: dist/I18N-LangTags/*<br>
+Copyright:<br>
+Copyright 1998+, Sean M. Burke <sburke@cpan.org>, all rights<br>
+reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: dist/I18N-LangTags/lib/I18N/LangTags/List.pm<br>
+Copyright:<br>
+Copyright (c) 2001+ Sean M. Burke. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You can redistribute and/or modify this document under the same terms<br>
+as Perl itself.<br>
+<br>
+Files: dist/IO/*<br>
+Copyright:<br>
+Copyright (c) 1996-2003 Graham Barr <gbarr@pobox.com>. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: dist/IO/lib/IO/Socket.pm<br>
+Copyright:<br>
+Copyright (c) 1997-8 Graham Barr <gbarr@pobox.com>. All rights reserved.<br>
+Copyright 2001, Lincoln Stein <lstein@cshl.org>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+.<br>
+The atmark() implementation: Copyright 2001, Lincoln Stein <lstein@cshl.org>.<br>
+This module is distributed under the same terms as Perl itself.<br>
+Feel free to use, modify and redistribute it as long as you retain<br>
+the correct attribution.<br>
+<br>
+Files: dist/lib/*<br>
+Copyright: as above for 'Files: *'<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This package has the same copyright and license as the perl core.<br>
+<br>
+Files: dist/Locale-Maketext/*<br>
+Copyright:<br>
+Copyright 1999-2004, Sean M. Burke <sburke@cpan.org>, all rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: dist/Locale-Maketext/lib/Locale/Maketext/TPJ13.pod<br>
+Copyright: 1999 The Perl Journal.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files: dist/Module-CoreList/*<br>
+Copyright:<br>
+Copyright (C) 2002-2009 Richard Clamp.  All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: dist/Module-CoreList/corelist<br>
+Copyright:<br>
+Copyright (c) 2002-2007 by D.H. aka PodMaster<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is distributed under the same terms as perl itself.<br>
+<br>
+Files: dist/Module-CoreList/lib/Module/CoreList/Utils.pm<br>
+Copyright:<br>
+Copyright (C) 2013 Chris Williams.  All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This module is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: dist/Net-Ping/*<br>
+Copyright:<br>
+Copyright (c) 2002-2003, Rob Brown.  All rights reserved.<br>
+Copyright (c) 2001, Colin McMillen.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you may redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: dist/PathTools/*<br>
+Copyright:<br>
+Copyright (c) 2004 by the Perl 5 Porters.  All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: dist/PathTools/Cwd.xs<br>
+Copyright:<br>
+Copyright (c) 2004 by the Perl 5 Porters.  All rights reserved.<br>
+Copyright (c) 2003 Constantin S. Svintsoff <kostik@iclub.nsu.ru><br>
+License: GPL-1+ or Artistic, and BSD-3-clause-GENERIC<br>
+Comment:<br>
+----------------------------------------<br>
+The main license applies to most of the code:<br>
+.<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+.<br>
+but portions of it have been taken from a BSD variant and are licensed<br>
+under the terms of the "BSD-3-clause-GENERIC" license included in this file.<br>
+.<br>
+dist/PathTools/Cwd.pm states:<br>
+.<br>
+Portions of the C code in this library are copyright (c) 1994 by the<br>
+Regents of the University of California.  All rights reserved.  The<br>
+license on this code is compatible with the licensing of the rest of<br>
+the distribution - please see the source code in F<Cwd.xs> for the<br>
+details.<br>
+.<br>
+but, as discussed in<br>
+http://rt.cpan.org/Public/Bug/Display.html?id=64116<br>
+this is outdated and dist/PathTools/Cwd.xs itself contains the correct<br>
+information.<br>
+<br>
+Files: dist/Pod-Perldoc/*<br>
+Copyright:<br>
+Copyright (c) 2002-2007 Sean M. Burke.<br>
+Copyright (c) 2011 Mark Allen.  All rights reserved.<br>
+Copyright (c) 2011 brian d foy. All rights reserved.<br>
+Copyright (c) 2011 Mark Allen.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: dist/Storable/*<br>
+Copyright:<br>
+Copyright (c) 1995-2001, Raphael Manfredi<br>
+Copyright (c) 2002-2014 by the Perl 5 Porters<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl 5 itself.<br>
+<br>
+Files: dist/Storable/t/forgive.t<br>
+Copyright:<br>
+Copyright (c) 1995-2000, Raphael Manfredi<br>
+(C) Copyright 1997, Universitat Dortmund, all rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may redistribute only under the same terms as Perl 5, as specified<br>
+in the README file that comes with the distribution.<br>
+<br>
+Files:<br>
+dist/Storable/t/attach_errors.t<br>
+dist/Storable/t/attach_singleton.t<br>
+dist/Storable/t/circular_hook.t<br>
+Copyright:<br>
+Copyright 2005, Adam Kennedy.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may redistribute only under the same terms as Perl 5, as specified<br>
+in the README file that comes with the distribution.<br>
+<br>
+Files:<br>
+dist/Storable/t/code.t<br>
+dist/Storable/t/sig_die.t<br>
+Copyright:<br>
+Copyright (c) 2002 Slaven Rezic<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may redistribute only under the same terms as Perl 5, as specified<br>
+in the README file that comes with the distribution.<br>
+<br>
+Files: dist/threads/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+threads is released under the same license as Perl.<br>
+<br>
+Files: dist/threads-shared/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+threads::shared is released under the same license as Perl.<br>
+<br>
+Files: dist/threads-shared/shared.xs<br>
+Copyright:<br>
+Copyright (c) 2001-2002, 2006 Larry Wall<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: dist/XSLoader/*<br>
+Copyright:<br>
+Copyright (C) 1990-2011 by Larry Wall and others.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: ext/attributes/*<br>
+Copyright:<br>
+Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008<br>
+by Larry Wall and others<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: ext/B/*<br>
+Copyright:<br>
+Copyright (c) 1996, 1997, 1998 Malcolm Beattie<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: ext/B/B/Concise.pm<br>
+Copyright:<br>
+Copyright (C) 2000-2003 Stephen McCamant. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute and/or modify it<br>
+under the same terms as Perl itself.<br>
+<br>
+Files: ext/Devel-Peek/*<br>
+Copyright:<br>
+Copyright (c) 1995-98 Ilya Zakharevich. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: ext/DynaLoader/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There is no license information included that clearly applies to the<br>
+whole of this distribution. It is assumed that it is licensed under<br>
+the same terms as Perl itself.<br>
+<br>
+Files: ext/DynaLoader/dl_aix.xs<br>
+Copyright:<br>
+This is an unpublished work copyright (c) 1992 Helios Software GmbH<br>
+3000 Hannover 1, Germany<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+It is assumed that this file is licensed under the same terms as Perl itself.<br>
+<br>
+Files: ext/DynaLoader/dl_dld.xs<br>
+Copyright:<br>
+based upon the file "dl.c", which is Copyright (c) 1994, Larry Wall<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: ext/DynaLoader/dl_symbian.xs<br>
+Copyright: 2004, Nokia<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+The license in the file is specified as<br>
+.<br>
+License:     Artistic/GPL<br>
+<br>
+Files: ext/Errno/*<br>
+Copyright:<br>
+Copyright (c) 1997-8 Graham Barr. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: ext/File-Glob/*<br>
+Copyright: unknown<br>
+License: Artistic<br>
+Comment:<br>
+The Perl interface was written by Nathan Torkington <gnat@frii.com>,<br>
+and is released under the artistic license.  Further modifications<br>
+were made by Greg Bacon <gbacon@cs.uah.edu>, Gurusamy Sarathy<br>
+<gsar@activestate.com>, and Thomas Wegner <wegner_thomas@yahoo.com>.<br>
+<br>
+Files:<br>
+ext/File-Glob/bsd_glob.c<br>
+ext/File-Glob/bsd_glob.h<br>
+Copyright:<br>
+Copyright (c) 1989, 1993<br>
+The Regents of the University of California.  All rights reserved.<br>
+.<br>
+This code is derived from software contributed to Berkeley by<br>
+Guido van Rossum.<br>
+License: BSD-3-clause<br>
+<br>
+Files: ext/Hash-Util/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+There is no license information in this distribution.<br>
+It is assumed that it is licensed under the same terms as Perl itself.<br>
+<br>
+Files: ext/Hash-Util/lib/Hash/Util.pm<br>
+Copyright:<br>
+hv_store() is from Array::RefElem, Copyright 2000 Gisle Aas.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+As above, it is assumed that this file is licensed under the same terms<br>
+as Perl itself.<br>
+.<br>
+The copyright and license information of Array::RefElem, as fetched from<br>
+<http://cpansearch.perl.org/src/GAAS/Array-RefElem-1.00/README>, is as<br>
+follows:<br>
+.<br>
+Copyright 2000 Gisle Aas <gisle@aas.no><br>
+.<br>
+This library is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: ext/Hash-Util-FieldHash/*<br>
+Copyright:<br>
+Copyright (C) 2006-2007 by (Anno Siegel)<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself, either Perl version 5.8.7 or,<br>
+at your option, any later version of Perl 5 you may have available.<br>
+<br>
+Files: ext/I18N-Langinfo/*<br>
+Copyright:<br>
+Copyright 2001 by Jarkko Hietaniemi<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: ext/mro/*<br>
+Copyright:<br>
+Copyright (c) 2007 Brandon L Black<br>
+Copyright (c) 2008,2009 Larry Wall and others<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: ext/Pod-Html/*<br>
+Copyright: unknown<br>
+License: Artistic<br>
+Comment:<br>
+This program is distributed under the Artistic License.<br>
+<br>
+Files: ext/SDBM_File/*<br>
+Copyright: unknown<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+There is no copyright or license information in this distribution.<br>
+It is assumed that it is licensed under the same terms as Perl itself.<br>
+<br>
+Files: ext/SDBM_File/sdbm/*<br>
+Copyright: none<br>
+License: SDBM-PUBLIC-DOMAIN<br>
+<br>
+Files: ext/Win32CORE/*<br>
+Copyright:<br>
+Copyright (C) 2007 by Larry Wall and others<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You may distribute under the terms of either the GNU General Public<br>
+License or the Artistic License, as specified in the README file.<br>
+<br>
+Files: ext/XS-APItest/*<br>
+Copyright:<br>
+Copyright (C) 2002,2004 Tim Jenness, Christian Soeller, Hugo van der Sanden.<br>
+All Rights Reserved.<br>
+.<br>
+Copyright (C) 2009 Andrew Main (Zefram) <zefram@fysh.org><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This library is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: ext/XS-Typemap/*<br>
+Copyright:<br>
+Copyright (C) 2001 Tim Jenness All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+pod/perldebtut.pod<br>
+pod/perlperf.pod<br>
+Copyright:<br>
+Richard Foley <richard.foley@rfi.net> Copyright (c) 2000<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+These files are a part of Perl itself, licensed as above.<br>
+<br>
+Files: pod/perlembed.pod<br>
+Copyright:<br>
+Copyright (C) 1995, 1996, 1997, 1998 Doug MacEachern and Jon Orwant.  All<br>
+Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files: pod/perlexperiment.pod<br>
+Copyright:<br>
+Copyright 2010, brian d foy <brian.d.foy@gmail.com><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+You can use and redistribute this document under the same terms as Perl<br>
+itself.<br>
+<br>
+Files:<br>
+pod/perlfaq*.pod<br>
+pod/perlopentut.pod<br>
+pod/perltooc.pod<br>
+Copyright:<br>
+Copyright (c) 1997-2010 Tom Christiansen, Nathan Torkington, and<br>
+other authors as noted. All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This documentation is free; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+.<br>
+Irrespective of its distribution, all code examples here are in the public<br>
+domain. You are permitted and encouraged to use this code and any<br>
+derivatives thereof in your own programs for fun or for profit as you<br>
+see fit. A simple comment in the code giving credit to the FAQ would<br>
+be courteous but is not required.<br>
+<br>
+Files: pod/perlfaq.pod<br>
+Copyright:<br>
+Tom Christiansen wrote the original version of this document.<br>
+brian d foy <bdfoy@cpan.org> wrote this version. See the<br>
+individual perlfaq documents for additional copyright information.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document is available under the same terms as Perl itself. Code<br>
+examples in all the perlfaq documents are in the public domain. Use<br>
+them as you see fit (and at your own risk with no warranty from anyone).<br>
+<br>
+Files:<br>
+pod/perlfilter.pod<br>
+pod/perlthrtut.pod<br>
+Copyright:<br>
+copyright 1998 The Perl Journal<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files: pod/perlglossary.pod<br>
+Copyright:<br>
+Based on the Glossary of I<Programming Perl>, Fourth Edition,<br>
+by Tom Christiansen, brian d foy, Larry Wall, & Jon Orwant.<br>
+Copyright (c) 2000, 1996, 1991, 2012 O'Reilly Media, Inc.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files: pod/perlmodinstall.pod<br>
+Copyright:<br>
+Copyright (C) 1998, 2002, 2003 Jon Orwant.  All Rights Reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+pod/perlopentut.pod<br>
+pod/perltooc.pod<br>
+pod/perltoot.pod<br>
+Copyright:<br>
+Copyright 1997-1999 Tom Christiansen.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This documentation is free; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+.<br>
+Irrespective of its distribution, all code examples in these files are<br>
+hereby placed into the public domain.  You are permitted and<br>
+encouraged to use this code in your own programs for fun or for profit<br>
+as you see fit.  A simple comment in the code giving credit would be<br>
+courteous but is not required.<br>
+<br>
+Files: pod/perlpodstyle.pod<br>
+Copyright:<br>
+Copyright 1999, 2000, 2001, 2004, 2006, 2008, 2010 Russ Allbery<br>
+<rra@stanford.edu>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This documentation is free software; you may redistribute it and/or modify<br>
+it under the same terms as Perl itself.<br>
+<br>
+Files: pod/perlreapi.pod<br>
+Copyright:<br>
+Copyright 2006 Yves Orton and 2007 Ævar Arnfjörð Bjarmason.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or modify it under<br>
+the same terms as Perl itself.<br>
+<br>
+Files: pod/perlreftut.pod<br>
+Copyright:<br>
+Copyright 1998 The Perl Journal.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This documentation is free; you can redistribute it and/or modify it<br>
+under the same terms as Perl itself.<br>
+.<br>
+Irrespective of its distribution, all code examples in these files are<br>
+hereby placed into the public domain.  You are permitted and<br>
+encouraged to use this code in your own programs for fun or for profit<br>
+as you see fit.  A simple comment in the code giving credit would be<br>
+courteous but is not required.<br>
+<br>
+Files:<br>
+pod/perlrequick.pod<br>
+pod/perlretut.pod<br>
+Copyright:<br>
+Copyright (c) 2000 Mark Kvale<br>
+All rights reserved.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files: pod/perlunicook.pod<br>
+Copyright:<br>
+Copyright (c) 2012 Tom Christiansen<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files: pod/perluniintro.pod<br>
+Copyright:<br>
+Copyright 2001-2011 Jarkko Hietaniemi <jhi@iki.fi><br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This document may be distributed under the same terms as Perl itself.<br>
+<br>
+Files:<br>
+Copying<br>
+pod/perlgpl.pod<br>
+Copyright:<br>
+Copyright (C) 1989 Free Software Foundation, Inc.<br>
+51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA<br>
+License: DONT-CHANGE-THE-GPL<br>
+<br>
+Files: t/io/shm.t<br>
+Copyright:<br>
+Copyright (C) 1999, Graham Barr <gbarr@pobox.com>.<br>
+Copyright (C) 2007-2010, Marcus Holland-Moritz <mhx@cpan.org>.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+This program is free software; you can redistribute it and/or<br>
+modify it under the same terms as Perl itself.<br>
+<br>
+Files: debian/*<br>
+Copyright:<br>
+Portions of the Debian packaging are<br>
+Copyright 2008-2011 Niko Tyni <ntyni@debian.org><br>
+Copyright 2011 Dominic Hargreaves <dom@earth.li><br>
+The other people listed in debian/changelog are most probably<br>
+copyright holders too, but they have not included explicit copyright<br>
+or licensing information.<br>
+License: GPL-1+ or Artistic<br>
+Comment:<br>
+----------------------------------------<br>
+The portions by Niko Tyni and Dominic Hargreaves may be redistributed<br>
+and/or modified under the same terms as Perl itself. It is assumed that<br>
+other contributors have placed their contributions under a compatible<br>
+license.<br>
+<br>
+License: LGPL-2.1<br>
+On Debian GNU/Linux systems, the complete text of the LGPL 2.1<br>
+license can be found in `/usr/share/common-licenses/LGPL-2.1'.<br>
+<br>
+License: GPL-1+<br>
+On Debian GNU/Linux systems, the complete text of the GNU General<br>
+Public License can be found in `/usr/share/common-licenses/GPL-1'.<br>
+<br>
+License: GPL-2+<br>
+On Debian GNU/Linux systems, the complete text of version 2 of<br>
+the GNU General Public License can be found in<br>
+`/usr/share/common-licenses/GPL-2'.<br>
+<br>
+License: Artistic<br>
+On Debian GNU/Linux systems, the complete text of the<br>
+Artistic Licence can be found in `/usr/share/common-licenses/Artistic'.<br>
+<br>
+License: Artistic-2<br>
+Copyright (c) 2000-2006, The Perl Foundation.<br>
+.<br>
+Everyone is permitted to copy and distribute verbatim copies of this<br>
+license document, but changing it is not allowed.<br>
+.<br>
+Preamble<br>
+.<br>
+This license establishes the terms under which a given free software<br>
+Package may be copied, modified, distributed, and/or redistributed.<br>
+The intent is that the Copyright Holder maintains some artistic<br>
+control over the development of that Package while still keeping the<br>
+Package available as open source and free software.<br>
+.<br>
+You are always permitted to make arrangements wholly outside of this<br>
+license directly with the Copyright Holder of a given Package. If the<br>
+terms of this license do not permit the full use that you propose to<br>
+make of the Package, you should contact the Copyright Holder and seek<br>
+a different licensing arrangement.<br>
+.<br>
+Definitions<br>
+.<br>
+"Copyright Holder" means the individual(s) or organization(s) named in<br>
+the copyright notice for the entire Package.<br>
+.<br>
+"Contributor" means any party that has contributed code or other<br>
+material to the Package, in accordance with the Copyright Holder's<br>
+procedures.<br>
+.<br>
+"You" and "your" means any person who would like to copy, distribute,<br>
+or modify the Package.<br>
+.<br>
+"Package" means the collection of files distributed by the Copyright<br>
+Holder, and derivatives of that collection and/or of those files. A<br>
+given Package may consist of either the Standard Version, or a<br>
+Modified Version.<br>
+.<br>
+"Distribute" means providing a copy of the Package or making it<br>
+accessible to anyone else, or in the case of a company or<br>
+organization, to others outside of your company or organization.<br>
+.<br>
+"Distributor Fee" means any fee that you charge for Distributing this<br>
+Package or providing support for this Package to another party. It<br>
+does not mean licensing fees.<br>
+.<br>
+"Standard Version" refers to the Package if it has not been modified,<br>
+or has been modified only in ways explicitly requested by the<br>
+Copyright Holder.<br>
+.<br>
+"Modified Version" means the Package, if it has been changed, and such<br>
+changes were not explicitly requested by the Copyright Holder.<br>
+.<br>
+"Original License" means this Artistic License as Distributed with the<br>
+Standard Version of the Package, in its current version or as it may<br>
+be modified by The Perl Foundation in the future.<br>
+.<br>
+"Source" form means the source code, documentation source, and<br>
+configuration files for the Package.<br>
+.<br>
+"Compiled" form means the compiled bytecode, object code, binary, or<br>
+any other form resulting from mechanical transformation or translation<br>
+of the Source form.<br>
+.<br>
+Permission for Use and Modification Without Distribution<br>
+.<br>
+(1) You are permitted to use the Standard Version and create and use<br>
+Modified Versions for any purpose without restriction, provided that<br>
+you do not Distribute the Modified Version.<br>
+.<br>
+Permissions for Redistribution of the Standard Version<br>
+.<br>
+(2) You may Distribute verbatim copies of the Source form of the<br>
+Standard Version of this Package in any medium without restriction,<br>
+either gratis or for a Distributor Fee, provided that you duplicate<br>
+all of the original copyright notices and associated disclaimers. At<br>
+your discretion, such verbatim copies may or may not include a<br>
+Compiled form of the Package.<br>
+.<br>
+(3) You may apply any bug fixes, portability changes, and other<br>
+modifications made available from the Copyright Holder. The resulting<br>
+Package will still be considered the Standard Version, and as such<br>
+will be subject to the Original License.<br>
+.<br>
+Distribution of Modified Versions of the Package as Source<br>
+.<br>
+(4) You may Distribute your Modified Version as Source (either gratis<br>
+or for a Distributor Fee, and with or without a Compiled form of the<br>
+Modified Version) provided that you clearly document how it differs<br>
+from the Standard Version, including, but not limited to, documenting<br>
+any non-standard features, executables, or modules, and provided that<br>
+you do at least ONE of the following:<br>
+.<br>
+(a) make the Modified Version available to the Copyright Holder of the<br>
+Standard Version, under the Original License, so that the Copyright<br>
+Holder may include your modifications in the Standard Version. (b)<br>
+ensure that installation of your Modified Version does not prevent the<br>
+user installing or running the Standard Version. In addition, the<br>
+Modified Version must bear a name that is different from the name of<br>
+the Standard Version. (c) allow anyone who receives a copy of the<br>
+Modified Version to make the Source form of the Modified Version<br>
+available to others under (i) the Original License or (ii) a license<br>
+that permits the licensee to freely copy, modify and redistribute the<br>
+Modified Version using the same licensing terms that apply to the copy<br>
+that the licensee received, and requires that the Source form of the<br>
+Modified Version, and of any works derived from it, be made freely<br>
+available in that license fees are prohibited but Distributor Fees are<br>
+allowed.<br>
+.<br>
+Distribution of Compiled Forms of the Standard Version or Modified<br>
+Versions without the Source<br>
+.<br>
+(5) You may Distribute Compiled forms of the Standard Version without<br>
+the Source, provided that you include complete instructions on how to<br>
+get the Source of the Standard Version. Such instructions must be<br>
+valid at the time of your distribution. If these instructions, at any<br>
+time while you are carrying out such distribution, become invalid, you<br>
+must provide new instructions on demand or cease further distribution.<br>
+If you provide valid instructions or cease distribution within thirty<br>
+days after you become aware that the instructions are invalid, then<br>
+you do not forfeit any of your rights under this license.<br>
+.<br>
+(6) You may Distribute a Modified Version in Compiled form without the<br>
+Source, provided that you comply with Section 4 with respect to the<br>
+Source of the Modified Version.<br>
+.<br>
+Aggregating or Linking the Package<br>
+.<br>
+(7) You may aggregate the Package (either the Standard Version or<br>
+Modified Version) with other packages and Distribute the resulting<br>
+aggregation provided that you do not charge a licensing fee for the<br>
+Package. Distributor Fees are permitted, and licensing fees for other<br>
+components in the aggregation are permitted. The terms of this license<br>
+apply to the use and Distribution of the Standard or Modified Versions<br>
+as included in the aggregation.<br>
+.<br>
+(8) You are permitted to link Modified and Standard Versions with<br>
+other works, to embed the Package in a larger work of your own, or to<br>
+build stand-alone binary or bytecode versions of applications that<br>
+include the Package, and Distribute the result without restriction,<br>
+provided the result does not expose a direct interface to the Package.<br>
+.<br>
+Items That are Not Considered Part of a Modified Version<br>
+.<br>
+(9) Works (including, but not limited to, modules and scripts) that<br>
+merely extend or make use of the Package, do not, by themselves, cause<br>
+the Package to be a Modified Version. In addition, such works are not<br>
+considered parts of the Package itself, and are not subject to the<br>
+terms of this license.<br>
+.<br>
+General Provisions<br>
+.<br>
+(10) Any use, modification, and distribution of the Standard or<br>
+Modified Versions is governed by this Artistic License. By using,<br>
+modifying or distributing the Package, you accept this license. Do not<br>
+use, modify, or distribute the Package, if you do not accept this<br>
+license.<br>
+.<br>
+(11) If your Modified Version has been derived from a Modified Version<br>
+made by someone other than you, you are nevertheless required to<br>
+ensure that your Modified Version complies with the requirements of<br>
+this license.<br>
+.<br>
+(12) This license does not grant you the right to use any trademark,<br>
+service mark, tradename, or logo of the Copyright Holder.<br>
+.<br>
+(13) This license includes the non-exclusive, worldwide,<br>
+free-of-charge patent license to make, have made, use, offer to sell,<br>
+sell, import and otherwise transfer the Package with respect to any<br>
+patent claims licensable by the Copyright Holder that are necessarily<br>
+infringed by the Package. If you institute patent litigation<br>
+(including a cross-claim or counterclaim) against any party alleging<br>
+that the Package constitutes direct or contributory patent<br>
+infringement, then this Artistic License to you shall terminate on the<br>
+date that such litigation is filed.<br>
+.<br>
+(14) Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT<br>
+HOLDER AND CONTRIBUTORS "AS IS' AND WITHOUT ANY EXPRESS OR IMPLIED<br>
+WARRANTIES. THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A<br>
+PARTICULAR PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT<br>
+PERMITTED BY YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT<br>
+HOLDER OR CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT,<br>
+INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE<br>
+OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+License: BZIP<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+.<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+.<br>
+2. The origin of this software must not be misrepresented; you must<br>
+not claim that you wrote the original software.  If you use this<br>
+software in a product, an acknowledgment in the product<br>
+documentation would be appreciated but is not required.<br>
+.<br>
+3. Altered source versions must be plainly marked as such, and must<br>
+not be misrepresented as being the original software.<br>
+.<br>
+4. The name of the author may not be used to endorse or promote<br>
+products derived from this software without specific prior written<br>
+permission.<br>
+.<br>
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS<br>
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY<br>
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE<br>
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS<br>
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,<br>
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+.<br>
+Julian Seward, jseward@bzip.org<br>
+bzip2/libbzip2 version 1.0.5 of 10 December 2007<br>
+<br>
+License: ZLIB<br>
+This software is provided 'as-is', without any express or implied<br>
+warranty.  In no event will the authors be held liable for any damages<br>
+arising from the use of this software.<br>
+.<br>
+Permission is granted to anyone to use this software for any purpose,<br>
+including commercial applications, and to alter it and redistribute it<br>
+freely, subject to the following restrictions:<br>
+.<br>
+1. The origin of this software must not be misrepresented; you must not<br>
+claim that you wrote the original software. If you use this software<br>
+in a product, an acknowledgment in the product documentation would be<br>
+appreciated but is not required.<br>
+2. Altered source versions must be plainly marked as such, and must not be<br>
+misrepresented as being the original software.<br>
+3. This notice may not be removed or altered from any source distribution.<br>
+<br>
+License: Expat<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+of this software and associated documentation files (the "Software"), to deal<br>
+in the Software without restriction, including without limitation the rights<br>
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+copies of the Software, and to permit persons to whom the Software is<br>
+furnished to do so, subject to the following conditions:<br>
+.<br>
+The above copyright notice and this permission notice shall be included in<br>
+all copies or substantial portions of the Software.<br>
+.<br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS<br>
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL<br>
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING<br>
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER<br>
+DEALINGS IN THE SOFTWARE.<br>
+<br>
+License: BSD-3-clause-with-weird-numbering<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+4. Neither the name of the University nor the names of its contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+.<br>
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+License: BSD-4-clause-POWERDOG<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer<br>
+in the documentation and/or other materials provided with the<br>
+distribution.<br>
+3. All advertising materials mentioning features or use of this<br>
+software must display the following acknowledgement:<br>
+This product includes software developed by Powerdog Industries.<br>
+4. The name of Powerdog Industries may not be used to endorse or<br>
+promote products derived from this software without specific prior<br>
+written permission.<br>
+.<br>
+THIS SOFTWARE IS PROVIDED BY POWERDOG INDUSTRIES ``AS IS'' AND ANY<br>
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR<br>
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE POWERDOG INDUSTRIES BE<br>
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF<br>
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR<br>
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,<br>
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE<br>
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,<br>
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+License: Unicode<br>
+EXHIBIT 1<br>
+UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE<br>
+.<br>
+Unicode Data Files include all data files under the directories<br>
+http://www.unicode.org/Public/, http://www.unicode.org/reports/,<br>
+and http://www.unicode.org/cldr/data/ . Unicode Data Files<br>
+do not include PDF online code charts under the directory<br>
+http://www.unicode.org/Public/. Software includes any<br>
+source code published in the Unicode Standard or under the directories<br>
+http://www.unicode.org/Public/, http://www.unicode.org/reports/,<br>
+and http://www.unicode.org/cldr/data/.<br>
+.<br>
+NOTICE TO USER: Carefully read the following legal agreement. BY<br>
+DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE<br>
+INC.'S DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"), YOU<br>
+UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE TERMS AND<br>
+CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT DOWNLOAD,<br>
+INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.<br>
+.<br>
+COPYRIGHT AND PERMISSION NOTICE<br>
+.<br>
+Copyright © 1991-2011 Unicode, Inc. All rights<br>
+reserved. Distributed under the Terms of Use in<br>
+http://www.unicode.org/copyright.html.<br>
+.<br>
+Permission is hereby granted, free of charge, to any person<br>
+obtaining a copy of the Unicode data files and any associated<br>
+documentation (the "Data Files") or Unicode software and any<br>
+associated documentation (the "Software") to deal in the Data Files<br>
+or Software without restriction, including without limitation<br>
+the rights to use, copy, modify, merge, publish, distribute,<br>
+and/or sell copies of the Data Files or Software, and to permit<br>
+persons to whom the Data Files or Software are furnished to do so,<br>
+provided that (a) the above copyright notice(s) and this permission<br>
+notice appear with all copies of the Data Files or Software,<br>
+(b) both the above copyright notice(s) and this permission notice<br>
+appear in associated documentation, and (c) there is clear notice<br>
+in each modified Data File or in the Software as well as in the<br>
+documentation associated with the Data File(s) or Software that<br>
+the data or software has been modified.<br>
+.<br>
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY<br>
+OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE<br>
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE<br>
+AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE<br>
+COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE<br>
+FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,<br>
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR<br>
+PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER<br>
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR<br>
+PERFORMANCE OF THE DATA FILES OR SOFTWARE.<br>
+.<br>
+Except as contained in this notice, the name of a copyright holder<br>
+shall not be used in advertising or otherwise to promote the sale,<br>
+use or other dealings in these Data Files or Software without<br>
+prior written authorization of the copyright holder.<br>
+<br>
+License: BSD-3-clause-GENERIC<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. The names of the authors may not be used to endorse or promote<br>
+products derived from this software without specific prior written<br>
+permission.<br>
+.<br>
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+License: BSD-3-clause<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+1. Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+2. Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+3. Neither the name of the University nor the names of its contributors<br>
+may be used to endorse or promote products derived from this software<br>
+without specific prior written permission.<br>
+.<br>
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND<br>
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br>
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE<br>
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE<br>
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br>
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS<br>
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)<br>
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT<br>
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY<br>
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF<br>
+SUCH DAMAGE.<br>
+<br>
+License: REGCOMP<br>
+Permission is granted to anyone to use this software for any<br>
+purpose on any computer system, and to redistribute it freely,<br>
+subject to the following restrictions:<br>
+.<br>
+1. The author is not responsible for the consequences of use of<br>
+this software, no matter how awful, even if they arise<br>
+from defects in it.<br>
+.<br>
+2. The origin of this software must not be misrepresented, either<br>
+by explicit claim or by omission.<br>
+.<br>
+3. Altered versions must be plainly marked as such, and must not<br>
+be misrepresented as being the original software.<br>
+<br>
+License: TEXT-TABS<br>
+This module may be modified, used, copied, and redistributed at your own risk.<br>
+.<br>
+Although allowed by the preceding license, please do not publicly<br>
+redistribute modified versions of this code with the name "Text::Tabs"<br>
+unless it passes the unmodified Text::Tabs test suite.<br>
+<br>
+License: S2P<br>
+This program is free and open software. You may use, modify,<br>
+distribute, and sell this program (and any modified variants) in any<br>
+way you wish, provided you do not restrict others from doing the same.<br>
+<br>
+License: DONT-CHANGE-THE-GPL<br>
+Everyone is permitted to copy and distribute verbatim copies<br>
+of this license document, but changing it is not allowed.<br>
+<br>
+License: SDBM-PUBLIC-DOMAIN<br>
+From ext/SDBM_File/sdbm/README:<br>
+.<br>
+The entire sdbm  library package, as authored by me, Ozan S.  Yigit,<br>
+is  hereby placed in the public domain. As such, the author is not<br>
+responsible for the  consequences  of  use  of this  software, no<br>
+matter how awful, even if they arise from defects in it. There is no<br>
+expressed or implied warranty for the sdbm library.<br>
+.<br>
+Since the sdbm library package is in the public domain, this   original<br>
+release  or  any  additional  public-domain releases of the modified<br>
+original cannot possibly (by definition) be withheld from you. Also<br>
+by definition, You (singular) have all the rights to this code<br>
+(including  the  right to sell without permission, the right to<br>
+hoard[3]  and  the right  to  do  other  icky  things as you see fit)<br>
+but those rights are also granted to everyone else.<br>
+.<br>
+Please note that all  previous  distributions  of  this software<br>
+contained  a  copyright  (which is now dropped) to protect its origins<br>
+and its  current  public  domain  status against any possible claims<br>
+and/or challenges.<br>
+<br>
+License: GPL-3+-WITH-BISON-EXCEPTION<br>
+This program is free software: you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation, either version 3 of the License, or<br>
+(at your option) any later version.<br>
+.<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br>
+.<br>
+You should have received a copy of the GNU General Public License<br>
+along with this program.  If not, see <http://www.gnu.org/licenses/>.<br>
+.<br>
+As a special exception, you may create a larger work that contains<br>
+part or all of the Bison parser skeleton and distribute that work<br>
+under terms of your choice, so long as that work isn't itself a<br>
+parser generator using the skeleton or a modified version thereof<br>
+as a parser skeleton.  Alternatively, if you modify or redistribute<br>
+the parser skeleton itself, you may (at your option) remove this<br>
+special exception, which will cause the skeleton and the resulting<br>
+Bison output files to be licensed under the GNU General Public<br>
+License without this special exception.<br>
+.<br>
+This special exception was added by the Free Software Foundation in<br>
+version 2.2 of Bison.<br>
+<br>
+License: HSIEH-DERIVATIVE<br>
+The derivative content includes raw computer source code, ideas,<br>
+opinions, and excerpts whose original source is covered under another<br>
+license and transformations of such derivatives. Note that mere excerpts<br>
+by themselves (with the exception of raw source code) are not considered<br>
+derivative works under this license. Use and redistribution is limited<br>
+to the following conditions:<br>
+.<br>
+One may not create a derivative work which, in any way, violates the<br>
+Paul Hsieh exposition license described above on the original content.<br>
+.<br>
+One may not apply a license to a derivative work that precludes<br>
+anyone else from using and redistributing derivative content.<br>
+.<br>
+One may not attribute any derivative content to authors not involved<br>
+in the creation of the content, though an attribution to the author<br>
+is not necessary.<br>
+<br>
+License: HSIEH-BSD<br>
+Copyright (c) 2010, Paul Hsieh<br>
+All rights reserved.<br>
+.<br>
+Redistribution and use in source and binary forms, with or without<br>
+modification, are permitted provided that the following conditions<br>
+are met:<br>
+.<br>
+Redistributions of source code must retain the above copyright<br>
+notice, this list of conditions and the following disclaimer.<br>
+.<br>
+Redistributions in binary form must reproduce the above copyright<br>
+notice, this list of conditions and the following disclaimer in the<br>
+documentation and/or other materials provided with the distribution.<br>
+.<br>
+Neither my name, Paul Hsieh, nor the names of any other contributors<br>
+to the code use may not be used to endorse or promote products<br>
+derived from this software without specific prior written permission.<br>
+.<br>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<br>
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<br>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<br>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT<br>
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<br>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<br>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<br>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<br>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+<br>
+License:  CC0-1.0<br>
+Statatement of Purpose<br>
+.<br>
+The laws of most jurisdictions throughout the world automatically confer<br>
+exclusive Copyright and Related Rights (defined below) upon the creator<br>
+and subsequent owner(s) (each and all, an "owner") of an original work<br>
+of authorship and/or a database (each, a "Work").<br>
+.<br>
+Certain owners wish to permanently relinquish those rights to a Work<br>
+for the purpose of contributing to a commons of creative, cultural and<br>
+scientific works ("Commons") that the public can reliably and without<br>
+fear of later claims of infringement build upon, modify, incorporate in<br>
+other works, reuse and redistribute as freely as possible in any form<br>
+whatsoever and for any purposes, including without limitation commercial<br>
+purposes. These owners may contribute to the Commons to promote the ideal<br>
+of a free culture and the further production of creative, cultural and<br>
+scientific works, or to gain reputation or greater distribution for<br>
+their Work in part through the use and efforts of others.<br>
+.<br>
+For these and/or other purposes and motivations, and without any<br>
+expectation of additional consideration or compensation, the person<br>
+associating CC0 with a Work (the "Affirmer"), to the extent that<br>
+he or she is an owner of Copyright and Related Rights in the Work,<br>
+voluntarily elects to apply CC0 to the Work and publicly distribute<br>
+the Work under its terms, with knowledge of his or her Copyright and<br>
+Related Rights in the Work and the meaning and intended legal effect<br>
+of CC0 on those rights.<br>
+.<br>
+1. Copyright and Related Rights. A Work made available under CC0 may be<br>
+protected by copyright and related or neighboring rights ("Copyright<br>
+and Related Rights"). Copyright and Related Rights include, but are<br>
+not limited to, the following:<br>
+.<br>
+the right to reproduce, adapt, distribute, perform, display,<br>
+communicate, and translate a Work;<br>
+.<br>
+moral rights retained by the original author(s) and/or performer(s);<br>
+.<br>
+publicity and privacy rights pertaining to a person's image or<br>
+likeness depicted in a Work;<br>
+.<br>
+rights protecting against unfair competition in regards to a Work,<br>
+subject to the limitations in paragraph 4(a), below;<br>
+.<br>
+rights protecting the extraction, dissemination, use and reuse of data in a Work;<br>
+.<br>
+database rights (such as those arising under Directive 96/9/EC<br>
+of the European Parliament and of the Council of 11 March 1996<br>
+on the legal protection of databases, and under any national<br>
+implementation thereof, including any amended or successor version<br>
+of such directive); and<br>
+.<br>
+other similar, equivalent or corresponding rights throughout the world<br>
+based on applicable law or treaty, and any national implementations<br>
+thereof.<br>
+.<br>
+2. Waiver. To the greatest extent permitted by, but not in contravention<br>
+of, applicable law, Affirmer hereby overtly, fully, permanently,<br>
+irrevocably and unconditionally waives, abandons, and surrenders all<br>
+of Affirmer's Copyright and Related Rights and associated claims and<br>
+causes of action, whether now known or unknown (including existing<br>
+as well as future claims and causes of action), in the Work (i) in<br>
+all territories worldwide, (ii) for the maximum duration provided by<br>
+applicable law or treaty (including future time extensions), (iii)<br>
+in any current or future medium and for any number of copies, and (iv)<br>
+for any purpose whatsoever, including without limitation commercial,<br>
+advertising or promotional purposes (the "Waiver"). Affirmer makes the<br>
+Waiver for the benefit of each member of the public at large and to the<br>
+detriment of Affirmer's heirs and successors, fully intending that such<br>
+Waiver shall not be subject to revocation, rescission, cancellation,<br>
+termination, or any other legal or equitable action to disrupt the<br>
+quiet enjoyment of the Work by the public as contemplated by Affirmer's<br>
+express Statement of Purpose.<br>
+.<br>
+3. Public License Fallback. Should any part of the Waiver for any<br>
+reason be judged legally invalid or ineffective under applicable law,<br>
+then the Waiver shall be preserved to the maximum extent permitted<br>
+taking into account Affirmer's express Statement of Purpose. In<br>
+addition, to the extent the Waiver is so judged Affirmer hereby<br>
+grants to each affected person a royalty-free, non transferable, non<br>
+sublicensable, non exclusive, irrevocable and unconditional license<br>
+to exercise Affirmer's Copyright and Related Rights in the Work (i)<br>
+in all territories worldwide, (ii) for the maximum duration provided<br>
+by applicable law or treaty (including future time extensions), (iii)<br>
+in any current or future medium and for any number of copies, and (iv)<br>
+for any purpose whatsoever, including without limitation commercial,<br>
+advertising or promotional purposes (the "License"). The License shall<br>
+be deemed effective as of the date CC0 was applied by Affirmer to the<br>
+Work. Should any part of the License for any reason be judged legally<br>
+invalid or ineffective under applicable law, such partial invalidity<br>
+or ineffectiveness shall not invalidate the remainder of the License,<br>
+and in such case Affirmer hereby affirms that he or she will not (i)<br>
+exercise any of his or her remaining Copyright and Related Rights in<br>
+the Work or (ii) assert any associated claims and causes of action<br>
+with respect to the Work, in either case contrary to Affirmer's express<br>
+Statement of Purpose.<br>
+.<br>
+4. Limitations and Disclaimers.<br>
+.<br>
+No trademark or patent rights held by Affirmer are waived,<br>
+abandoned, surrendered, licensed or otherwise affected by this<br>
+document.<br>
+.<br>
+Affirmer offers the Work as-is and makes no representations or<br>
+warranties of any kind concerning the Work, express, implied,<br>
+statutory or otherwise, including without limitation warranties<br>
+of title, merchantability, fitness for a particular purpose, non<br>
+infringement, or the absence of latent or other defects, accuracy,<br>
+or the present or absence of errors, whether or not discoverable,<br>
+all to the greatest extent permissible under applicable law.<br>
+.<br>
+Affirmer disclaims responsibility for clearing rights of other<br>
+persons that may apply to the Work or any use thereof, including<br>
+without limitation any person's Copyright and Related Rights in the<br>
+Work. Further, Affirmer disclaims responsibility for obtaining any<br>
+necessary consents, permissions or other rights required for any<br>
+use of the Work.<br>
+.<br>
+Affirmer understands and acknowledges that Creative Commons is not<br>
+a party to this document and has no duty or obligation with respect<br>
+to this CC0 or use of the Work.<br>
+Comment:<br>
+This license text was retrieved from<br>
+<http://creativecommons.org/publicdomain/zero/1.0/><br>
+on Fri, 05 Feb 2016 20:30:28 +0200<br>
+   </body>
+</html>

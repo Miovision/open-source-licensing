@@ -1,0 +1,73 @@
+<html>
+   <body>
+This is Debian GNU/Linux's prepackaged version of the General Purpose<br>
+Mouse Interface utility. The general purpose mouse daemon tries to be<br>
+a useful mouse server for applications running on the Linux console.<br>
+<br>
+This package was put together by, James Troup <james@nocrew.org>.<br>
+<br>
+Now maintained as a team by:<br>
+<br>
+Guillem Jover <guillem@debian.org><br>
+Peter Samuelson <peter@p12n.org><br>
+<br>
+The upstream source was downloaded from:<br>
+<br>
+<http://unix.schottelius.org/gpm/archives/><br>
+<br>
+The initial changes while packaging were minor :-<br>
+<br>
+- adding support for the Debian package maintenance scheme, by adding<br>
+various debian/* files.<br>
+- gpm.c (processConn): type of socket length changed (size_t -> socklen_t).<br>
+- debuglog.c: #include <string.h> to quiet -Wall.<br>
+- doc/Makefile.in (maintainer-clean): clean without interaction and<br>
+clean all relevant files (i.e. gpm.info-{1,2}).<br>
+- doc/Makefile.in: add support for mouse-test.1.<br>
+<br>
+The following changes were thought of and done mostly by François<br>
+Gouget <fgouget@mygale.org>; though I didn't apply his patches as<br>
+they were for various reasons:<br>
+<br>
+- gpn.c (cmdline): modified handling of -t command line argument, so it<br>
+can be used by anyone regardless of whether or not a copy of gpm is<br>
+already running.<br>
+- gpn.c (usage): update for new -t option "types".<br>
+- mice.c: improved descriptions of mouse types.<br>
+- mice.c (M_listMice): function used by -t help, reworked version of<br>
+old M_listTypes.<br>
+- mice.c (M_listTypes): function used by -t types; lists only<br>
+mnemonics.<br>
+<br>
+Copyright Holders:<br>
+<br>
+Copyright © 1993       Andrew Haylett <ajh@gec-mrc.co.uk><br>
+Copyright © 1994-2000  Alessandro Rubini <rubini@linux.it><br>
+Copyright © 1998,1999  Ian Zimmerman <itz@rahul.net><br>
+Copyright © 2001-2008  Nico Schottelius <nico@schottelius.org><br>
+<br>
+Debian specific modifications (1.10-1 -> 1.10-6)<br>
+Copyright © 1996, 1997  Martin Schulze<br>
+<br>
+Debian specific modifications (1.10-7 and onwards)<br>
+Copyright © 1997, 1998, 1999  James Troup<br>
+<br>
+License:<br>
+<br>
+This program is free software; you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation; version 2 dated June, 1991.<br>
+<br>
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br>
+<br>
+You should have received a copy of the GNU General Public License with<br>
+your Debian GNU/Linux system, in /usr/share/common-licenses/GPL-2, or with<br>
+the Debian GNU/Linux gpm source package as the file COPYING.  If not,<br>
+write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,<br>
+Boston, MA  02110-1301 USA<br>
+<br>
+   </body>
+</html>
